@@ -8,7 +8,6 @@ import { buildCss } from "./buildCSS";
 
 export function buildViteConfig(options: BuildOptions) {
   const { mode, paths } = options;
-  console.log(mode);
 
   return {
     mode,
