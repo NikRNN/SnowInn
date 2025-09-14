@@ -9,6 +9,12 @@ export type BuildMode = "development" | "production";
 export interface BuildPaths {
   build: string;
   src: string;
+  app: string;
+  shared: string;
+  entities: string;
+  features: string;
+  pages: string;
+  widgets: string;
 }
 
 export interface BuildOptions {
@@ -18,5 +24,11 @@ export interface BuildOptions {
 
 export const buildPaths: BuildPaths = {
   build: "build",
-  src: path.resolve(__dirname, "./src"),
+  src: path.resolve(__dirname, "../../../src"),
+  app: path.resolve(__dirname, "../../../src/app"),
+  shared: path.resolve(__dirname, "../../../src/shared"),
+  entities: path.resolve(__dirname, "../../../src/entities"),
+  features: path.resolve(__dirname, "../../../src/features"),
+  pages: path.resolve(__dirname, "../../../src/pages"),
+  widgets: path.resolve(__dirname, "../../../src/widgets"),
 };

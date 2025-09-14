@@ -6,9 +6,15 @@
   ],
   "compilerOptions": {
     "composite": true,
-    "baseUrl": ".",
+     "baseUrl": "./src",
     "paths": {
-    "*": ["./src/*"]
+      "src/*": ["./src/*"],
+      "app/*": ["app/*"],
+      "shared/*": ["shared/*"],
+      "entities/*": ["entities/*"],
+      "features/*": ["features/*"],
+      "pages/*": ["pages/*"],
+      "widgets/*": ["widgets/*"]
   },
 }
 }

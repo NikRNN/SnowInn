@@ -1,12 +1,8 @@
-import { Routes, Route, Link } from "react-router-dom";
-import { Suspense } from "react";
-
-import { AboutPageLazy } from "pages/AboutPage/index.js";
-import { MainPageLazy } from "pages/MainPage/index.js";
-
-import "./styles/index.scss";
+import { Link } from "react-router-dom";
 import { UseTheme } from "app/providers/ThemeProvider/index.js";
 import { classNames } from "shared/lib/classNames/classNames.js";
+import { AppRouter } from "app/providers/router/index.js";
+import "./styles/index.scss";
 
 function App() {
   const { theme, toggleTheme } = UseTheme();
@@ -16,13 +12,7 @@ function App() {
       <button onClick={toggleTheme}>Toggle</button>
       <Link to={"/"}>Главная</Link>
       <Link to={"/about"}>О сайте</Link>
-
-      <Suspense fallback={<div>Загрузка</div>}>
-        <Routes>
-          <Route element={<AboutPageLazy />} path={"/about"} />
-          <Route element={<MainPageLazy />} path={"/"} />
-        </Routes>
-      </Suspense>
+      <AppRouter />
     </div>
   );
 }
