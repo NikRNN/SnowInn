@@ -1,0 +1,31 @@
+<svg width="64" height="64" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" stroke="currentColor"
+    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="cursor:pointer">
+    <style>
+        .bulb {
+            transition: fill 0.3s ease, filter 0.3s ease;
+        }
+
+        svg:hover .bulb {
+            animation: glow 1s infinite alternate;
+            filter: drop-shadow(0 0 2px #FFD93B) drop-shadow(0 0 5px #FFD93B);
+        }
+
+        @keyframes glow {
+            0% {
+                fill: #FFD93B;
+            }
+
+            100% {
+                fill: #FFE066;
+            }
+        }
+    </style>
+
+    <!-- bulb glass -->
+    <circle class="bulb" cx="24" cy="20" r="8" fill="#FFD93B" />
+    <!-- filament -->
+    <path d="M20 20 Q24 24 28 20" stroke="currentColor" />
+    <!-- compact base -->
+    <rect x="21" y="28" width="6" height="3" rx="1.5" fill="none" />
+    <rect x="21" y="32" width="6" height="2" rx="1" fill="none" />
+</svg>
