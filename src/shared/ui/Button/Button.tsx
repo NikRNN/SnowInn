@@ -7,7 +7,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   theme?: ThemeButton;
 }
 
-enum ThemeButton {
+export enum ThemeButton {
   CLEAR = "clear",
 }
 

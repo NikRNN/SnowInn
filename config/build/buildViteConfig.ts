@@ -5,6 +5,7 @@ import { buildServer } from "./buildServer";
 import { buildResolvers } from "./buildResolvers";
 import { buildPlugins } from "./buildPlugins";
 import { buildCss } from "./buildCSS";
+import { buildDefine } from "./buildDefine";
 
 export function buildViteConfig(options: BuildOptions) {
   const { mode, paths } = options;
@@ -16,5 +17,6 @@ export function buildViteConfig(options: BuildOptions) {
     build: buildOptions(paths),
     server: buildServer(mode),
     css: buildCss(mode),
+    define: buildDefine(mode),
   };
 }
