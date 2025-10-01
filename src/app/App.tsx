@@ -1,5 +1,4 @@
 import { Suspense } from "react";
-import { useTranslation } from "react-i18next";
 
 import { UseTheme } from "app/providers/ThemeProvider/index.js";
 import { classNames } from "shared/lib/classNames/classNames.js";
@@ -9,20 +8,20 @@ import { Sidebar } from "widgets/Sidebar/index.js";
 import "./styles/index.scss";
 
 function App() {
-  const { theme } = UseTheme();
+    const { theme } = UseTheme();
 
-  return (
-    <div className={classNames("app", [theme])}>
-      <Suspense fallback="">
-        <Navbar />
+    return (
+        <div className={classNames("app", [theme])}>
+            <Suspense fallback="">
+                <Navbar />
 
-        <div className="content-page">
-          <Sidebar />
-          <AppRouter />
+                <div className="content-page">
+                    <Sidebar />
+                    <AppRouter />
+                </div>
+            </Suspense>
         </div>
-      </Suspense>
-    </div>
-  );
+    );
 }
 
 export default App;
