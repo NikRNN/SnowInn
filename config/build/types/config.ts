@@ -6,6 +6,19 @@ const __dirname = path.dirname(__filename);
 
 export type BuildMode = "development" | "production";
 
+export type CssConfig = {
+    modules: {
+        generateScopedName: string
+    }
+}
+
+export type VitestConfig = {
+
+        globals: boolean,
+        environment: "jsdom"
+
+}
+
 export interface BuildPaths {
   build: string;
   src: string;
@@ -20,15 +33,16 @@ export interface BuildPaths {
 export interface BuildOptions {
   mode: BuildMode;
   paths: BuildPaths;
+
 }
 
 export const buildPaths: BuildPaths = {
-  build: "build",
-  src: path.resolve(__dirname, "../../../src"),
-  app: path.resolve(__dirname, "../../../src/app"),
-  shared: path.resolve(__dirname, "../../../src/shared"),
-  entities: path.resolve(__dirname, "../../../src/entities"),
-  features: path.resolve(__dirname, "../../../src/features"),
-  pages: path.resolve(__dirname, "../../../src/pages"),
-  widgets: path.resolve(__dirname, "../../../src/widgets"),
+    build: "build",
+    src: path.resolve(__dirname, "../../../src"),
+    app: path.resolve(__dirname, "../../../src/app"),
+    shared: path.resolve(__dirname, "../../../src/shared"),
+    entities: path.resolve(__dirname, "../../../src/entities"),
+    features: path.resolve(__dirname, "../../../src/features"),
+    pages: path.resolve(__dirname, "../../../src/pages"),
+    widgets: path.resolve(__dirname, "../../../src/widgets"),
 };

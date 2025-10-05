@@ -5,12 +5,12 @@ import svgr from "vite-plugin-svgr";
 import { ViteMinifyPlugin } from "vite-plugin-minify";
 
 export function buildPlugins(): PluginOption[] {
-  return [
-    react(),
-    progress(),
-    svgr({
-      exportAsDefault: true,
-    }),
-    ViteMinifyPlugin({}),
-  ];
+    return [
+        react(),
+        progress(),
+        svgr({
+            exportAsDefault: true,
+        }),
+        ViteMinifyPlugin({}),
+    ];
 }

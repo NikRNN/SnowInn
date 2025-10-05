@@ -6,17 +6,19 @@ import { buildResolvers } from "./buildResolvers";
 import { buildPlugins } from "./buildPlugins";
 import { buildCss } from "./buildCSS";
 import { buildDefine } from "./buildDefine";
+import { buildVitest } from "./buildVitest";
 
 export function buildViteConfig(options: BuildOptions) {
-  const { mode, paths } = options;
+    const { mode, paths } = options;
 
-  return {
-    mode,
-    plugins: buildPlugins(),
-    resolve: buildResolvers(paths),
-    build: buildOptions(paths),
-    server: buildServer(mode),
-    css: buildCss(mode),
-    define: buildDefine(mode),
-  };
+    return {
+        mode,
+        plugins: buildPlugins(),
+        resolve: buildResolvers(paths),
+        build: buildOptions(paths),
+        server: buildServer(mode),
+        css: buildCss(mode),
+        define: buildDefine(mode),
+        test: buildVitest(),
+    };
 }
