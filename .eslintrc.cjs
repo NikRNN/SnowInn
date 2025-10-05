@@ -26,6 +26,7 @@ module.exports = {
         "plugin:@typescript-eslint/recommended", // базовые правила TypeScript
         "plugin:react/recommended", // рекомендации React
         "plugin:jsx-a11y/recommended", // доступность
+        "plugin:i18next/recommended",
     ],
     settings: {
         react: {
@@ -43,7 +44,7 @@ module.exports = {
             2,
             { extensions: [".tsx", ".jsx", ".js"] },
         ],
-        "i18next/no-literal-string": "warn", // предупреждение для текста без перевода
+        "i18next/no-literal-string": ["error", { markupOnly: true }], // ошибка для текста без перевода
         quotes: ["error", "double"],
         "import/extensions": [
             "error",

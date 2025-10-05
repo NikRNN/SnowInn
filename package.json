@@ -11,7 +11,9 @@
     "lint": "eslint src --ext .ts,.tsx,.js",
     "test": "jest",
     "serve": "http-server ./build --port 3000 -o",
-    "lint:fix": "eslint src --ext .ts,.tsx,.js --fix"
+    "lint:fix": "eslint src --ext .ts,.tsx,.js --fix",
+    "lint:scss": "npx stylelint \"**/*.scss\"",
+    "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix"
   },
   "repository": {
     "type": "git",

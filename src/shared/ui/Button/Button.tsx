@@ -22,7 +22,7 @@ export function Button(props: ButtonProps) {
     return (
         <button
             type="button"
-            className={classNames(cls.Button, [className, cls[theme]])}
+            className={classNames(cls.button, [className, cls[theme]])}
             {...otherProps} // сделал предупреждение вместо ошибки;
         >
             {children}
