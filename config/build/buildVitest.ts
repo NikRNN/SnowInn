@@ -6,4 +6,3 @@ export function buildVitest() : VitestConfig {
         environment: "jsdom", // если тестируем компоненты с DOM
     });
 }
-

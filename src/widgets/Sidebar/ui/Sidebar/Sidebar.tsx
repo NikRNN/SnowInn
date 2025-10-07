@@ -21,7 +21,6 @@ export function Sidebar({ className }: SidebarProps) {
             })}
         >
             <Button onClick={onToggle}>toggle</Button>
-
             <div className={cls.switchers}>
                 <ThemeSwitcher />
                 <LangSwitcher className={cls.lang} />

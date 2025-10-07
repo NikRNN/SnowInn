@@ -1,5 +1,4 @@
 import { Suspense } from "react";
-
 import { UseTheme } from "app/providers/ThemeProvider/index.js";
 import { classNames } from "shared/lib/classNames/classNames.js";
 import { AppRouter } from "app/providers/router/index.js";
