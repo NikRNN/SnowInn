@@ -11,13 +11,14 @@ export function PageError({ className }: PageErrorProps) {
     const { t } = useTranslation();
 
     const reloadPage = () => {
-        location.reload();
+        window.location.reload();
     };
 
     return (
         <div className={classNames(cls.PageError, [className])}>
-            <p>{t("Произошла непредвиденная ошибка")}</p>
-            <Button onClick={reloadPage}>{t("Обновить страницу")}</Button>
+            <h1 className={cls.title}>{t("Произошла непредвиденная ошибка")}</h1>
+            <p className={cls.description}>{t("Мы уже работаем над ее исправлением, а пока попробуйте обновить страницу")}</p>
+            <Button className={cls.reloadButton} onClick={reloadPage}>{t("Обновить страницу")}</Button>
         </div>
     );
 }

@@ -1,8 +1,9 @@
 import type { VitestConfig } from "./types/config";
 
-export function buildVitest() : VitestConfig {
+export function buildTests() : VitestConfig {
     return ({
         globals: true, // чтобы не импортировать describe, test, expect в каждом файле
-        environment: "jsdom", // если тестируем компоненты с DOM
+        environment: "jsdom", // для testing library jest dom
+
     });
 }

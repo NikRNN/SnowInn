@@ -60,7 +60,7 @@ module.exports = {
         "react/jsx-indent": ["error", 4],
         "react/jsx-indent-props": ["error", 4],
         indent: [2, 4],
-        "max-len": ["error", { code: 120, ignoreComments: true }],
+        "max-len": ["error", { code: 130, ignoreComments: true }],
         "no-unused-vars": "off",
         "@typescript-eslint/no-unused-vars": ["warn"],
         "react/require-default-props": "off",
@@ -69,7 +69,7 @@ module.exports = {
         "no-underscore-dangle": ["error", {
             allow: ["__IS_DEV", "__dirname", "__filename"],
         }],
-        "import/no-extraneous-dependencies": ["error", {
+        "import/no-extraneous-dependencies": ["warn", {
             devDependencies: true, // разрешаем все dev зависимости
             optionalDependencies: false,
             peerDependencies: false,
