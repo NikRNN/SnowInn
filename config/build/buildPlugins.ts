@@ -10,7 +10,9 @@ export function buildPlugins(): PluginOption[] {
         react(),
         progress(),
         svgr({
-            exportAsDefault: true,
+            // экспорт по умолчанию как React компонент
+            include: "**/*.svg",
+
         }),
         ViteMinifyPlugin({}),
         analyzer({

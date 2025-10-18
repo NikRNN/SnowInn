@@ -21,12 +21,13 @@ module.exports = {
         "@typescript-eslint",
     ],
     extends: [
-        "airbnb", // стиль Airbnb
-        "airbnb/hooks", // для React Hooks
-        "plugin:@typescript-eslint/recommended", // базовые правила TypeScript
-        "plugin:react/recommended", // рекомендации React
-        "plugin:jsx-a11y/recommended", // доступность
+        "airbnb",
+        "airbnb/hooks",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended",
+        "plugin:jsx-a11y/recommended",
         "plugin:i18next/recommended",
+        "plugin:storybook/recommended",
     ],
     settings: {
         react: {
@@ -44,6 +45,7 @@ module.exports = {
             2,
             { extensions: [".tsx", ".jsx", ".js"] },
         ],
+        "react/display-name": "warn",
         "i18next/no-literal-string": ["error", { markupOnly: true }], // ошибка для текста без перевода
         quotes: ["error", "double"],
         "import/extensions": [
@@ -60,7 +62,7 @@ module.exports = {
         "react/jsx-indent": ["error", 4],
         "react/jsx-indent-props": ["error", 4],
         indent: [2, 4],
-        "max-len": ["error", { code: 130, ignoreComments: true }],
+        "max-len": ["error", { code: 200, ignoreComments: true }],
         "no-unused-vars": "off",
         "@typescript-eslint/no-unused-vars": ["warn"],
         "react/require-default-props": "off",

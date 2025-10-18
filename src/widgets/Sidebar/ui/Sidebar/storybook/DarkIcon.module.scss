@@ -1,0 +1,16 @@
+// только для тестов в storybook!!!
+
+.darkIcon {
+    background: none;
+  cursor: pointer;
+
+  &:hover .eyeL,
+  &:hover .eyeR {
+    r: 0.1; /* анимация уменьшения радиуса при hover */
+  }
+}
+
+.eyeL,
+.eyeR {
+  transition: r 0.2s ease;
+}

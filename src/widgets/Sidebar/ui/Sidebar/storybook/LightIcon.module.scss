@@ -1,0 +1,24 @@
+// только для тестов в storybook!!!
+
+@keyframes glow {
+  0% {
+    fill: #ffd93b;
+  }
+  100% {
+    fill: #ffe066;
+  }
+}
+
+.lightIcon {
+  cursor: pointer;
+
+  &:hover .bulb {
+    animation: glow 1s infinite alternate;
+    filter: drop-shadow(0 0 2px #ffd93b)
+            drop-shadow(0 0 5px #ffd93b);
+  }
+}
+
+.bulb {
+  transition: fill 0.3s ease, filter 0.3s ease;
+}
