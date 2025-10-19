@@ -1,10 +1,10 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
-import { fn } from "storybook/test";
+import type { Meta, StoryObj } from "@storybook/react";
+import { fn } from "@storybook/test";
 import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator.js";
 import { Theme } from "app/providers/ThemeProvider/index.js";
 import { Button, ThemeButton } from "./Button.js";
 
-const meta = {
+const meta: Meta<typeof Button> = {
     title: "shared/Button",
     component: Button,
     parameters: {

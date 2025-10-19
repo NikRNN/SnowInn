@@ -5,13 +5,15 @@ import svgr from "vite-plugin-svgr";
 const config: StorybookConfig = {
     stories: [
         "../../src/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+
     ],
     addons: [
-        "@chromatic-com/storybook",
-        "@storybook/addon-docs",
+        "@storybook/addon-essentials",
+        "@storybook/addon-viewport",
         "@storybook/addon-onboarding",
         "@storybook/addon-a11y",
-        "@storybook/addon-vitest",
+        "@storybook/experimental-addon-test",
+
     ],
     framework: {
         name: "@storybook/react-vite",

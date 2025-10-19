@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
+import type { Meta, StoryObj } from "@storybook/react";
 import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator.js";
 import { Theme } from "app/providers/ThemeProvider/index.js";
 import { Sidebar } from "./Sidebar.js";
@@ -22,12 +22,12 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Dark: Story = {
+export const Light: Story = {
     args: {},
     decorators: [ThemeDecorator(Theme.DARK)],
 
 };
 
-export const Light: Story = {
+export const Dark: Story = {
     args: {},
 };

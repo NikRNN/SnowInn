@@ -28,6 +28,11 @@ module.exports = {
         "plugin:jsx-a11y/recommended",
         "plugin:i18next/recommended",
         "plugin:storybook/recommended",
+        "plugin:storybook/recommended",
+        "plugin:storybook/recommended",
+        "plugin:storybook/recommended",
+        "plugin:storybook/recommended",
+        "plugin:storybook/recommended"
     ],
     settings: {
         react: {
