@@ -32,7 +32,7 @@ module.exports = {
         "plugin:storybook/recommended",
         "plugin:storybook/recommended",
         "plugin:storybook/recommended",
-        "plugin:storybook/recommended"
+        "plugin:storybook/recommended",
     ],
     settings: {
         react: {
