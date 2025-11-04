@@ -19,5 +19,5 @@
       "widgets/*": ["widgets/*"]
   },
 },
-"include": ["src", "config/storybook"]
+"include": ["src", "config/storybook", "vite-env.d.ts"]
 }

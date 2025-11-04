@@ -12,7 +12,6 @@ export function buildPlugins(): PluginOption[] {
         svgr({
             // экспорт по умолчанию как React компонент
             include: "**/*.svg",
-
         }),
         ViteMinifyPlugin({}),
         analyzer({

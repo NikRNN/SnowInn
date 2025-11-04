@@ -1,15 +1,12 @@
-type Mods = Record<string, boolean | string>; // объект с ключами из стрингов и значениями из стрингов или булевыми
+type Mods = Record<string, boolean | string | undefined>; // объект с ключами из стрингов и значениями из стрингов или булевыми
 
-export function classNames(
-    cls: string,
-    additional: Array<string | undefined> = [],
-    mods: Mods = {},
-) {
+export function classNames(cls: string, additional: Array<string | undefined> = [], mods: Mods = {}): string {
     return [
         cls,
-        ...additional.filter(Boolean), // фильтр на случай, если сюда прилетят undefined
+        ...additional.filter(Boolean), // на случай, если прилетит undefined
         ...Object.entries(mods)
-            .filter(([className, value]) => Boolean(value))
+            .filter(([_, value]) => Boolean(value))
             .map(([className]) => className),
-    ].join(" ");
+    ]
+        .join(" ");
 }
