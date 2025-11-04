@@ -24,12 +24,16 @@ jobs:
         - name: make build production project
           run: npm run build
         - name: typescript listing
+          if: always()
           run: npm run lint
         - name: scss listing
+          if: always()
           run: npm run lint:scss
         - name: unit testing
+          if: always()
           run: npm run test-unit
         - name: screenshot testing chromatic
+          if: always()
           uses: chromaui/action@v1
           with:
            projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
