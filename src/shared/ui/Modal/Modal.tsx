@@ -1,0 +1,72 @@
+import { classNames } from "shared/lib/classNames/classNames.js";
+import {
+    ReactNode, useCallback, useEffect, useRef, useState,
+} from "react";
+import { Portal } from "shared/ui/Portal/Portal.js";
+import { UseTheme } from "app/providers/ThemeProvider/index.js";
+import cls from "./Modal.module.scss";
+
+interface ModalProps {
+  className?: string;
+  children?: ReactNode;
+  isOpen?: boolean;
+  onClose?: ()=>void;
+
+}
+
+export function Modal({
+    className, children, isOpen, onClose,
+}: ModalProps) {
+    const [isClose, setIsClose] = useState(false);
+    const timeRef = useRef<NodeJS.Timeout>(undefined);
+    const { theme } = UseTheme();
+
+    const mods: Record<string, boolean | undefined> = {
+        [cls.opened]: isOpen,
+        [cls.isClosing]: isClose,
+        [cls[theme]]: true,
+
+    };
+
+    const closeHandler = useCallback(() => {
+        if (onClose) {
+            setIsClose(true);
+            timeRef.current = setTimeout(() => { onClose(); setIsClose(false); }, 300);
+        }
+    }, [onClose]);
+
+    const onKeyDown = useCallback((e: KeyboardEvent) => {
+        if (e.key === "Escape") {
+            closeHandler();
+        }
+    }, [closeHandler]);
+
+    const onContentClick = (e : React.MouseEvent) => {
+        e.stopPropagation();
+    };
+
+    useEffect(() => {
+        if (isOpen) {
+            window.addEventListener("keydown", onKeyDown);
+        }
+
+        return () => {
+            clearTimeout(timeRef.current);
+            window.removeEventListener("keydown", onKeyDown);
+        };
+    }, [isOpen, onKeyDown]);
+
+    return (
+        <Portal>
+            <div className={classNames(cls.Modal, [className], mods)}>
+                <div className={cls.overlay} onClick={closeHandler}>
+                    <div className={cls.content} onClick={onContentClick}>
+                        {children}
+                    </div>
+
+                </div>
+            </div>
+        </Portal>
+
+    );
+}

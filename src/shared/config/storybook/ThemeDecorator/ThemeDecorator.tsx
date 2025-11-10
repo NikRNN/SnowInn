@@ -1,4 +1,4 @@
-import { Decorator } from "@storybook/react-vite";
+import type { Decorator } from "@storybook/react";
 import { Theme, ThemeProvider } from "app/providers/ThemeProvider/index.js";
 import "../../../../app/styles/index.scss";
 
