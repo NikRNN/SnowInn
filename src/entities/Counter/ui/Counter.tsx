@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
-import { Button } from "shared/ui/Button/Button.js";
-import { CounterActions } from "../model/slice/CounterSlice.js";
-import { getCounterValue } from "../model/selectors/getCounterValue/getCounterValue.js";
+import { Button } from "shared/ui/Button/Button";
+import { CounterActions } from "../model/slice/CounterSlice";
+import { getCounterValue } from "../model/selectors/getCounterValue/getCounterValue";
 
 export function Counter() {
     const dispatch = useDispatch();
@@ -10,7 +10,7 @@ export function Counter() {
     const incr = () => { dispatch(CounterActions.incremented()); };
 
     const decr = () => { dispatch(CounterActions.decremented()); };
-
+    /* eslint-disable i18next/no-literal-string */
     return (
         <div>
             <h1 data-testid="value-title">

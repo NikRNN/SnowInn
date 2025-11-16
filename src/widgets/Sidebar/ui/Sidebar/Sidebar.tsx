@@ -1,21 +1,25 @@
-import { classNames } from "shared/lib/classNames/classNames.js";
+import { classNames } from "shared/lib/classNames/classNames";
 import { useState } from "react";
-import { ThemeSwitcher } from "widgets/ThemeSwitcher/ui/ThemeSwitcher.js";
+import { ThemeSwitcher } from "widgets/ThemeSwitcher/ui/ThemeSwitcher";
 import { LangSwitcher } from "widgets/LangSwitcher/LangSwitcher.js";
-import { Button, ButtonTheme, SizeButton } from "shared/ui/Button/Button.js";
-import { AppLink, AppLinkTheme } from "shared/ui/AppLink/AppLink.js";
+import { Button, ButtonTheme, SizeButton } from "shared/ui/Button/Button";
+import { AppLink, AppLinkTheme } from "shared/ui/AppLink/AppLink";
 import { useTranslation } from "react-i18next";
-import { RoutePath } from "shared/config/routeConfig/routeConfig.js";
-import MainPageIcon from "shared/assets/icons/main-page.svg";
-import AboutPageIcon from "shared/assets/icons/about-us.svg";
+import { RoutePath } from "shared/config/routeConfig/routeConfig";
+// import MainPageIcon from "shared/assets/icons/main-page.svg"; - для prod
+// import AboutPageIcon from "shared/assets/icons/about-us.svg"; - для prod
+import { MainPageIcon } from "widgets/Sidebar/ui/Sidebar/storybook/MainPageIcon";
+import { AboutUsIcon } from "widgets/Sidebar/ui/Sidebar/storybook/AboutUsIcon";
 import cls from "./Sidebar.module.scss";
 
 interface SidebarProps {
   className?: string;
 }
 
-const MainIcon = MainPageIcon as unknown as React.FC<React.SVGProps<SVGSVGElement>>;
-const AboutIcon = AboutPageIcon as unknown as React.FC<React.SVGProps<SVGSVGElement>>;
+// const MainIcon = MainPageIcon as unknown as React.FC<React.SVGProps<SVGSVGElement>>; - для prod
+// const AboutIcon = AboutPageIcon as unknown as React.FC<React.SVGProps<SVGSVGElement>>; - для prod
+
+// storybook тказывается работать с svg, поэтому для тестов вместо svg использую компоненты (для prod расскоментируй комметарии выше и ниже)
 
 export function Sidebar({ className }: SidebarProps) {
     const [collapsed, setCollapsed] = useState(false);
@@ -49,19 +53,19 @@ export function Sidebar({ className }: SidebarProps) {
                         to={RoutePath.main}
                         className={cls.item}
                     >
-                        <MainIcon className={cls.icon} />
+                        <MainPageIcon className={cls.icon} />
+                        {/* {<MainIcon className={cls.icon}/>} - для prod */}
                         <span className={cls.link}>
-                            {" "}
                             {t("Главная")}
                         </span>
-
                     </AppLink>
                 </div>
 
                 <div>
 
                     <AppLink theme={AppLinkTheme.SECONDARY} to={RoutePath.about} className={cls.item}>
-                        <AboutIcon className={cls.icon} />
+                        <AboutUsIcon className={cls.icon} />
+                        {/* <AboutIcon className={cls.icon} /> - для prod */}
                         <span className={cls.link}>
                             {t("О сайте")}
                         </span>

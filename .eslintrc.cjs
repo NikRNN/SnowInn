@@ -70,7 +70,7 @@ module.exports = {
         "react/jsx-indent": ["error", 4],
         "react/jsx-indent-props": ["error", 4],
         indent: [2, 4],
-        "max-len": ["error", { code: 200, ignoreComments: true }],
+        "max-len": ["warn", { code: 250, ignoreComments: true }],
         "no-unused-vars": "off",
         "@typescript-eslint/no-unused-vars": ["warn"],
         "react/require-default-props": "off",

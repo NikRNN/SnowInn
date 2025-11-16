@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator.js";
-import { Theme } from "app/providers/ThemeProvider/index.js";
-import { Sidebar } from "./Sidebar.js";
+import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
+import { Theme } from "app/providers/ThemeProvider/index";
+import { Sidebar } from "./Sidebar";
 
 // перед тестированием добавь initialTheme в ThemeProvider!!!
 
@@ -24,10 +24,11 @@ type Story = StoryObj<typeof meta>;
 
 export const Light: Story = {
     args: {},
-    decorators: [ThemeDecorator(Theme.DARK)],
+    decorators: [ThemeDecorator(Theme.LIGHT)],
 
 };
 
 export const Dark: Story = {
     args: {},
+    decorators: [ThemeDecorator(Theme.DARK)],
 };
