@@ -31,12 +31,13 @@ jobs:
           run: npm run lint:scss
         - name: unit testing
           if: always()
-          run: npm run test-unit
+          run: npm run test:unit
         - name: screenshot testing chromatic
           if: always()
           uses: chromaui/action@v1
           with:
            projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+           buildScriptName: 'build:storybook'
         
 
  
