@@ -1,5 +1,5 @@
 import "@testing-library/jest-dom";
-import { StateSchema } from "app/providers/ReduxProvider/index.js";
+import { StateSchema } from "app/providers/StoreProvider/index.js";
 import type { DeepPartial } from "app/types/global.js";
 import { getCounter } from "./getCounter.js";
 

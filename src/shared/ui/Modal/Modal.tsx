@@ -11,22 +11,28 @@ interface ModalProps {
   children?: ReactNode;
   isOpen?: boolean;
   onClose?: ()=>void;
-
+  lazy?: boolean;
 }
 
 export function Modal({
-    className, children, isOpen, onClose,
+    className, children, isOpen, onClose, lazy,
 }: ModalProps) {
     const [isClose, setIsClose] = useState(false);
+    const [isMounted, setIsMounted] = useState(false);
     const timeRef = useRef<NodeJS.Timeout>(undefined);
-    const { theme } = UseTheme();
+    // const { theme } = UseTheme();
 
     const mods: Record<string, boolean | undefined> = {
         [cls.opened]: isOpen,
         [cls.isClosing]: isClose,
-        [cls[theme]]: true,
 
     };
+
+    useEffect(() => {
+        if (isOpen) {
+            setIsMounted(true);
+        }
+    }, [isOpen]);
 
     const closeHandler = useCallback(() => {
         if (onClose) {
@@ -56,6 +62,10 @@ export function Modal({
         };
     }, [isOpen, onKeyDown]);
 
+    if (lazy && !isMounted) {
+        return null;
+    }
+
     return (
         <Portal>
             <div className={classNames(cls.Modal, [className], mods)}>
@@ -63,7 +73,6 @@ export function Modal({
                     <div className={cls.content} onClick={onContentClick}>
                         {children}
                     </div>
-
                 </div>
             </div>
         </Portal>

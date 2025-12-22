@@ -7,10 +7,10 @@ import { Sidebar } from "widgets/Sidebar/index.js";
 
 /* eslint-disable i18next/no-literal-string */
 function App() {
-    const { theme } = UseTheme();
+    const { theme } = UseTheme(); // раньше использовал, чтобы вешать глобальные стили; потом в useTheme вешаю их на body сразу
 
     return (
-        <div className={classNames("app", [theme])}>
+        <div className={classNames("app", [])}>
             <Suspense fallback="">
                 <Navbar />
 

@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import { DeepPartial } from "app/types/global.js";
-import type { StateSchema } from "app/providers/ReduxProvider/index.js";
+import type { StateSchema } from "app/providers/StoreProvider/index.js";
 import { getCounterValue } from "./getCounterValue.js";
 
 describe("getCounterValue.test", () => {
