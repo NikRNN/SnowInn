@@ -1,8 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
-
 import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator.js";
 import { Theme } from "app/providers/ThemeProvider/index.js";
-import { ReduxDecorator } from "shared/config/storybook/ReduxDecorator/ReduxDecorator";
+import { StoreDecoratorWithoutState } from "shared/config/storybook/StoreDecorator/StoreDecorator.js";
 import MainPage from "./MainPage.js";
 
 const meta = {
@@ -24,11 +23,11 @@ type Story = StoryObj<typeof meta>;
 
 export const Light: Story = {
     args: { },
-    decorators: [ReduxDecorator],
+    decorators: [StoreDecoratorWithoutState],
 
 };
 
 export const Dark: Story = {
     args: { },
-    decorators: [ThemeDecorator(Theme.DARK), ReduxDecorator],
+    decorators: [ThemeDecorator(Theme.DARK), StoreDecoratorWithoutState],
 };

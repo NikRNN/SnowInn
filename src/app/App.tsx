@@ -1,13 +1,18 @@
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import { UseTheme } from "app/providers/ThemeProvider/index.js";
 import { classNames } from "shared/lib/classNames/classNames.js";
 import { AppRouter } from "app/providers/router/index.js";
 import { Navbar } from "widgets/NavBar/index.js";
 import { Sidebar } from "widgets/Sidebar/index.js";
+import { userActions } from "entities/User";
+import { UseAppDispatch } from "./providers/StoreProvider/lib/UseAppDispatch";
 
 /* eslint-disable i18next/no-literal-string */
 function App() {
     const { theme } = UseTheme(); // раньше использовал, чтобы вешать глобальные стили; потом в useTheme вешаю их на body сразу
+    const dispatch = UseAppDispatch();
+
+    useEffect(() => { dispatch(userActions.initAuthData()); }, [dispatch]);
 
     return (
         <div className={classNames("app", [])}>

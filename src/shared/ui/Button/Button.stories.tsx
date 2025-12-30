@@ -113,3 +113,13 @@ export const SizeXL: Story = {
         size: SizeButton.XL,
     },
 };
+
+export const Disabled: Story = {
+    args: {
+        children: ">",
+        theme: ButtonTheme.BACKGROUND,
+        square: true,
+        size: SizeButton.XL,
+        disabled: true,
+    },
+};

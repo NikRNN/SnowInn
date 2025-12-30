@@ -1,4 +1,5 @@
 import type { Preview } from "@storybook/react";
+import { StoreDecoratorWithoutState } from "shared/config/storybook/StoreDecorator/StoreDecorator";
 import { StyleDecorator } from "../../src/shared/config/storybook/StyleDecorator/StyleDecorator";
 import { ThemeDecorator } from "../../src/shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { Theme } from "../../src/app/providers/ThemeProvider/index";
@@ -38,7 +39,7 @@ const preview: Preview = {
             test: "todo",
         },
     },
-    decorators: [StyleDecorator, ThemeDecorator(Theme.LIGHT), RouterDecorator],
+    decorators: [StyleDecorator, ThemeDecorator(Theme.LIGHT), RouterDecorator, StoreDecoratorWithoutState],
 };
 
 export default preview;

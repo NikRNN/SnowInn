@@ -1,3 +1,4 @@
+import "shared/config/i18n/i18nForTest.js";
 import { screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { componentRender } from "shared/lib/tests/componentRender/componentRender.js";

@@ -41,15 +41,6 @@ const config: StorybookConfig = {
                     widgets: path.resolve(__dirname, "../../src/widgets"),
                 },
             },
-            // css: {
-            //     postcss: null,
-            //     preprocessorOptions: {
-            //         scss: {
-            //         // для импорта scss
-            //             additionalData: " @use \"../../src/app/styles/index.scss\" ",
-            //         },
-            //     },
-            // },
             optimizeDeps: {
                 include: ["storybook-dark-mode"],
             },
