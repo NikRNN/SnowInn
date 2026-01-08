@@ -1,15 +1,24 @@
 import { configureStore, ReducersMapObject } from "@reduxjs/toolkit";
 import { userReducer } from "entities/User";
-import { LoginReducer } from "features/AuthByUsername/index.js";
 import { CounterReducer } from "entities/Counter/index.js";
 import { StateSchema } from "./StateSchema.js";
+import { createReducerManager } from "./ReducerManager.js";
 
 export function createReduxStore(initialState?: StateSchema) {
     const rootReducers: ReducersMapObject<StateSchema> = {
-        user: userReducer, loginForm: LoginReducer, counter: CounterReducer,
+        user: userReducer, counter: CounterReducer,
     };
 
-    return configureStore<StateSchema>({ reducer: rootReducers, preloadedState: initialState });
+    const reducerManager = createReducerManager(rootReducers);
+
+    const store = configureStore<StateSchema>({ reducer: reducerManager.reduce, preloadedState: initialState });
+
+    // eslint-disable-next-line
+    // @ts-ignore 
+    // eslint-disable-next-line
+    store.reducerManager = reducerManager; //внутри стора создал свое поле, в котором лежит взыов createReducerManager
+
+    return store;
 }
 
 export type AppDispatch = ReturnType<typeof createReduxStore>["dispatch"];

@@ -1,10 +1,11 @@
 // тут внутри лежит логин форм, наружу отдаю только логин модал
 
 import { classNames } from "shared/lib/classNames/classNames.js";
-import { useTranslation } from "react-i18next";
 import { Modal } from "shared/ui/Modal/Modal";
-import { LoginForm } from "../LoginForm/LoginForm";
+import { Suspense } from "react";
+import { Loader } from "shared/ui/Loader/Loader";
 import cls from "./LoginModal.module.scss";
+import { LoginFormAsync } from "../LoginForm/LoginForm.async";
 
 interface LoginModalProps {
   className?: string;
@@ -13,9 +14,11 @@ interface LoginModalProps {
 }
 
 export function LoginModal({ className, isOpen, onClose }: LoginModalProps) {
-    const { t } = useTranslation();
-
     return (
-        <Modal lazy isOpen={isOpen} onClose={onClose} className={classNames(cls.LoginModal, [className])}><LoginForm /></Modal>
+        <Modal lazy isOpen={isOpen} onClose={onClose} className={classNames(cls.LoginModal, [className])}>
+            <Suspense fallback={<Loader />}>
+                <LoginFormAsync />
+            </Suspense>
+        </Modal>
     );
 }
