@@ -1,12 +1,13 @@
 import { configureStore, ReducersMapObject } from "@reduxjs/toolkit";
 import { userReducer } from "entities/User";
 import { CounterReducer } from "entities/Counter/index.js";
+import { ReducersList } from "shared/lib/component/DynamicSomethingLoader.js";
 import { StateSchema } from "./StateSchema.js";
 import { createReducerManager } from "./ReducerManager.js";
 
-export function createReduxStore(initialState?: StateSchema) {
+export function createReduxStore(initialState?: StateSchema, asyncReducers?: ReducersList) {
     const rootReducers: ReducersMapObject<StateSchema> = {
-        user: userReducer, counter: CounterReducer,
+        ...asyncReducers, user: userReducer, counter: CounterReducer,
     };
 
     const reducerManager = createReducerManager(rootReducers);

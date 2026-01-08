@@ -1,10 +1,11 @@
 import type { Decorator } from "@storybook/react";
 import { StateSchema, StoreProvider } from "app/providers/StoreProvider";
 import type { DeepPartial } from "app/types/global";
+import { ReducersList } from "shared/lib/component/DynamicSomethingLoader";
 
-export const StoreDecoratorWithState = (state: DeepPartial<StateSchema>): Decorator => function (Story) {
+export const StoreDecoratorWithState = (state: DeepPartial<StateSchema>, asyncReducers: ReducersList): Decorator => function (Story) {
     return (
-        <StoreProvider initialState={state}>
+        <StoreProvider initialState={state} asyncReducers={asyncReducers}>
             <Story />
         </StoreProvider>
     );

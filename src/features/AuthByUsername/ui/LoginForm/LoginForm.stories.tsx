@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { StoreDecoratorWithState } from "shared/config/storybook/StoreDecorator/StoreDecorator.js";
+import { LoginReducer } from "features/AuthByUsername/model/slice/loginSlice.js";
 import LoginForm from "./LoginForm.js";
 
 const meta: Meta<typeof LoginForm> = {
@@ -20,27 +21,37 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
     args: {},
-    decorators: [StoreDecoratorWithState({
-        loginForm: {
-            username: "admin", password: "123",
+    decorators: [StoreDecoratorWithState(
+        {
+            loginForm: {
+                username: "admin", password: "123", isLoading: false,
+            },
         },
-    })],
+        { loginForm: LoginReducer },
+    )],
 };
 
 export const WithError: Story = {
     args: {},
-    decorators: [StoreDecoratorWithState({
-        loginForm: {
-            username: "admin", password: "123", error: "Ошибка!!!",
+    decorators: [StoreDecoratorWithState(
+        {
+            loginForm: {
+                username: "admin", password: "123", error: "Ошибка!!!", isLoading: false,
+            },
         },
-    })],
+        { loginForm: LoginReducer },
+
+    )],
 };
 
 export const WithLoading: Story = {
     args: {},
-    decorators: [StoreDecoratorWithState({
-        loginForm: {
-            username: "admin", password: "123", isLoading: true,
+    decorators: [StoreDecoratorWithState(
+        {
+            loginForm: {
+                username: "admin", password: "123", isLoading: true,
+            },
         },
-    })],
+        { loginForm: LoginReducer },
+    )],
 };
