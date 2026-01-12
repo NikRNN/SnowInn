@@ -5,21 +5,24 @@ import { Button, ButtonTheme } from "shared/ui/Button/Button.js";
 // import LightIcon from "../../../shared/assets/icons/light-theme.svg"; - для dev и prod, ниже импорт для тестов
 import { DarkIcon } from "widgets/Sidebar/ui/Sidebar/storybook/DarkTheme.js";
 import { LightIcon } from "widgets/Sidebar/ui/Sidebar/storybook/LightTheme.js";
+import { memo } from "react";
 
 interface ThemeSwitcherProps {
   className?: string;
 }
 
-export function ThemeSwitcher({ className }: ThemeSwitcherProps) {
-    const { theme, toggleTheme } = UseTheme();
+export const ThemeSwitcher = memo(
+    ({ className }: ThemeSwitcherProps) => {
+        const { theme, toggleTheme } = UseTheme();
 
-    return (
-        <Button
-            theme={ButtonTheme.CLEAR}
-            className={classNames("", [className])}
-            onClick={toggleTheme}
-        >
-            {theme === Theme.DARK ? <DarkIcon /> : <LightIcon />}
-        </Button>
-    );
-}
+        return (
+            <Button
+                theme={ButtonTheme.CLEAR}
+                className={classNames("", [className])}
+                onClick={toggleTheme}
+            >
+                {theme === Theme.DARK ? <DarkIcon /> : <LightIcon />}
+            </Button>
+        );
+    },
+);

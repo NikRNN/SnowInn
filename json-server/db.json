@@ -9,7 +9,13 @@
   "comments": [
     { "id": "1", "body": "some comment", "postId": 1 }
   ],
-  "profile": { "name": "typicode" },
+  "profile": { "firstname": "Никита", 
+  "lastname": "Романов", 
+  "age": 33, 
+  "country": "Russia", 
+  "city": "Sarov", 
+  "username": "admin",
+  "avatar": "https://images2.novochag.ru/upload/img_cache/740/7406dbf70c4e6eb6c1ca4a7a34a14553_ce_2370x1580x0x0_cropped_1332x888.webp" },
   "users": [
     {
         "id": "1",
@@ -17,5 +23,4 @@
         "password": "123"
     }
   ]
-  
 }

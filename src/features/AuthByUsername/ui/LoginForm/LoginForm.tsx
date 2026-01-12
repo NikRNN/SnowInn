@@ -7,20 +7,21 @@ import { memo, useCallback } from "react";
 import { LoginActions, LoginReducer } from "features/AuthByUsername/model/slice/loginSlice";
 import { getLoginState } from "features/AuthByUsername/model/selectors/getLoginState/getLoginState.ts/getLoginState";
 import { loginByUsername } from "features/AuthByUsername/model/services/loginByUsername/loginByUsername";
-import { UseAppDispatch } from "app/providers/StoreProvider/lib/UseAppDispatch";
+import { UseAppDispatch } from "shared/lib/hooks/useAppDispatch";
 import { Text, TextTheme } from "shared/ui/Text/Text";
 import { DynamicSomethingLoader, ReducersList } from "shared/lib/component/DynamicSomethingLoader";
 import cls from "./LoginForm.module.scss";
 
 export interface LoginFormProps {
   className?: string;
+  onSuccess: ()=>void;
 }
 
 const initialReducers: ReducersList = {
     loginForm: LoginReducer,
 };
 
-const LoginForm = memo(({ className }: LoginFormProps) => {
+const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
     const { t } = useTranslation();
     const dispatch = UseAppDispatch(); // кастомный хук для работы с thunk
 
@@ -31,9 +32,14 @@ const LoginForm = memo(({ className }: LoginFormProps) => {
         username, password, error, isLoading,
     } = useSelector(getLoginState); // получаю состояние из стейта
 
-    const onLoginOnClick = useCallback(() => {
-        dispatch(loginByUsername({ username, password }));
-    }, [dispatch, username, password]);
+    const onLoginOnClick = useCallback(async () => {
+        const result = await dispatch(loginByUsername({ username, password }));
+        console.log(result);
+        if (result.meta.requestStatus === "fulfilled") {
+            console.log(onSuccess);
+            onSuccess();
+        }
+    }, [dispatch, username, password, onSuccess]);
 
     return (
         <DynamicSomethingLoader removeAfterUnmount reducers={initialReducers}>

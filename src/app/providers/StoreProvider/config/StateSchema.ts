@@ -4,12 +4,14 @@ import { CounterSchema } from "entities/Counter";
 import {
     EnhancedStore, ReducersMapObject, Action, Reducer,
 } from "@reduxjs/toolkit";
+import { ProfileSchema } from "entities/Profile";
 
 export interface StateSchema {
     user: UserSchema;
     counter: CounterSchema;
     // дальше пойдут асинхронные редьюсеры (поэтому и необязательные)
     loginForm?: LoginSchema;
+    profile?: ProfileSchema
 }
 
 export type StateSchemaKey = keyof StateSchema
