@@ -5,6 +5,7 @@ import { StateSchema } from "app/providers/StoreProvider";
 import { userActions } from "entities/User";
 import { TestAsyncThunk } from "shared/lib/tests/testAsyncThunk/TestAsyncThunk";
 import { loginByUsername } from "./loginByUsername";
+
 // import "@testing-library/jest-dom"; // тут не нужен, т.к. тут с DOM не работаем
 
 vi.mock("axios"); // заменил модуль axios на mock, далее все методы (get, post, put и т.д.) становятся vi.fn()
@@ -36,7 +37,7 @@ describe("loginByUsername.test", () => {
     test("error", async () => { // тут вариант классический, без TestAsyncThunk
         mockedAxios.post.mockReturnValue(Promise.resolve({ status: 403 }));
         const action = loginByUsername({ username: "123", password: "123" });
-        const result = await action(dispatch, getState, undefined);
+        const result = await action(dispatch, getState, { api: mockedAxios, navigate: vi.fn() });
         console.log(result);
         expect(mockedAxios.post).toHaveBeenCalled();
         expect(dispatch).toHaveBeenCalledTimes(2);

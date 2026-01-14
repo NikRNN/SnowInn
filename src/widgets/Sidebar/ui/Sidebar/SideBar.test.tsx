@@ -1,6 +1,7 @@
 import { screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { componentRender } from "shared/lib/tests/componentRender/componentRender.js";
+import { MemoryRouter } from "react-router-dom";
 import { Sidebar } from "./Sidebar.js";
 
 describe("SideBar", () => {
