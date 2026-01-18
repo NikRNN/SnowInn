@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
+import type { Meta, StoryObj } from "@storybook/react";
 import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator.js";
 import { Theme } from "app/providers/ThemeProvider/index.js";
 import { Navbar } from "./Navbar.js";

@@ -1,7 +1,8 @@
 import type { Decorator } from "@storybook/react";
-import { StateSchema, StoreProvider } from "app/providers/StoreProvider";
+import { StateSchema, StoreProvider, createReduxStore } from "app/providers/StoreProvider";
 import type { DeepPartial } from "app/types/global";
 import { ReducersList } from "shared/lib/component/DynamicSomethingLoader";
+import { Provider } from "react-redux";
 
 export const StoreDecoratorWithState = (state: DeepPartial<StateSchema>, asyncReducers: ReducersList): Decorator => function (Story) {
     return (
@@ -11,12 +12,28 @@ export const StoreDecoratorWithState = (state: DeepPartial<StateSchema>, asyncRe
     );
 };
 
-export const StoreDecoratorWithoutState: Decorator = function (Story) {
+// export const StoreDecoratorWithoutState: Decorator = function (Story) {
+//     return (
+
+//         <StoreProvider>
+//             <div>
+//                 <Story />
+//             </div>
+//         </StoreProvider>
+
+//     );
+// };
+
+export const StoreDecoratorWithoutState: Decorator = (Story) => {
+    const store = createReduxStore(
+        undefined,
+        undefined,
+        () => {}, // заглушка вместо navigate
+    );
+
     return (
-        <StoreProvider>
-            <div>
-                <Story />
-            </div>
-        </StoreProvider>
+        <Provider store={store}>
+            <Story />
+        </Provider>
     );
 };

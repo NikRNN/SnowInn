@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getUserAuthData, userActions } from "entities/User";
 import cls from "./Navbar.module.scss";
 
-interface NavbarProps {
+export interface NavbarProps {
   className?: string;
 }
 

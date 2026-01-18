@@ -9,7 +9,7 @@ import cls from "./Sidebar.module.scss";
 import { SideBarItemsList } from "./model/items";
 import { SidebarItem } from "../SidebarItems/SibebarItem";
 
-interface SidebarProps {
+export interface SidebarProps {
   className?: string;
 }
 

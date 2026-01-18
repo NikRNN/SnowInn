@@ -1,9 +1,11 @@
 import "app/styles/index.scss";
 import { Decorator } from "@storybook/react";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export const RouterDecorator: Decorator = (Story) => (
     <BrowserRouter>
-        <Story />
+        <Routes>
+            <Route path="/*" element={<Story />} />
+        </Routes>
     </BrowserRouter>
 );
