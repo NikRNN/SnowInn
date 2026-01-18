@@ -3,11 +3,11 @@
   "compilerOptions": {
     "outDir": "./dist",
     "target": "es5",
-    "module": "es2020",
-    "jsx": "react-jsx",
+    "module": "esnext",
+    "jsx": "react-jsx", //компилятор работает не только с ts, но и с js
     "noImplicitAny": true,
     "allowJs": true,
-    "moduleResolution": "node",
+    "moduleResolution": "node", //для абсолютного импорта
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,

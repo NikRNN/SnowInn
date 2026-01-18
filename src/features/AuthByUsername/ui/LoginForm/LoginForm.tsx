@@ -7,7 +7,7 @@ import { memo, useCallback } from "react";
 import { LoginActions, LoginReducer } from "features/AuthByUsername/model/slice/loginSlice";
 import { getLoginState } from "features/AuthByUsername/model/selectors/getLoginState/getLoginState.ts/getLoginState";
 import { loginByUsername } from "features/AuthByUsername/model/services/loginByUsername/loginByUsername";
-import { UseAppDispatch } from "shared/lib/hooks/useAppDispatch";
+import { useAppDispatch } from "shared/lib/hooks/useAppDispatch";
 import { Text, TextTheme } from "shared/ui/Text/Text";
 import { DynamicSomethingLoader, ReducersList } from "shared/lib/component/DynamicSomethingLoader";
 import cls from "./LoginForm.module.scss";
@@ -23,7 +23,7 @@ const initialReducers: ReducersList = {
 
 const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
     const { t } = useTranslation();
-    const dispatch = UseAppDispatch(); // кастомный хук для работы с thunk
+    const dispatch = useAppDispatch(); // кастомный хук для работы с thunk
 
     const onChangeLogin = useCallback((value: string) => { dispatch(LoginActions.setUsername(value)); }, [dispatch]);
     const onChangePassword = useCallback((value: string) => { dispatch(LoginActions.setPassword(value)); }, [dispatch]);
