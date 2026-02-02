@@ -26,7 +26,7 @@ describe("loginByUsername.test", () => {
         const thunk = new TestAsyncThunk(loginByUsername);
 
         const result = await thunk.callThunk({ username: "123", password: "123" });
-        console.log(result);
+
         expect(thunk.dispatch).toHaveBeenCalledWith(userActions.setAuthData({ username: "123", id: "1" }));
         expect(thunk.dispatch).toHaveBeenCalledTimes(3);
         expect(mockedAxios.post).toHaveBeenCalled();
@@ -38,7 +38,7 @@ describe("loginByUsername.test", () => {
         mockedAxios.post.mockReturnValue(Promise.resolve({ status: 403 }));
         const action = loginByUsername({ username: "123", password: "123" });
         const result = await action(dispatch, getState, { api: mockedAxios, navigate: vi.fn() });
-        console.log(result);
+
         expect(mockedAxios.post).toHaveBeenCalled();
         expect(dispatch).toHaveBeenCalledTimes(2);
         expect(result.meta.requestStatus).toBe("rejected");

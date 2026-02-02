@@ -6,7 +6,7 @@ import {
 } from "@reduxjs/toolkit";
 import { ProfileSchema } from "entities/Profile";
 import type { AxiosInstance } from "axios";
-import type { NavigateFunction } from "react-router-dom";
+import { NavigateOptions, To } from "react-router-dom";
 
 export interface StateSchema {
     user: UserSchema;
@@ -32,5 +32,5 @@ export interface ReduxStoreWithManager extends EnhancedStore<StateSchema> // enh
 
 export interface ThunkApi {
     api: AxiosInstance,
-    navigate: NavigateFunction
+    navigate?: (to: To, options?: NavigateOptions) => void
 }

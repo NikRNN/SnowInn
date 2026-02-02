@@ -49,7 +49,7 @@ export const WithLoading: Story = {
     decorators: [StoreDecoratorWithState(
         {
             loginForm: {
-                username: "admin", password: "123", isLoading: true,
+                isLoading: true,
             },
         },
         { loginForm: LoginReducer },

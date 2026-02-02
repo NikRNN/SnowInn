@@ -22,7 +22,7 @@ const initialReducers: ReducersList = {
 };
 
 const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
-    const { t } = useTranslation();
+    const { t } = useTranslation("loginForm");
     const dispatch = useAppDispatch(); // кастомный хук для работы с thunk
 
     const onChangeLogin = useCallback((value: string) => { dispatch(LoginActions.setUsername(value)); }, [dispatch]);

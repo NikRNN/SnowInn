@@ -1,4 +1,4 @@
-import path from "path";
+import * as path from "path";
 import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -15,7 +15,8 @@ export type CssConfig = {
 export type VitestConfig = {
 
         globals: boolean,
-        environment: "jsdom"
+        environment: "jsdom",
+        define?: Record<string, string>
 
 }
 

@@ -5,6 +5,7 @@ import cls from "./Button.module.scss";
 export enum ButtonTheme {
   CLEAR = "clear",
   OUTLINE = "outline",
+  OUTLINE_RED = "outline_red",
   BACKGROUND = "background",
   BACKGROUND_INVERTED = "backgroundInverted",
   CLEAR_INVERTED = "clearInverted"
@@ -28,7 +29,7 @@ export function Button(props: ButtonProps) {
     const {
         className,
         children,
-        theme,
+        theme = ButtonTheme.OUTLINE,
         square,
         size = SizeButton.M,
         disabled,
@@ -36,9 +37,9 @@ export function Button(props: ButtonProps) {
     } = props;
 
     const mods : Record <string, boolean | undefined> = {
-        [cls[theme!]]: true,
+        [cls[theme]]: true,
         [cls.square]: square,
-        [cls[size!]]: true,
+        [cls[size]]: true,
         [cls.disabled]: disabled,
 
     };

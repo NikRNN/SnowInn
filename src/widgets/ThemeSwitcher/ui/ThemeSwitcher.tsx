@@ -7,7 +7,7 @@ import { DarkIcon } from "widgets/Sidebar/ui/Sidebar/storybook/DarkTheme.js";
 import { LightIcon } from "widgets/Sidebar/ui/Sidebar/storybook/LightTheme.js";
 import { memo } from "react";
 
-interface ThemeSwitcherProps {
+export interface ThemeSwitcherProps {
   className?: string;
 }
 

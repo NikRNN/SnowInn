@@ -5,4 +5,5 @@ import { buildPaths } from "./config/build/types/config";
 export default defineConfig(({ mode }) => buildViteConfig({
     mode: mode as "development" | "production",
     paths: buildPaths,
+
 }));

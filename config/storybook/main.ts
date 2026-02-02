@@ -41,6 +41,10 @@ const config: StorybookConfig = {
                     widgets: path.resolve(__dirname, "../../src/widgets"),
                 },
             },
+            define: {
+                ...customConfig.define,
+                "import.meta.env.VITE_APP_ENV": JSON.stringify("storybook"),
+            },
             optimizeDeps: {
                 include: ["storybook-dark-mode"],
             },

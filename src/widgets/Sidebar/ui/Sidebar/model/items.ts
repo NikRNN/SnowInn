@@ -14,7 +14,8 @@ const ProfileIcon = ProfilePageIcon as unknown as React.FC<React.SVGProps<SVGSVG
 export interface ItemsPropsType {
     path: string;
     text: string;
-    Icon: React.FC<React.SVGProps<SVGSVGElement>>
+    Icon: React.FC<React.SVGProps<SVGSVGElement>>;
+    authOnly?: boolean;
 }
 
 export const SideBarItemsList : ItemsPropsType[] = [
@@ -32,5 +33,6 @@ export const SideBarItemsList : ItemsPropsType[] = [
         path: RoutePath.profile,
         Icon: ProfileIcon,
         text: "Профиль",
+        authOnly: true,
     },
 ];

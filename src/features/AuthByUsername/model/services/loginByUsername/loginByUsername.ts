@@ -24,7 +24,7 @@ export const loginByUsername = createAsyncThunk<User, LoginProps, {rejectValue: 
             localStorage.setItem(AUTH_USER_LOCALSTORAGE, JSON.stringify(response.data));// записал в localstorage данные по ключу
             thunkAPI.dispatch(userActions.setAuthData(response.data)); // после успешного логина диспатчим в стейт данные об авторизации пользователя
 
-            thunkAPI.extra.navigate("/about");
+            if (thunkAPI.extra.navigate) { thunkAPI.extra.navigate("/about"); }
 
             console.log(response.data);
             return response.data; // автоматически создает экшн с type login/loginByUsername/fulfilled и payload response.data

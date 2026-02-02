@@ -1,17 +1,13 @@
 {
-  "Ключ для перевода": "Translation key",
-  "Перевод": "Translate",
-  "Главная страница": "Main page",
   "Полный язык": "Русский",
   "Сокращенный язык": "RU",
-  "Страница не найдена": "Page not found",
   "Произошла непредвиденная ошибка": "An unexpected error occurred",
   "Обновить страницу": "Refresh page",
   "Переключить": "Toggle",
   "Главная": "Home",
-  "О сайте": "About the site",
+  "О нас": "About the app",
+  "Профиль": "Profile",
   "Войти": "Log in",
-  "Введите логин": "Enter your login",
-  "Введите пароль": "Enter your password",
+  "Выйти": "Log out",
   "Неверный логин или пароль": "Uncorrect username or password"
 }
