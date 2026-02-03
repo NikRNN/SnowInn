@@ -2,6 +2,7 @@
 @use "./themes/dark.scss";
 @use "./themes/normal.scss";
 @use "./variables/global.scss";
+@use "./themes/pink.scss";
 
 body {
     font: var(--font-m);

@@ -5,10 +5,10 @@ function MainPage() {
     const { t } = useTranslation("home");
 
     return (
-        <>
+        <div style={{ color: "black" }}>
             {t("Главная страница")}
             <BugButton />
-        </>
+        </div>
     );
 }
 
