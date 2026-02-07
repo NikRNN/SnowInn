@@ -19,6 +19,8 @@ module.exports = {
         "import",
         "i18next",
         "@typescript-eslint",
+        "jsonc",
+
     ],
     extends: [
         "airbnb",
@@ -34,7 +36,27 @@ module.exports = {
         "plugin:storybook/recommended",
         "plugin:storybook/recommended",
         "plugin:react-hooks/recommended",
+
     ],
+
+    overrides: [
+        {
+            files: ["*.json"],
+            parser: "jsonc-eslint-parser",
+            extends: ["plugin:jsonc/recommended-with-json"],
+            rules: {
+                "jsonc/quotes": ["error", "double"],
+                "jsonc/quote-props": ["error", "always"],
+                "jsonc/comma-dangle": ["error", "never"],
+            },
+        },
+        {
+            files: ["*.jsonc", "*.json5", "tsconfig*.json"],
+            parser: "jsonc-eslint-parser",
+            extends: ["plugin:jsonc/recommended-with-jsonc"],
+        },
+    ],
+
     settings: {
         react: {
             version: "detect", // автоматически определяет версию React
@@ -44,7 +66,7 @@ module.exports = {
                 alwaysTryTypes: true,
             },
             node: {
-                extensions: [".js", ".jsx", ".ts", ".tsx"],
+                extensions: [".js", ".jsx", ".ts", ".tsx", ".json"],
             },
         },
     },

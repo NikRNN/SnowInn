@@ -17,7 +17,7 @@
       "features/*": ["features/*"],
       "pages/*": ["pages/*"],
       "widgets/*": ["widgets/*"]
+    }
   },
-},
-"include": ["src", "config/storybook", "vite-env.d.ts"]
+  "include": ["src", "config/storybook", "vite-env.d.ts"]
 }

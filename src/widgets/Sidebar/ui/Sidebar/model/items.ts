@@ -2,10 +2,12 @@ import { RoutePath } from "shared/config/routeConfig/routeConfig";
 import MainPageIcon from "shared/assets/icons/main-page.svg";
 import AboutPageIcon from "shared/assets/icons/about-us.svg";
 import ProfilePageIcon from "shared/assets/icons/profile.svg";
+import ArticlePageIcon from "shared/assets/icons/article-20-20.svg";
 
 const MainIcon = MainPageIcon as unknown as React.FC<React.SVGProps<SVGSVGElement>>;
 const AboutIcon = AboutPageIcon as unknown as React.FC<React.SVGProps<SVGSVGElement>>;
 const ProfileIcon = ProfilePageIcon as unknown as React.FC<React.SVGProps<SVGSVGElement>>;
+const ArticlePage = ArticlePageIcon as unknown as React.FC<React.SVGProps<SVGSVGElement>>;
 
 // import { MainPageIcon } from "widgets/Sidebar/ui/Sidebar/storybook/MainPageIcon"; - для сторибука
 // import { AboutUsIcon } from "widgets/Sidebar/ui/Sidebar/storybook/AboutUsIcon";
@@ -35,4 +37,11 @@ export const SideBarItemsList : ItemsPropsType[] = [
         text: "Профиль",
         authOnly: true,
     },
+    {
+        path: RoutePath.articles,
+        Icon: ArticlePage,
+        text: "Статьи",
+        authOnly: true,
+    },
+
 ];

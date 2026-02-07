@@ -4,10 +4,10 @@
     "outDir": "./dist",
     "target": "es5",
     "module": "esnext",
-    "jsx": "react-jsx", //компилятор работает не только с ts, но и с js
+    "jsx": "react-jsx",
     "noImplicitAny": true,
     "allowJs": true,
-    "moduleResolution": "node", //для абсолютного импорта
+    "moduleResolution": "node",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,

@@ -1,6 +1,6 @@
 {
-    "Неверно указан возраст": "Incorrect age specified",
-    "Неверно указаны имя или фамилия пользователя": "The user's first or last name is incorrect",
-    "Данные пользователя не указаны": "User data is not specified",
-    "Ошибка сервера": "Server error"
+  "Неверно указан возраст": "Incorrect age specified",
+  "Неверно указаны имя или фамилия пользователя": "The user's first or last name is incorrect",
+  "Данные пользователя не указаны": "User data is not specified",
+  "Ошибка сервера": "Server error"
 }

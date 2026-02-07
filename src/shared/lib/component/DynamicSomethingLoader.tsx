@@ -19,6 +19,8 @@ children: ReactNode;
 removeAfterUnmount?: boolean; // на случай, если не хочу удалять редьюсер после размонтирования компонента
 }
 
+// для динамической подгрузки редьюсеров (оборачиваю какой-то компонент, в пропсы сюда передаю список редьюсеров из слайса)
+
 export const DynamicSomethingLoader: FC<DynamicSomethingLoaderProps> = (props) => {
     const {
         reducers,
@@ -33,7 +35,7 @@ export const DynamicSomethingLoader: FC<DynamicSomethingLoaderProps> = (props) =
         Object.entries(reducers).forEach(
             ([name, reducer]) => {
                 store.reducerManager.add(name as StateSchemaKey, reducer);
-                dispatch({ type: `INIT ${name} reducer` });
+                dispatch({ type: `INIT ${name} reducer` }); // для отслеживания в инструментах разработчика отправки действия
             },
         );
 
