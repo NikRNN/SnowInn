@@ -3,9 +3,10 @@
 
     // color: var(--primary-color);
     padding: 10px 15px;
-    &:hover{
+
+    &:hover {
         cursor: pointer;
-        opacity: 0.6
+        opacity: 0.6;
     }
 }
 
@@ -15,6 +16,7 @@
     border: none;
     background: none;
     outline: none;
+
     // color: var(--inverted-primary-color)
 }
 
