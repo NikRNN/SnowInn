@@ -1,0 +1,84 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input,
+button,
+textarea,
+select {
+  margin: 0;
+  font: inherit;
+}
+
+.app_dark {
+  --bg-color: #0f1b1a; /* ночь в горах */
+  --inverted-bg-color: #f3f6f5;
+  --primary-color: #4fd1b3; /* подсвеченная хвоя */
+  --secondary-color: #7dd3fc; /* ледяной голубой */
+  --inverted-primary-color: #1f6f5c;
+  --inverted-secondary-color: #4aa3df;
+}
+
+:root {
+  --bg-color: #f3f6f5; /* снежный фон */
+  --inverted-bg-color: #66b8a7; /* светлый, но не слишком бледный */
+  --primary-color: #1f6f5c; /* alpine green */
+  --secondary-color: #4aa3df; /* горный холодный синий */
+  --inverted-primary-color: #1a5f50; /* мягкий мятный */
+  --inverted-secondary-color: #cfe9f8; /* светлый ледяной */
+}
+
+:root {
+  --font-family-main: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-size-m: 16px;
+  --font-line-m: 24px;
+  --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
+  --font-size-l: 24px;
+  --font-line-l: 32px;
+  --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
+  --font-size-xl: 32px;
+  --font-line-xl: 40px;
+  --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
+  --navbar-height: 50px;
+  --sidebar-width: 280px;
+  --sidebar-width-collapsed: 80px;
+  --modal-z-index: 10;
+  --overlay-color: rgba(0 0 0 / 55%);
+  --color-red-light: rgb(242 10 10);
+  --color-red-dark: rgb(106 6 6);
+}
+
+.app_sunset {
+  --bg-color: #2b1f1a; /* тёплый горный сумрак */
+  --inverted-bg-color: #f5efe9; /* светлый снег на закате */
+  --primary-color: #e07a3f; /* тёплый оранжево-медный */
+  --secondary-color: #f2b880; /* мягкий закатный свет */
+  --inverted-primary-color: #4a2a1a;
+  --inverted-secondary-color: #8b4a2b;
+}
+
+body {
+  font: var(--font-m);
+  color: var(--primary-color);
+  min-height: 100vh;
+}
+
+.app {
+  background: var(--bg-color);
+  min-height: 100vh;
+}
+
+.content-page {
+  display: flex;
+}
+
+.page-wrapper {
+  flex-grow: 1;
+  padding: 20px 20px 20px 45px;
+  height: calc(100vh - var(--navbar-height));
+  overflow-y: auto;
+  width: 90%;
+}/*# sourceMappingURL=index.css.map */

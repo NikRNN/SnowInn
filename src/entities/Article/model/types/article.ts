@@ -1,6 +1,6 @@
 export enum ArticleBlockType {
-TEXT = "text",
-IMAGE = "image"
+TEXT = "TEXT",
+IMAGE = "IMAGE"
 }
 
 export interface ArticleBlockBase {

@@ -16,7 +16,6 @@ const articleSlice = createSlice({
     extraReducers: (builder) => {
         builder
             .addCase(fetchArticleById.pending, (state) => {
-                console.log("pend");
                 state.error = undefined;
                 state.isLoading = true;
             })

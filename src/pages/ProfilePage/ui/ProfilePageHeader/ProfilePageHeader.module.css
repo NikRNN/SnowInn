@@ -1,0 +1,16 @@
+.ProfilePageHeader {
+  display: flex;
+  margin-bottom: 20px;
+}
+.ProfilePageHeader .editBtn {
+  margin-left: auto;
+}
+.ProfilePageHeader .cancelBtn {
+  margin-left: auto;
+}
+.ProfilePageHeader .btnWrapper {
+  margin-left: auto;
+}
+.ProfilePageHeader .btnWrapper .editBtn {
+  margin-right: 10px;
+}/*# sourceMappingURL=ProfilePageHeader.module.css.map */

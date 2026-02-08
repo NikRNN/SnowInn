@@ -2,7 +2,7 @@
 @use "./themes/dark.scss";
 @use "./themes/normal.scss";
 @use "./variables/global.scss";
-@use "./themes/pink.scss";
+@use "./themes/sunset.scss";
 
 body {
     font: var(--font-m);
@@ -24,4 +24,5 @@ body {
     padding: 20px 20px 20px 45px;
     height: calc(100vh - var(--navbar-height));
     overflow-y: auto;
+    width: 90%
 }

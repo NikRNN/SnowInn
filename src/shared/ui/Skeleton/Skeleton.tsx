@@ -16,8 +16,6 @@ export function Skeleton({
         width, height, borderRadius: border,
     };
 
-    console.log(cls);
-
     return (
         <div className={classNames(cls.Skeleton, [className])} style={styles} />
     );

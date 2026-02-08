@@ -9,7 +9,7 @@ interface ArticlesDetailsPageProps {
   className?: string;
 }
 
-function ArticlesDetailsPage({ className }: ArticlesDetailsPageProps) {
+export function ArticleDetailsPage({ className }: ArticlesDetailsPageProps) {
     const { t } = useTranslation("article_details");
 
     const { id } = useParams(); // получаю id из строки запроса
@@ -27,4 +27,4 @@ function ArticlesDetailsPage({ className }: ArticlesDetailsPageProps) {
     );
 }
 
-export default memo(ArticlesDetailsPage);
+export default memo(ArticleDetailsPage);

@@ -1,0 +1,13 @@
+@charset "UTF-8";
+.eyeL,
+.eyeR {
+  transition: r 0.2s ease;
+}
+
+.darkIcon {
+  background: none;
+  cursor: pointer;
+}
+.darkIcon:hover .eyeL, .darkIcon:hover .eyeR {
+  r: 0.1; /* анимация уменьшения радиуса при hover */
+}/*# sourceMappingURL=DarkIcon.module.css.map */

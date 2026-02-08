@@ -78,7 +78,7 @@ module.exports = {
             2,
             { extensions: [".tsx", ".jsx", ".js"] },
         ],
-        "react/display-name": "warn",
+        "react/display-name": "off",
         "i18next/no-literal-string": ["error", { markupOnly: true }], // ошибка для текста без перевода
         quotes: ["error", "double"],
         "import/extensions": [
