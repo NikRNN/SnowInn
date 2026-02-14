@@ -33,7 +33,7 @@ describe("fetchProfileData.test", () => {
             },
         }));
 
-        const action = fetchProfileData();
+        const action = fetchProfileData("1");
 
         const result = await action(dispatch, getState, { api: mockedAxios, navigate: vi.fn() });
         expect(mockedAxios.get).toHaveBeenCalled(); // проверяю, что axios.get в принципе вызвался
@@ -53,7 +53,7 @@ describe("fetchProfileData.test", () => {
 
     test("error", async () => { // вариант без TestAsyncThunk
         mockedAxios.get.mockReturnValue(Promise.resolve({ status: 403 }));
-        const action = fetchProfileData();
+        const action = fetchProfileData("1");
         const result = await action(dispatch, getState, { api: mockedAxios, navigate: vi.fn() });
         expect(mockedAxios.get).toHaveBeenCalled(); // проверяю, что axios.get в принципе вызвался
         expect(dispatch).toHaveBeenCalledTimes(2); // проверяю, что dispatch вызвался два раза: pending и rejected

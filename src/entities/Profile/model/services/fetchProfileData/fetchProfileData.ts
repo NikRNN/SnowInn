@@ -2,11 +2,11 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import type { ThunkApi } from "app/providers/StoreProvider";
 import { ValidateProfileError, type Profile } from "../../types/profile";
 
-export const fetchProfileData = createAsyncThunk<Profile, void, {rejectValue: ValidateProfileError[], extra : ThunkApi}>( // типы: юзер - то, что вернется в случае успеха, логин пропс - входные данные thunk и тип ошибки
+export const fetchProfileData = createAsyncThunk<Profile, string, {rejectValue: ValidateProfileError[], extra : ThunkApi}>( // типы: юзер - то, что вернется в случае успеха, логин пропс - входные данные thunk и тип ошибки
     "profile/fetchProfileData", // первый аргумент, название thunk
-    async (_, thunkAPI) => {
+    async (profileId, thunkAPI) => {
         try {
-            const response = await thunkAPI.extra.api.get<Profile>("/profile"); // полный адрес запроса идет из $api
+            const response = await thunkAPI.extra.api.get<Profile>(`/profile/${profileId}`); // полный адрес запроса идет из $api
 
             if (!response.data) {
                 throw new Error();

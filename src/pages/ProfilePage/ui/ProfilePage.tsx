@@ -1,21 +1,22 @@
-import { classNames } from "shared/lib/classNames/classNames.js";
 import { useTranslation } from "react-i18next";
-import { DynamicSomethingLoader, ReducersList } from "shared/lib/component/DynamicSomethingLoader";
+import { useCallback, useEffect } from "react";
+import { useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
+import { classNames } from "../../../shared/lib/classNames/classNames.js";
+import { DynamicSomethingLoader, ReducersList } from "../../../shared/lib/component/DynamicSomethingLoader";
 import {
     fetchProfileData, ProfileReducer, getProfileError, getProfileForm,
     getProfileisLoading,
     ProfileActions,
     getProfileReadOnly,
     getProfileValidateError,
-} from "entities/Profile";
-import { useCallback, useEffect } from "react";
-import { useAppDispatch } from "shared/lib/hooks/useAppDispatch";
-import { ProfileCard } from "entities/User";
-import { useSelector } from "react-redux";
-import { Country } from "entities/Country/model/types/country";
-import { TextTheme, Text } from "shared/ui/Text/Text";
-import { ValidateProfileError } from "entities/Profile/model/types/profile";
-
+} from "../../../entities/Profile";
+import { useAppDispatch } from "../../../shared/lib/hooks/useAppDispatch/useAppDispatch";
+import { ProfileCard } from "../../../entities/User";
+import { Country } from "../../../entities/Country/model/types/country";
+import { TextTheme, Text } from "../../../shared/ui/Text/Text";
+import { ValidateProfileError } from "../../../entities/Profile/model/types/profile";
+import { useInitialEffect } from "../../../shared/lib/hooks/useInitialEffect/useInitialEffect";
 import { ProfilePageHeader } from "./ProfilePageHeader/ProfilePageHeader";
 
 interface ProfilePageProps {
@@ -36,16 +37,22 @@ export function ProfilePage({ className }: ProfilePageProps) {
     const validateErrors = useSelector(getProfileValidateError);
 
     const dispatch = useAppDispatch();
+    const { id } = useParams();
 
-    useEffect(() => {
-        const env = import.meta.env.VITE_APP_ENV;
-        console.log("APP ENV:", env);
-        console.log("Full env object:", import.meta.env);
-        const isStorybook = import.meta.env.STORYBOOK === "true";
-        if (!isStorybook) {
-            dispatch(fetchProfileData());
+    useInitialEffect(() => {
+        if (id) {
+            dispatch(fetchProfileData(id));
         }
-    }, [dispatch]);
+    });
+
+    // useEffect(() => {
+    //     const env = import.meta.env.VITE_APP_ENV;
+
+    //     const isStorybook = import.meta.env.STORYBOOK === "true";
+    //     if (!isStorybook) {
+
+    //     }
+    // }, [dispatch]);
 
     const onChangeFirstName = useCallback((value : string) => {
         dispatch(ProfileActions.updateProfileForm({ firstname: value }));

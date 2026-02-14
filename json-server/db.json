@@ -88,40 +88,75 @@
         {
             "id": "1",
             "text": "some comment 1",
-            "postId": 1
+            "articleId": "1",
+            "userId": "1"
         },
           {
             "id": "2",
             "text": "some comment 2",
-            "postId": 1
+            "articleId": "1",
+            "userId": "2"
         },
           {
             "id": "3",
             "text": "some comment 3",
-            "postId": 1
+            "articleId": "1",
+            "userId": "3"
         }
     ],
-    "profile": {
+    "profile": [
+        {
+        "id": "1",
         "firstname": "Никита",
         "lastname": "Романов",
         "age": 33,
-        "country": "China",
+        "country": "Russia",
         "city": "Саров",
         "username": "admin",
         "avatar": "https://images2.novochag.ru/upload/img_cache/740/7406dbf70c4e6eb6c1ca4a7a34a14553_ce_2370x1580x0x0_cropped_1332x888.webp"
-    },
+        },
+        {
+        "id": "2",
+        "firstname": "Пётр",
+        "lastname": "Иванов",
+        "age": 33,
+        "country": "Austria",
+        "city": "Vienna",
+        "username": "admin111",
+        "avatar": "https://sport-marafon.ru/upload/iblock/db3/0757-001.jpg"
+        },
+           {
+        "id": "3",
+        "firstname": "Иван",
+        "lastname": "Смирнов",
+        "age": 33,
+        "country": "Austria",
+        "city": "Vienna",
+        "username": "admin111",
+        "avatar": "https://preview2.photoxpress.ru/preview/photoxpress_ru/news_info2/3217185610.jpg"
+        }
+    ],
     "users": [
         {
             "id": "1",
             "username": "admin",
             "password": "123",
-            "role": "ADMIN"
+            "role": "ADMIN",
+            "avatar": "https://images2.novochag.ru/upload/img_cache/740/7406dbf70c4e6eb6c1ca4a7a34a14553_ce_2370x1580x0x0_cropped_1332x888.webp"
         },
         {
             "id": "2",
-            "username": "user",
+            "username": "user1",
             "password": "123",
-            "role": "USER"
+            "role": "USER",
+            "avatar": "https://sport-marafon.ru/upload/iblock/db3/0757-001.jpg"
+        },
+         {
+            "id": "3",
+            "username": "user2",
+            "password": "123",
+            "role": "USER",
+            "avatar": "https://preview2.photoxpress.ru/preview/photoxpress_ru/news_info2/3217185610.jpg"
         }
     ]
 }

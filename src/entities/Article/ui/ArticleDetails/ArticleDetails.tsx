@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { DynamicSomethingLoader, ReducersList } from "shared/lib/component/DynamicSomethingLoader";
 import { ArticleReducer } from "entities/Article/model/slice/ArticleDetailsSlice";
 import { useEffect, memo, useCallback } from "react";
-import { useAppDispatch } from "shared/lib/hooks/useAppDispatch";
+import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { useSelector } from "react-redux";
 import {
     Text, TextPosition, TextSize, TextTheme,
