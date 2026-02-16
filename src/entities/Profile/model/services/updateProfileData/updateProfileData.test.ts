@@ -28,6 +28,7 @@ describe("updateProfileData.test", () => {
                     country: Country.Austria,
                     city: "sar",
                     username: "gfgfgf",
+                    id: "1",
                 },
             },
         }));
@@ -43,11 +44,12 @@ describe("updateProfileData.test", () => {
                 country: Country.Austria,
                 city: "sar",
                 username: "gfgfgf",
+                id: "1",
             },
 
         }));
 
-        const action = updateProfileData();
+        const action = updateProfileData("1");
 
         const result = await action(dispatch, getState, { api: mockedAxios, navigate: vi.fn() });
         expect(mockedAxios.put).toHaveBeenCalled(); // проверяю, что axios.get в принципе вызвался
@@ -61,13 +63,14 @@ describe("updateProfileData.test", () => {
             country: Country.Austria,
             city: "sar",
             username: "gfgfgf",
+            id: "1",
 
         });
     });
 
     test("error", async () => { // вариант без TestAsyncThunk
         mockedAxios.put.mockReturnValue(Promise.resolve({ status: 403 }));
-        const action = updateProfileData();
+        const action = updateProfileData("1");
         const result = await action(dispatch, getState, { api: mockedAxios, navigate: vi.fn() });
         expect(mockedAxios.put).toHaveBeenCalled(); // проверяю, что axios.get в принципе вызвался
         expect(dispatch).toHaveBeenCalledTimes(2); // проверяю, что dispatch вызвался два раза: pending и rejected
@@ -90,6 +93,7 @@ describe("updateProfileData.test", () => {
                 country: Country.Austria,
                 city: "sar",
                 username: "gfgfgf",
+                id: "1",
 
             },
         }));
@@ -103,6 +107,7 @@ describe("updateProfileData.test", () => {
                     country: Country.Austria,
                     city: "sar",
                     username: "gfgfgf",
+                    id: "1",
                 },
             },
         });
@@ -118,6 +123,7 @@ describe("updateProfileData.test", () => {
             country: Country.Austria,
             city: "sar",
             username: "gfgfgf",
+            id: "1",
 
         });
     });
@@ -134,6 +140,7 @@ describe("updateProfileData.test", () => {
                     country: Country.Austria,
                     city: "sar",
                     username: "gfgfgf",
+                    id: "1",
                 },
             },
         });
@@ -158,6 +165,7 @@ describe("updateProfileData.test", () => {
                     country: Country.Austria,
                     city: "sar",
                     username: "gfgfgf",
+                    id: "1",
                 },
             },
         });

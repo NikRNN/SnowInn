@@ -1,162 +1,183 @@
 {
-    "posts": [
+  "posts": [
+    {
+      "id": "1",
+      "title": "json-server1",
+      "author": "typicode"
+    },
+    {
+      "id": "2",
+      "title": "json-server23",
+      "author": "typicode"
+    },
+    {
+      "id": "3",
+      "title": "json-server4",
+      "author": "typicode"
+    },
+    {
+      "id": "4",
+      "title": "json-server5",
+      "author": "typicode"
+    },
+    {
+      "id": "5",
+      "title": "json-server6",
+      "author": "typicode"
+    }
+  ],
+  "articles": [
+    {
+      "id": "1",
+      "title": "Сочи",
+      "subtitle": "От легендарных Олимпийских трасс до бескрайнего фрирайда — где рождается ваш горнолыжный миф.",
+      "img": "https://resize.tripster.ru/JkJnz8k5TxD9TatTNkr4lMxgC6k=/fit-in/1080x810/filters:no_upscale()/https://cdn.tripster.ru/photos/9d94324a-cd3d-4d09-87fe-9b625349e3a9.jpg",
+      "views": 90,
+      "createdAt": "04.02.2026",
+      "type": [
+        "ski",
+        "sea"
+      ],
+      "blocks": [
         {
-            "id": "1",
-            "title": "json-server1",
-            "author": "typicode"
+          "id": "1",
+          "type": "TEXT",
+          "title": "За снежной вертикалью: Сочи — новая альпийская мечта России",
+          "paragraphs": [
+            "Забудьте о стереотипах про пальмы и море. С декабря по апрель Большой Сочи — это иная вселенная, где пики Главного Кавказского хребта подпирают небо, а современные курорты предлагают один из самых масштабных и технологичных горнолыжных опытов в Восточной Европе.",
+            "Это место, где наследие Зимних Игр 2014 года ощущается в идеальной нарезке трасс и работе подъёмников, а уровень сервиса и инфраструктуры сравним с лучшими европейскими направлениями. Здесь русский размах встречает альпийские стандарты, а гостеприимство Кавказа согревает после самого активного дня на склоне."
+          ]
         },
         {
-            "id": "2",
-            "title": "json-server23",
-            "author": "typicode"
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://7d9e88a8-f178-4098-bea5-48d960920605.selcdn.net/75165295-5e1f-46b4-bd68-e7342cb6c5e5/-/format/webp/-/quality/lightest/-/stretch/off/-/resize/450x/",
+          "title": "Панорама курорта Роза Хутор с вершины"
         },
         {
-            "id": "3",
-            "title": "json-server4",
-            "author": "typicode"
+          "id": "3",
+          "type": "TEXT",
+          "title": "Три гиганта: Роза Хутор, Горки Город и Газпром",
+          "paragraphs": [
+            "Сердце горнолыжного Сочи бьется на двух крупнейших курортах, каждый из которых обладает уникальным характером.",
+            "Роза Хутор — это флагман, наследие Олимпиады. 102 километра подготовленных трасс любого уровня сложности спускаются с высоты 2320 метров."
+          ]
         },
         {
-            "id": "4",
-            "title": "json-server5",
-            "author": "typicode"
+          "id": "4",
+          "type": "IMAGE",
+          "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYWOxKQT2HQKSgWNuHlN4uOquKb1AZVAl_aA&s",
+          "title": "Горки Город"
         },
         {
-            "id": "5",
-            "title": "json-server6",
-            "author": "typicode"
+          "id": "5",
+          "type": "TEXT",
+          "code": "Еще одна сокровищница Сочи - горнолыжный курорт Газпром",
+          "paragraphs": [
+            "Газпром — это элегантный горнолыжный курорт в сердце Красной Поляны, созданный для семейного отдыха и комфортного катания.",
+            "Современные трассы общей протяженностью 25 километров, пологие склоны и развитая инфраструктура делают его идеальным местом для новичков и тех, кто ценит спокойный, размеренный отдых в горах."
+          ]
+        },
+        {
+          "id": "6",
+          "type": "IMAGE",
+          "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrD5z7OvSl24Z_TK_SY7roJ22izH7AllU9WA&s",
+          "title": "Газпром Альпика"
         }
-    ],
-    "articles": [
-        {
-            "id": "1",
-            "title": "Сочи",
-            "subtitle": "От легендарных Олимпийских трасс до бескрайнего фрирайда — где рождается ваш горнолыжный миф.",
-            "img": "https://resize.tripster.ru/JkJnz8k5TxD9TatTNkr4lMxgC6k=/fit-in/1080x810/filters:no_upscale()/https://cdn.tripster.ru/photos/9d94324a-cd3d-4d09-87fe-9b625349e3a9.jpg",
-            "views": 90,
-            "createdAt": "04.02.2026",
-            "type": ["ski", "sea"],
-            "blocks": [
-                {
-                    "id": "1",
-                    "type": "TEXT",
-                    "title": "За снежной вертикалью: Сочи — новая альпийская мечта России",
-                    "paragraphs": [
-                        "Забудьте о стереотипах про пальмы и море. С декабря по апрель Большой Сочи — это иная вселенная, где пики Главного Кавказского хребта подпирают небо, а современные курорты предлагают один из самых масштабных и технологичных горнолыжных опытов в Восточной Европе.",
-                        "Это место, где наследие Зимних Игр 2014 года ощущается в идеальной нарезке трасс и работе подъёмников, а уровень сервиса и инфраструктуры сравним с лучшими европейскими направлениями. Здесь русский размах встречает альпийские стандарты, а гостеприимство Кавказа согревает после самого активного дня на склоне."
-                    ]
-                },
-                {
-                    "id": "2",
-                    "type": "IMAGE",
-                    "src": "https://7d9e88a8-f178-4098-bea5-48d960920605.selcdn.net/75165295-5e1f-46b4-bd68-e7342cb6c5e5/-/format/webp/-/quality/lightest/-/stretch/off/-/resize/450x/",
-                    "title": "Панорама курорта Роза Хутор с вершины"
-                },
-                {
-                    "id": "3",
-                    "type": "TEXT",
-                    "title": "Три гиганта: Роза Хутор, Горки Город и Газпром",
-                    "paragraphs": [
-                        "Сердце горнолыжного Сочи бьется на двух крупнейших курортах, каждый из которых обладает уникальным характером.",
-                        "Роза Хутор — это флагман, наследие Олимпиады. 102 километра подготовленных трасс любого уровня сложности спускаются с высоты 2320 метров."
-                    ]
-                },
-                {
-                    "id": "4",
-                    "type": "IMAGE",
-                    "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYWOxKQT2HQKSgWNuHlN4uOquKb1AZVAl_aA&s",
-                    "title": "Горки Город"
-                },
-                {
-                    "id": "5",
-                    "type": "TEXT",
-                    "code": "Еще одна сокровищница Сочи - горнолыжный курорт Газпром",
-                     "paragraphs": [
-                        "Газпром — это элегантный горнолыжный курорт в сердце Красной Поляны, созданный для семейного отдыха и комфортного катания.",
-    "Современные трассы общей протяженностью 25 километров, пологие склоны и развитая инфраструктура делают его идеальным местом для новичков и тех, кто ценит спокойный, размеренный отдых в горах."
-                    ]
-                },
-                  {
-                    "id": "6",
-                    "type": "IMAGE",
-                    "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrD5z7OvSl24Z_TK_SY7roJ22izH7AllU9WA&s",
-                    "title": "Газпром Альпика"
-                }
-            ]
-        }
-    ],
-    "comments": [
-        {
-            "id": "1",
-            "text": "some comment 1",
-            "articleId": "1",
-            "userId": "1"
-        },
-          {
-            "id": "2",
-            "text": "some comment 2",
-            "articleId": "1",
-            "userId": "2"
-        },
-          {
-            "id": "3",
-            "text": "some comment 3",
-            "articleId": "1",
-            "userId": "3"
-        }
-    ],
-    "profile": [
-        {
-        "id": "1",
-        "firstname": "Никита",
-        "lastname": "Романов",
-        "age": 33,
-        "country": "Russia",
-        "city": "Саров",
-        "username": "admin",
-        "avatar": "https://images2.novochag.ru/upload/img_cache/740/7406dbf70c4e6eb6c1ca4a7a34a14553_ce_2370x1580x0x0_cropped_1332x888.webp"
-        },
-        {
-        "id": "2",
-        "firstname": "Пётр",
-        "lastname": "Иванов",
-        "age": 33,
-        "country": "Austria",
-        "city": "Vienna",
-        "username": "admin111",
-        "avatar": "https://sport-marafon.ru/upload/iblock/db3/0757-001.jpg"
-        },
-           {
-        "id": "3",
-        "firstname": "Иван",
-        "lastname": "Смирнов",
-        "age": 33,
-        "country": "Austria",
-        "city": "Vienna",
-        "username": "admin111",
-        "avatar": "https://preview2.photoxpress.ru/preview/photoxpress_ru/news_info2/3217185610.jpg"
-        }
-    ],
-    "users": [
-        {
-            "id": "1",
-            "username": "admin",
-            "password": "123",
-            "role": "ADMIN",
-            "avatar": "https://images2.novochag.ru/upload/img_cache/740/7406dbf70c4e6eb6c1ca4a7a34a14553_ce_2370x1580x0x0_cropped_1332x888.webp"
-        },
-        {
-            "id": "2",
-            "username": "user1",
-            "password": "123",
-            "role": "USER",
-            "avatar": "https://sport-marafon.ru/upload/iblock/db3/0757-001.jpg"
-        },
-         {
-            "id": "3",
-            "username": "user2",
-            "password": "123",
-            "role": "USER",
-            "avatar": "https://preview2.photoxpress.ru/preview/photoxpress_ru/news_info2/3217185610.jpg"
-        }
-    ]
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "some comment 1",
+      "articleId": "1",
+      "userId": "1"
+    },
+    {
+      "id": "2",
+      "text": "some comment 2",
+      "articleId": "1",
+      "userId": "2"
+    },
+    {
+      "id": "3",
+      "text": "some comment 3",
+      "articleId": "1",
+      "userId": "3"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "vfdbdfsbvdf",
+      "id": "QmXkcBR"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "12345",
+      "id": "_WFfJeD"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "привет",
+      "id": "cXoHSnQ"
+    }
+  ],
+  "profile": [
+    {
+      "id": "1",
+      "firstname": "Никита",
+      "lastname": "Романов",
+      "age": 33,
+      "country": "Russia",
+      "city": "Саров",
+      "username": "admin",
+      "avatar": "https://images2.novochag.ru/upload/img_cache/740/7406dbf70c4e6eb6c1ca4a7a34a14553_ce_2370x1580x0x0_cropped_1332x888.webp"
+    },
+    {
+      "id": "2",
+      "firstname": "Пётр",
+      "lastname": "Иванов",
+      "age": 33,
+      "country": "Austria",
+      "city": "Vienna",
+      "username": "admin111",
+      "avatar": "https://sport-marafon.ru/upload/iblock/db3/0757-001.jpg"
+    },
+    {
+      "id": "3",
+      "firstname": "Иван",
+      "lastname": "Смирнов",
+      "age": 33,
+      "country": "Austria",
+      "city": "Vienna",
+      "username": "admin111",
+      "avatar": "https://preview2.photoxpress.ru/preview/photoxpress_ru/news_info2/3217185610.jpg"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "123",
+      "role": "ADMIN",
+      "avatar": "https://images2.novochag.ru/upload/img_cache/740/7406dbf70c4e6eb6c1ca4a7a34a14553_ce_2370x1580x0x0_cropped_1332x888.webp"
+    },
+    {
+      "id": "2",
+      "username": "user1",
+      "password": "123",
+      "role": "USER",
+      "avatar": "https://sport-marafon.ru/upload/iblock/db3/0757-001.jpg"
+    },
+    {
+      "id": "3",
+      "username": "user2",
+      "password": "123",
+      "role": "USER",
+      "avatar": "https://preview2.photoxpress.ru/preview/photoxpress_ru/news_info2/3217185610.jpg"
+    }
+  ]
 }
