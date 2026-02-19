@@ -29,6 +29,7 @@
   "articles": [
     {
       "id": "1",
+      "userId": "1",
       "title": "Сочи",
       "subtitle": "От легендарных Олимпийских трасс до бескрайнего фрирайда — где рождается ваш горнолыжный миф.",
       "img": "https://resize.tripster.ru/JkJnz8k5TxD9TatTNkr4lMxgC6k=/fit-in/1080x810/filters:no_upscale()/https://cdn.tripster.ru/photos/9d94324a-cd3d-4d09-87fe-9b625349e3a9.jpg",

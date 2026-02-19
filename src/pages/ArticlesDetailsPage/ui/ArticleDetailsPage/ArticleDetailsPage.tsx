@@ -43,7 +43,9 @@ export function ArticleDetailsPage({ className }: ArticlesDetailsPageProps) {
         dispatch(addCommentForArticle(value));
     }, [dispatch]);
 
-    if (!id) {
+    const isStorybook = import.meta.env.STORYBOOK === "true";
+
+    if (!id && !isStorybook) {
         return (
             <div className={classNames(cls.ArticlesDetailsPage, [className])}>
                 {t("Статья не найдена")}
@@ -52,10 +54,9 @@ export function ArticleDetailsPage({ className }: ArticlesDetailsPageProps) {
     }
 
     return (
-
         <DynamicSomethingLoader reducers={reducers} removeAfterUnmount>
             <div className={classNames(cls.ArticlesDetailsPage, [className])}>
-                <ArticleDetails id={id} />
+                <ArticleDetails id={id!} />
                 <Text className={cls.commentsTitle} title={t("Комментарии")} />
                 <AddNewComment onSendComment={onSendComment} />
                 <CommentList
@@ -63,7 +64,6 @@ export function ArticleDetailsPage({ className }: ArticlesDetailsPageProps) {
                     comments={comments}
                 />
             </div>
-
         </DynamicSomethingLoader>
 
     );

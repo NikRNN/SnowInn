@@ -4,6 +4,7 @@ import { memo } from "react";
 import { classNames } from "shared/lib/classNames/classNames";
 import { useSelector } from "react-redux";
 import { getUserAuthData } from "entities/User";
+import { RoutePath } from "shared/config/routeConfig/routeConfig";
 import { ItemsPropsType } from "../Sidebar/model/items";
 import cls from "./SidebarItem.module.scss";
 
@@ -28,7 +29,7 @@ export const SidebarItem = memo(
         return (
             <AppLink
                 theme={AppLinkTheme.SECONDARY}
-                to={path}
+                to={isAuth?.id && item?.path === RoutePath.profile ? `${path}${isAuth.id}` : path}
                 className={classNames(cls.item, [], { [cls.collapsed]: collapsed })}
             >
 

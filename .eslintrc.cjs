@@ -110,5 +110,6 @@ module.exports = {
             peerDependencies: false,
         }],
         "no-param-reassign": "off",
+        "linebreak-style": "off",
     },
 };

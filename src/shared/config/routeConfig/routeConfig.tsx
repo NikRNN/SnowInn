@@ -3,7 +3,7 @@ import { MainPageLazy } from "pages/MainPage/index.js";
 import { AboutPageLazy } from "pages/AboutPage/index.js";
 import { ProfilePage } from "pages/ProfilePage";
 import { NotFoundPage } from "pages/NotFoundPage/index.js";
-import { ArticlePageLazy } from "pages/ArticlesPage";
+import { ArticlesPageLazy } from "pages/ArticlesPage";
 import { ArticleDetailsPageLazy } from "pages/ArticlesDetailsPage";
 
 export type AppRoutesProps = RouteProps & {
@@ -45,7 +45,7 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     },
     [AppRoutes.ARTICLES]: {
         path: RoutePath.articles,
-        element: <ArticlePageLazy />,
+        element: <ArticlesPageLazy />,
         authOnly: true,
 
     },

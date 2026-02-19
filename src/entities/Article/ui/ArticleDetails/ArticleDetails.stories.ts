@@ -27,7 +27,11 @@ const articleData : Article = {
     img: "https://resize.tripster.ru/JkJnz8k5TxD9TatTNkr4lMxgC6k=/fit-in/1080x810/filters:no_upscale()/https://cdn.tripster.ru/photos/9d94324a-cd3d-4d09-87fe-9b625349e3a9.jpg",
     views: 90,
     createdAt: "04.02.2026",
-    type: ArticleType.SEA,
+    type: [ArticleType.SEA],
+    user: {
+        id: "1",
+        username: "Никита",
+    },
     blocks: [
         {
             id: "1",

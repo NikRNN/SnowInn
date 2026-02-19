@@ -8,4 +8,5 @@ export const RouterDecorator: Decorator = (Story) => (
             <Route path="/*" element={<Story />} />
         </Routes>
     </BrowserRouter>
+
 );

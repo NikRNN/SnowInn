@@ -1,0 +1,74 @@
+.tile {
+    width: 210px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 5px 3px rgb(0 0 0 / 30%);
+    transition: 0.2s;
+    background: var(--card-bg);
+    cursor: pointer;
+
+    .imgWrapper {
+        max-width: 180px;
+        max-height: 180px;
+        position: relative;
+    }
+
+    .img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .data {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .infoWrapper {
+        display: flex;
+        align-items: center;
+        margin-top: 8px;
+    }
+
+    .types p {
+        width: 135px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-left: auto;
+    }
+
+    .views {
+        margin-left: auto;
+        margin-right: 8px;
+    }
+
+    .title {
+        margin-top: 8px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .title p {
+        width: 135px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    :hover {
+        opacity: 0.9;
+        transform: scale(1.009);
+
+        .data {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.LIST {
+    display: block // не существует
+}
