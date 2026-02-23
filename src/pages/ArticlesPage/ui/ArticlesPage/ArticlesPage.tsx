@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { memo } from "react";
 import { ArticleList } from "entities/Article/ui/ArticleList/ArticleList";
 import { Article } from "entities/Article";
-import { ArticleBlockType, ArticleType } from "entities/Article/model/types/article";
+import { ArticleBlockType, ArticleType, ArticleTypeView } from "entities/Article/model/types/article";
 import cls from "./ArticlePage.module.scss";
 
 interface ArticlePageProps {
@@ -16,7 +16,7 @@ function ArticlesPage({ className, articles }: ArticlePageProps) {
 
     const article = {
         id: "1",
-        title: "СОЧИ fvhfidhvif vhfdv hdfv hvfshvid",
+        title: "СОЧИ",
         subtitle: "От легендарных Олимпийских трасс до бескрайнего фрирайда — где рождается ваш горнолыжный миф.",
         img: "https://resize.tripster.ru/JkJnz8k5TxD9TatTNkr4lMxgC6k=/fit-in/1080x810/filters:no_upscale()/https://cdn.tripster.ru/photos/9d94324a-cd3d-4d09-87fe-9b625349e3a9.jpg",
         views: 90,
@@ -78,10 +78,12 @@ function ArticlesPage({ className, articles }: ArticlePageProps) {
 
     return (
         <div className={classNames(cls.ArticlePage, [className])}>
-            <ArticleList articles={new Array(16).fill(0).map((item, index) => ({
-                ...article,
-                id: String(index),
-            }))}
+            <ArticleList
+                view={ArticleTypeView.LIST}
+                articles={new Array(16).fill(0).map((item, index) => ({
+                    ...article,
+                    id: String(index),
+                }))}
             />
         </div>
     );

@@ -1,37 +1,37 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { StoreDecoratorWithState } from "shared/config/storybook/StoreDecorator/StoreDecorator";
-import { Article, ArticleBlockType, ArticleType } from "entities/Article/model/types/article";
-import { ArticleReducer } from "entities/Article/model/slice/ArticleDetailsSlice";
-import { ArticleDetailsPage } from "./ArticleDetailsPage";
+import {
+    ArticleTypeView, ArticleType, ArticleBlockType, Article,
+} from "entities/Article/model/types/article.js";
+import { RouterDecorator } from "shared/config/storybook/RouterDecorator/RouterDecorator.js";
+import { ArticleListItem } from "./ArticleListItem.js";
 
-const meta: Meta<typeof ArticleDetailsPage> = {
-    title: "pages/ArticleDetailsPage",
-    component: ArticleDetailsPage,
+const meta: Meta<typeof ArticleListItem> = {
+    title: "entities/Article/ArticleListItem",
+    component: ArticleListItem,
     parameters: {
         layout: "centered",
     },
     tags: ["autodocs"],
     argTypes: {
-
     },
-
-} satisfies Meta<typeof ArticleDetailsPage>;
+} satisfies Meta<typeof ArticleListItem>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const articleData : Article = {
+const article = {
     id: "1",
-    title: "Сочи",
+    title: "СОЧИ",
     subtitle: "От легендарных Олимпийских трасс до бескрайнего фрирайда — где рождается ваш горнолыжный миф.",
     img: "https://resize.tripster.ru/JkJnz8k5TxD9TatTNkr4lMxgC6k=/fit-in/1080x810/filters:no_upscale()/https://cdn.tripster.ru/photos/9d94324a-cd3d-4d09-87fe-9b625349e3a9.jpg",
     views: 90,
     createdAt: "04.02.2026",
-    type: [ArticleType.SEA],
     user: {
         id: "1",
-        username: "Никита",
+        username: "Никита Романов",
+        avatar: "https://sport-marafon.ru/upload/iblock/db3/0757-001.jpg",
     },
+    type: [ArticleType.SEA],
     blocks: [
         {
             id: "1",
@@ -79,54 +79,39 @@ const articleData : Article = {
             title: "Газпром Альпика",
         },
     ],
+
+} as Article;
+
+export const PrimaryList: Story = {
+    args: {
+        isLoading: false,
+        article,
+        view: ArticleTypeView.LIST,
+    },
+
 };
 
-export const Primary: Story = {
-    args: { id: "1" },
-    decorators: [StoreDecoratorWithState(
-        // Начальное состояние
-        {
-            articleDetails: {
-                data: articleData,
-            },
-        },
-        // Редьюсеры
-        {
-            articleDetails: ArticleReducer,
-        },
-    )],
+export const PrimaryTile: Story = {
+    args: {
+        isLoading: false,
+        article,
+        view: ArticleTypeView.TILE,
+    },
 };
 
-export const Loading: Story = {
-    args: {},
-    decorators: [StoreDecoratorWithState(
-        // Начальное состояние
-        {
-            articleDetails: {
+export const PrimaryListLoading: Story = {
+    args: {
+        isLoading: true,
+        article,
+        view: ArticleTypeView.LIST,
+    },
 
-                isLoading: true,
-            },
-        },
-        // Редьюсеры
-        {
-            articleDetails: ArticleReducer,
-        },
-    )],
 };
 
-export const Error: Story = {
-    args: {},
-    decorators: [StoreDecoratorWithState(
-        // Начальное состояние
-        {
-            articleDetails: {
-
-                error: "error",
-            },
-        },
-        // Редьюсеры
-        {
-            articleDetails: ArticleReducer,
-        },
-    )],
+export const PrimaryTileLoading: Story = {
+    args: {
+        isLoading: true,
+        article,
+        view: ArticleTypeView.TILE,
+    },
 };

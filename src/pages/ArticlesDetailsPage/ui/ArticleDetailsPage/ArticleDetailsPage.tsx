@@ -1,11 +1,13 @@
 import { useTranslation } from "react-i18next";
 import { memo, useCallback } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { getArticleCommentIsLoading } from "features/ArticleCommentsList/model/selectors/getArticleCommentIsLoding/getArticleCommentIsLoading.js";
 import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEffect.js";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch.js";
 import { addCommentForArticle } from "features/ArticleCommentsList/model/services/addCommentForArticle/addCommentForArticle.js";
+import { Button } from "shared/ui/Button/Button.js";
+import { RoutePath } from "shared/config/routeConfig/routeConfig.js";
 import { classNames } from "../../../../shared/lib/classNames/classNames.js";
 import { ArticleDetails } from "../../../../entities/Article";
 import { CommentList } from "../../../../entities/Comment";
@@ -39,6 +41,11 @@ export function ArticleDetailsPage({ className }: ArticlesDetailsPageProps) {
         dispatch(fetchCommentByArticleId(id));
     });
 
+    const navigate = useNavigate();
+    const onBackToArticlesList = useCallback(() => {
+        navigate(RoutePath.articles);
+    }, [navigate]);
+
     const onSendComment = useCallback((value : string) => {
         dispatch(addCommentForArticle(value));
     }, [dispatch]);
@@ -56,6 +63,7 @@ export function ArticleDetailsPage({ className }: ArticlesDetailsPageProps) {
     return (
         <DynamicSomethingLoader reducers={reducers} removeAfterUnmount>
             <div className={classNames(cls.ArticlesDetailsPage, [className])}>
+                <Button onClick={onBackToArticlesList}>{t("Назад")}</Button>
                 <ArticleDetails id={id!} />
                 <Text className={cls.commentsTitle} title={t("Комментарии")} />
                 <AddNewComment onSendComment={onSendComment} />

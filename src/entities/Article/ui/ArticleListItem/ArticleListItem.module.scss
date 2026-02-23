@@ -1,3 +1,82 @@
+.list {
+    .card {
+        margin-bottom: 30px;
+    }
+
+    .views {
+        margin-left: auto;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+    }
+
+    .username {
+        margin-left: 8px;
+    }
+
+    .usernameSkeleton {
+        margin-left: 8px;
+        margin-top: 10px;
+    }
+
+    .date {
+        margin-left: auto;
+    }
+
+    .dateSkeleton {
+        margin-left: auto;
+        margin-top: 15px;
+    }
+
+    .title {
+        margin-top: 8px;
+    }
+
+    .img {
+        width: 100%;
+        max-height: 250px;
+        object-fit: contain;
+    }
+
+    .imgSkeleton {
+        width: 100%;
+        max-height: 250px;
+        object-fit: contain;
+        margin-top: 10px;
+    }
+
+    .footer {
+        display: flex;
+        align-items: center;
+    }
+
+    .footerSkeleton {
+        display: flex;
+        align-items: center;
+        margin-top: 8px;
+    }
+
+    .textBlock {
+        max-height: 150px;
+        overflow-y: hidden;
+        position: relative;
+        mask-image:
+            linear-gradient(
+                to bottom,
+                rgb(0 0 0 / 100%) 60%,
+                rgb(0 0 0 / 70%) 75%,
+                rgb(0 0 0 / 30%) 90%,
+                rgb(0 0 0 / 0%) 100%
+            );
+    }
+
+    .btnList {
+        margin-top: 12px;
+    }
+}
+
 .tile {
     width: 210px;
     border-radius: 15px;
@@ -10,6 +89,14 @@
         max-width: 180px;
         max-height: 180px;
         position: relative;
+    }
+
+    .imgWrapperSkeleton {
+        max-width: 180px;
+        max-height: 180px;
+        position: relative;
+        display: flex;
+        justify-content: center;
     }
 
     .img {
@@ -30,6 +117,12 @@
         display: flex;
         align-items: center;
         margin-top: 8px;
+    }
+
+    .infoWrapperSkeleton {
+        display: flex;
+        align-items: center;
+        margin-top: 28px;
     }
 
     .types p {
@@ -60,15 +153,10 @@
 
     :hover {
         opacity: 0.9;
-        transform: scale(1.009);
 
-        .data {
+        .date {
             opacity: 1;
             visibility: visible;
         }
     }
-}
-
-.LIST {
-    display: block // не существует
 }
