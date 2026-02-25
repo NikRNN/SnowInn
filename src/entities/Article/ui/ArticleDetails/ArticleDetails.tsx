@@ -18,7 +18,7 @@ import { getArticleDetailsData, getArticleDetailsError, getArticleDetailsIsLoadi
 import cls from "./ArticleDetails.module.scss";
 import { fetchArticleById } from "../../model/services/fetchArticleById/fetchArticleById";
 import { ArticleImageBlockComponent } from "../ArticleImageBlockComponent/ArticleImageBlockComponent";
-import { ArticleTextBloсkComponent } from "../ArticleTextBlockComponent/ArticleTextBlokComponent";
+import { ArticleTextBloсkComponent } from "../ArticleTextBlockComponent/ArticleTextBlockComponent";
 
 const EyeIcon = EyeIconArticle as unknown as React.FC<React.SVGProps<SVGSVGElement>>;
 const CalendarIcon = CalendarIconArticle as unknown as React.FC<React.SVGProps<SVGSVGElement>>;

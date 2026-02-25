@@ -1,4 +1,4 @@
-import { Navigate, Outlet, useLocation } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { getUserAuthData } from "entities/User";
 import { RoutePath } from "shared/config/routeConfig/routeConfig";

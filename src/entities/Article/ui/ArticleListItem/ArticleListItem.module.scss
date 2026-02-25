@@ -104,7 +104,7 @@
         height: 180px;
     }
 
-    .data {
+    .date {
         position: absolute;
         right: 5px;
         top: 5px;
@@ -153,7 +153,6 @@
 
     :hover {
         opacity: 0.9;
-
         .date {
             opacity: 1;
             visibility: visible;

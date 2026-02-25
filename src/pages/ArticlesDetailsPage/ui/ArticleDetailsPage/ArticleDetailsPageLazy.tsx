@@ -8,7 +8,7 @@ export const ArticleDetailsPageLazy = lazy(
                 // @ts-expect-error
 
                 () => resolve(import("./ArticleDetailsPage")),
-                1500,
+                300,
             );
         },
     ),
