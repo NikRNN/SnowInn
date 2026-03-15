@@ -3,7 +3,6 @@ import axios from "axios";
 import { Dispatch } from "@reduxjs/toolkit";
 import { StateSchema } from "app/providers/StoreProvider";
 import { TestAsyncThunk } from "shared/lib/tests/testAsyncThunk/TestAsyncThunk";
-import { Country } from "entities/Country";
 import { fetchArticleById } from "./fetchArticleById";
 
 // import "@testing-library/jest-dom"; // тут не нужен, т.к. тут с DOM не работаем

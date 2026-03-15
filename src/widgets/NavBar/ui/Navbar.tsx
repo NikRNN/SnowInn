@@ -41,7 +41,7 @@ export const Navbar = memo(
         }
 
         return (
-            <div className={classNames(cls.navbar, [className])}>
+            <header className={classNames(cls.navbar, [className])}>
                 <Button onClick={onShowModal} theme={ButtonTheme.CLEAR_INVERTED} className={cls.links}>
                     {t("Войти")}
                 </Button>
@@ -52,7 +52,7 @@ export const Navbar = memo(
                         onClose={onCloseModal}
                     />
                 )}
-            </div>
+            </header>
         );
     },
 

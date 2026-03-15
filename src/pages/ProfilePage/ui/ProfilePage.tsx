@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { useCallback, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import { PageWrapper } from "shared/ui/PageWrapper/PageWrapper.js";
 import { classNames } from "../../../shared/lib/classNames/classNames.js";
 import { DynamicSomethingLoader, ReducersList } from "../../../shared/lib/component/DynamicSomethingLoader";
 import {
@@ -100,7 +101,7 @@ export function ProfilePage({ className }: ProfilePageProps) {
 
     return (
         <DynamicSomethingLoader reducers={reducers} removeAfterUnmount>
-            <div className={classNames("", [className])}>
+            <PageWrapper className={classNames("", [className])}>
                 {validateErrors?.length && validateErrors.map((err) => <Text theme={TextTheme.ERROR} text={translateValidateErrors[err]} key={err} />)}
                 <ProfilePageHeader />
                 <ProfileCard
@@ -116,7 +117,7 @@ export function ProfilePage({ className }: ProfilePageProps) {
                     onChangeUsername={onChangeUsername}
                     onChangeAvatar={onChangeAvatar}
                 />
-            </div>
+            </PageWrapper>
 
         </DynamicSomethingLoader>
 

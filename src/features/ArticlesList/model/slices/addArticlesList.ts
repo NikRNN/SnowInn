@@ -6,8 +6,9 @@ import {
 import { StateSchema } from "app/providers/StoreProvider";
 import { Article, ArticleTypeView } from "entities/Article";
 import { ARTICLE_VIEW_LOCALSTORAGE } from "shared/const/localstorage";
+import { ArticleBlockType } from "entities/Article/model/types/article";
 import { ArticlesListSchema } from "../types/articleListSchema";
-import { fetchArticlesList } from "../services/fetchArticlesList";
+import { fetchArticlesList } from "../services/fetchArticlesList/fetchArticlesList";
 
 const articlesAdapter = createEntityAdapter<Article>({
 
@@ -24,17 +25,24 @@ const articlesListSlice = createSlice({
     initialState: articlesAdapter.getInitialState<ArticlesListSchema>({
         ids: [],
         entities: {},
-        view: ArticleTypeView.TILE,
+        view: ArticleTypeView.LIST,
         isLoading: false,
         error: undefined,
+        page: 1,
+        hasMore: true,
     }),
     reducers: {
         setView: (state, action : PayloadAction<ArticleTypeView>) => {
             state.view = action.payload;
             localStorage.setItem(ARTICLE_VIEW_LOCALSTORAGE, action.payload);
         },
+        setPage: (state, action : PayloadAction<number>) => {
+            state.page = action.payload;
+        },
         initState: (state) => {
-            state.view = localStorage.getItem(ARTICLE_VIEW_LOCALSTORAGE) as ArticleTypeView;
+            const view = localStorage.getItem(ARTICLE_VIEW_LOCALSTORAGE) as ArticleTypeView;
+            state.view = view;
+            state.limit = view === ArticleTypeView.LIST ? 3 : 9;
         },
     },
     extraReducers: (builder) => {
@@ -46,7 +54,8 @@ const articlesListSlice = createSlice({
             .addCase(fetchArticlesList.fulfilled, (state, action : PayloadAction<Article[]>) => { // для action указан тип, который ожидаю на вход
                 state.isLoading = false;
                 state.error = undefined;
-                articlesAdapter.setAll(state, action.payload);
+                articlesAdapter.addMany(state, action.payload);
+                state.hasMore = action.payload.length > 0;
             })
             .addCase(fetchArticlesList.rejected, (state, action) => {
                 state.error = action.payload;

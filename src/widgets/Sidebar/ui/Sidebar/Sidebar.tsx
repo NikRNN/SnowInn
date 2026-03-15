@@ -22,7 +22,7 @@ export const Sidebar = memo(
         const { t } = useTranslation();
 
         return (
-            <div
+            <menu
                 data-testid="sidebar"
                 className={classNames(cls.sidebar, [className], {
                     [cls.collapsed]: collapsed,
@@ -49,7 +49,7 @@ export const Sidebar = memo(
                     <ThemeSwitcher />
                     <LangSwitcher short={collapsed} className={cls.lang} />
                 </div>
-            </div>
+            </menu>
         );
     },
 

@@ -1,8 +1,13 @@
 import { useTranslation } from "react-i18next";
+import { PageWrapper } from "shared/ui/PageWrapper/PageWrapper";
 
 function AboutPage() {
     const { t } = useTranslation("about");
-    return <>{t("О сайте")}</>;
+    return (
+        <PageWrapper>
+            {t("О сайте")}
+        </PageWrapper>
+    );
 }
 
 export default AboutPage;
