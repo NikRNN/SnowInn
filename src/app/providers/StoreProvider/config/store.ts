@@ -21,7 +21,6 @@ export function createReduxStore(initialState?: StateSchema, asyncReducers?: Red
             thunk: {
                 extraArgument: {
                     api: $api,
-                    navigate,
                 },
             },
         }),

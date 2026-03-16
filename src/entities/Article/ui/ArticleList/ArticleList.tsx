@@ -29,7 +29,8 @@ export const ArticleList = memo(({
                 .map((item, index) => (
                     <SkeletonListItem
                         className={cls.card}
-                        key={item.id}
+                        // eslint-disable-next-line
+                        key={index}
                         view={view}
                     />
                 ))}

@@ -21,10 +21,10 @@ declare module "*.svg" {
   export default ReactComponent;
 }
 
-// export type DeepPartial<T> = {
-//   [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
-// };
-
 export type DeepPartial<T> = T extends object ? {
     [P in keyof T]?: DeepPartial<T[P]>;
 } : T;
+// eslint-disable-next-line
+    // @ts-ignore 
+// eslint-disable-next-line
+type CustomOptionalRecord<K extends keyof any, T> = { [P in K]?: T; } //ts ругается на встроенный тип Record

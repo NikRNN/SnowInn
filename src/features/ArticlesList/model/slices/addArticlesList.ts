@@ -30,6 +30,7 @@ const articlesListSlice = createSlice({
         error: undefined,
         page: 1,
         hasMore: true,
+        _inited: false,
     }),
     reducers: {
         setView: (state, action : PayloadAction<ArticleTypeView>) => {
@@ -43,6 +44,8 @@ const articlesListSlice = createSlice({
             const view = localStorage.getItem(ARTICLE_VIEW_LOCALSTORAGE) as ArticleTypeView;
             state.view = view;
             state.limit = view === ArticleTypeView.LIST ? 3 : 9;
+            // eslint-disable-next-line
+            state._inited = true;
         },
     },
     extraReducers: (builder) => {

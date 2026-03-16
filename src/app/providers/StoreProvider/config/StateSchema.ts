@@ -11,6 +11,7 @@ import { ArticleDetailsSchema } from "entities/Article";
 import { ArticleDetailsCommentSchema } from "features/ArticleCommentsList";
 import { AddNewCommentSchema } from "features/AddNewComment";
 import { ArticlesListSchema } from "features/ArticlesList";
+import { CustomOptionalRecord } from "app/types/global";
 
 export interface StateSchema {
     user: UserSchema;
@@ -31,6 +32,7 @@ export interface ReducerManager {
     reduce: (state:StateSchema | undefined, action:Action) => StateSchema;
     add: (key : StateSchemaKey, reducer:Reducer) => void;
     remove: (key:StateSchemaKey) => void;
+    mountedReducers: ()=> CustomOptionalRecord<StateSchemaKey, boolean> // проверяю, монтирован ли уже редьюсер или нет; для корректной работы DynamicSomethingLoader
 }
 
 export interface ReduxStoreWithManager extends EnhancedStore<StateSchema> // enhancedstore - это стандартный тип , который возвращает стор
@@ -40,5 +42,5 @@ export interface ReduxStoreWithManager extends EnhancedStore<StateSchema> // enh
 
 export interface ThunkApi {
     api: AxiosInstance,
-    navigate?: (to: To, options?: NavigateOptions) => void
+
 }

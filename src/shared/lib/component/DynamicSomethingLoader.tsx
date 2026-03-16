@@ -32,10 +32,15 @@ export const DynamicSomethingLoader: FC<DynamicSomethingLoaderProps> = (props) =
     const dispatch = UseAppDispatch();
 
     useEffect(() => {
+        const mountedReducers = store.reducerManager.mountedReducers();
+
         Object.entries(reducers).forEach(
             ([name, reducer]) => {
-                store.reducerManager.add(name as StateSchemaKey, reducer);
-                dispatch({ type: `INIT ${name} reducer` }); // для отслеживания в инструментах разработчика отправки действия
+                const mounted = mountedReducers[name as StateSchemaKey];
+                if (!mounted) {
+                    store.reducerManager.add(name as StateSchemaKey, reducer);
+                    dispatch({ type: `INIT ${name} reducer` }); // для отслеживания в инструментах разработчика отправки действия
+                }
             },
         );
 

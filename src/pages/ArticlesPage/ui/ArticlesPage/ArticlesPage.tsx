@@ -11,10 +11,11 @@ import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEf
 import { fetchArticlesList } from "features/ArticlesList/model/services/fetchArticlesList/fetchArticlesList";
 import { useSelector } from "react-redux";
 import {
-    getArticleListError, getArticleListIsLoading, getArticleListView,
+    getArticleListError, getArticleListIsInited, getArticleListIsLoading, getArticleListView,
 } from "features/ArticlesList/model/selectors/articlesListSelector";
 import { PageWrapper } from "shared/ui/PageWrapper/PageWrapper";
 import { fetchNextArticlesPage } from "features/ArticlesList/model/services/fetchNextArticlesPage/fetchNextArticlesPage";
+import { fetchInitArticlesPage } from "features/ArticlesList/model/services/initArticlesPage/initArticlesPage";
 import cls from "./ArticlePage.module.scss";
 import { ArticleViewSelector } from "../ArticleViewSelector/ArticleViewSelector";
 
@@ -36,6 +37,7 @@ function ArticlesPage({ className, articles }: ArticlePageProps) {
     const isLoading = useSelector(getArticleListIsLoading);
     const error = useSelector(getArticleListError);
     const view = useSelector(getArticleListView);
+    const inited = useSelector(getArticleListIsInited);
 
     const onLoadNextPart = useCallback(() => {
         dispatch(fetchNextArticlesPage());
@@ -46,12 +48,11 @@ function ArticlesPage({ className, articles }: ArticlePageProps) {
     };
 
     useInitialEffect(() => {
-        dispatch(articlesListActions.initState());
-        dispatch(fetchArticlesList({ page: 1 }));
+        dispatch(fetchInitArticlesPage());
     });
 
     return (
-        <DynamicSomethingLoader reducers={reducers}>
+        <DynamicSomethingLoader reducers={reducers} removeAfterUnmount={false}>
             <PageWrapper onScrollEnd={onLoadNextPart} className={classNames(cls.ArticlePage, [className, cls[view]])}>
                 <ArticleViewSelector view={view} onToggleView={onToggleView} />
                 <ArticleList

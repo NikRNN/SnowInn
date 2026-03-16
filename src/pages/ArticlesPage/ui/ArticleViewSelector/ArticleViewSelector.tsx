@@ -36,7 +36,7 @@ export const ArticleViewSelector = memo(({ className, view, onToggleView }: Arti
         <div className={classNames(cls.ArticleViewSelector, [className])}>
             {viewTypes.map((item, index) => (
                 <Button theme={ButtonTheme.CLEAR} key={item.view} onClick={onClick(item.view)}>
-                    <IconWrapper Svg={item.icon} className={classNames("", [], { [cls.selected]: item.view === view })} />
+                    <IconWrapper key={item.view} Svg={item.icon} className={classNames("", [], { [cls.selected]: item.view === view })} />
                 </Button>
             ))}
         </div>
