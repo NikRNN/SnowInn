@@ -1,7 +1,7 @@
 import { classNames } from "shared/lib/classNames/classNames.js";
 import { useTranslation } from "react-i18next";
 import { memo } from "react";
-import { PageWrapper } from "shared/ui/PageWrapper/PageWrapper";
+import { PageWrapper } from "widgets/PageWrapper/PageWrapper";
 import cls from "./NotFoundPage.module.scss";
 
 export interface NotFoundPageProps {

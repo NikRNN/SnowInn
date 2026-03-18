@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { BugButton } from "app/providers/ErrorBoundary/index.js";
-import { PageWrapper } from "shared/ui/PageWrapper/PageWrapper";
+import { PageWrapper } from "widgets/PageWrapper/PageWrapper";
 
 function MainPage() {
     const { t } = useTranslation("home");

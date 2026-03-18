@@ -8,7 +8,7 @@ import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch.j
 import { addCommentForArticle } from "features/ArticleCommentsList/model/services/addCommentForArticle/addCommentForArticle.js";
 import { Button } from "shared/ui/Button/Button.js";
 import { RoutePath } from "shared/config/routeConfig/routeConfig.js";
-import { PageWrapper } from "shared/ui/PageWrapper/PageWrapper.js";
+import { PageWrapper } from "widgets/PageWrapper/PageWrapper.js";
 import { classNames } from "../../../../shared/lib/classNames/classNames.js";
 import { ArticleDetails } from "../../../../entities/Article";
 import { CommentList } from "../../../../entities/Comment";

@@ -10,7 +10,7 @@ export const useInfiniteScroll = ({ callback, triggerRef, wrapperRef } : useInfi
     useEffect(() => {
         let observer : IntersectionObserver | null = null;
         const wrapperElem = wrapperRef.current;
-        const triggerElem = triggerRef.current;
+        const triggerElem = triggerRef.current; // сделал замыкание, т.к. при размонтировании элемента метод unobserve выдавал ошибку (triggerRef.current был уже undefined)
         if (callback) {
             const options = {
                 root: wrapperRef.current,

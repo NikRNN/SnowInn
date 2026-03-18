@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { useCallback, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { PageWrapper } from "shared/ui/PageWrapper/PageWrapper.js";
+import { PageWrapper } from "widgets/PageWrapper/PageWrapper.js";
 import { classNames } from "../../../shared/lib/classNames/classNames.js";
 import { DynamicSomethingLoader, ReducersList } from "../../../shared/lib/component/DynamicSomethingLoader";
 import {

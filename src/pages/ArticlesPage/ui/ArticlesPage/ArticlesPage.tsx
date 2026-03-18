@@ -13,7 +13,7 @@ import { useSelector } from "react-redux";
 import {
     getArticleListError, getArticleListIsInited, getArticleListIsLoading, getArticleListView,
 } from "features/ArticlesList/model/selectors/articlesListSelector";
-import { PageWrapper } from "shared/ui/PageWrapper/PageWrapper";
+import { PageWrapper } from "widgets/PageWrapper/PageWrapper";
 import { fetchNextArticlesPage } from "features/ArticlesList/model/services/fetchNextArticlesPage/fetchNextArticlesPage";
 import { fetchInitArticlesPage } from "features/ArticlesList/model/services/initArticlesPage/initArticlesPage";
 import cls from "./ArticlePage.module.scss";
