@@ -31,7 +31,7 @@ const article = {
         username: "Никита Романов",
         avatar: "https://sport-marafon.ru/upload/iblock/db3/0757-001.jpg",
     },
-    type: [ArticleType.SEA],
+    type: [ArticleType.SKI_TRACK],
     blocks: [
         {
             id: "1",

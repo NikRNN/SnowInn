@@ -4,3 +4,4 @@ export type { ArticleDetailsSchema } from "./model/types/ArticleDetailsSchema";
 export { fetchArticleById } from "./model/services/fetchArticleById/fetchArticleById";
 
 export { ArticleTypeView } from "./model/types/article";
+export { ArticleTypeTabs } from "./ui/ArticleTypeTabs/ArticleTypeTabs";

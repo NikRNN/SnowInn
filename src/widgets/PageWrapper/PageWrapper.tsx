@@ -7,7 +7,7 @@ import {
 } from "react";
 import { useInfiniteScroll } from "shared/lib/hooks/useInfiniteScroll/useInfiniteScroll";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
-import { getScrollPosByPath, ScrollSaveActions } from "features/ScrollSave";
+import { getScrollPosByPath, scrollSaveActions } from "features/ScrollSave";
 import { useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { StateSchema } from "app/providers/StoreProvider";
@@ -29,7 +29,7 @@ export const PageWrapper = memo(({ className, children, onScrollEnd }: PageProps
     const scrollPos = useSelector((state: StateSchema) => getScrollPosByPath(state, location.pathname));
 
     const onScroll = useThrottle((event: UIEvent<HTMLDivElement>) => {
-        dispatch(ScrollSaveActions.setScrollPos({
+        dispatch(scrollSaveActions.setScrollPos({
             position: event.currentTarget.scrollTop,
             path: location.pathname,
         }));

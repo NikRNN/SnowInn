@@ -16,7 +16,8 @@ export type VitestConfig = {
 
         globals: boolean,
         environment: "jsdom",
-        define?: Record<string, string>
+        define?: Record<string, string>,
+        test?: Record<string, boolean>
 
 }
 

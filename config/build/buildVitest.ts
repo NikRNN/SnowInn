@@ -7,6 +7,9 @@ export function buildTests() : VitestConfig {
         define: {
             "import.meta.env.VITE_APP_ENV": JSON.stringify("vitest"),
         },
+        test: {
+            silent: false,
+        },
 
     });
 }

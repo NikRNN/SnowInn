@@ -1,4 +1,4 @@
-import { useRef, RefObject, useEffect } from "react";
+import { RefObject, useEffect } from "react";
 
 export interface useInfiniteScrollProps {
     callback?: ()=> void;

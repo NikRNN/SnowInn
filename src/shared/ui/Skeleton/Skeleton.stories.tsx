@@ -11,10 +11,7 @@ const meta = {
         layout: "centered",
     },
     tags: ["autodocs"],
-    argTypes: {
-
-    },
-
+    argTypes: {},
     args: { },
 } satisfies Meta<typeof Skeleton>;
 
@@ -26,14 +23,21 @@ export const Primary: Story = {
         width: "100%",
         height: "200px",
     },
-    decorators: [StyleDecorator, ThemeDecorator(Theme.DARK)],
+    decorators: [
+        (StoryWithWidth) => (
+            <div style={{ width: 300 }}>
+                <StoryWithWidth />
+            </div>
+        ),
+        StyleDecorator, ThemeDecorator(Theme.DARK),
+    ],
 };
 
 export const Circle: Story = {
     args: {
         border: "50%",
-        width: "100",
-        height: "100",
+        width: "100px",
+        height: "100px",
     },
     decorators: [StyleDecorator],
 };

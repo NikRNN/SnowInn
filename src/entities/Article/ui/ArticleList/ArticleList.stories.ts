@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { ArticleTypeView, ArticleType, ArticleBlockType } from "entities/Article/model/types/article.js";
-import { StoreDecoratorWithoutState } from "shared/config/storybook/StoreDecorator/StoreDecorator.js";
 import { ArticleList } from "./ArticleList.js";
 
 const meta: Meta<typeof ArticleList> = {
@@ -29,7 +28,7 @@ const article = {
         username: "Никита Романов",
         avatar: "https://sport-marafon.ru/upload/iblock/db3/0757-001.jpg",
     },
-    type: [ArticleType.SEA],
+    type: [ArticleType.SKI_TRACK],
     blocks: [
         {
             id: "1",

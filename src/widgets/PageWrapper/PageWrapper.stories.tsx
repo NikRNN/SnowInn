@@ -3,7 +3,7 @@ import { fn } from "@storybook/test";
 import { PageWrapper } from "./PageWrapper.js";
 
 const meta: Meta<typeof PageWrapper> = {
-    title: "shared/PageWrapper",
+    title: "widgets/PageWrapper",
     component: PageWrapper,
     parameters: {
         layout: "centered",

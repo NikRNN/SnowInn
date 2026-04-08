@@ -1,6 +1,5 @@
 import { classNames } from "shared/lib/classNames/classNames.js";
 import { useTranslation } from "react-i18next";
-import type { Mods } from "shared/lib/classNames/classNames.js";
 import { useMemo, memo, ChangeEvent } from "react";
 import cls from "./Select.module.scss";
 
@@ -25,16 +24,12 @@ export const Select = memo(({
 
     const optionsList = useMemo(() => options?.map((option) => (<option key={option.value} className={cls.option} value={option.value}>{t(option.content)}</option>)), [options, t]);
 
-    const mods : Mods = {
-
-    };
-
     const onChangeHandlerSelect = (e :ChangeEvent<HTMLSelectElement>) => {
         onChange?.(e.target.value);
     };
 
     return (
-        <div className={classNames(cls.selectWrapper, [className], mods)}>
+        <div className={classNames(cls.selectWrapper, [className])}>
             {label && (
                 <span className={cls.selectLabel}>
                     {label}

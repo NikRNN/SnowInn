@@ -34,10 +34,10 @@
       "subtitle": "От легендарных Олимпийских трасс до бескрайнего фрирайда — где рождается ваш горнолыжный миф.",
       "img": "https://resize.tripster.ru/JkJnz8k5TxD9TatTNkr4lMxgC6k=/fit-in/1080x810/filters:no_upscale()/https://cdn.tripster.ru/photos/9d94324a-cd3d-4d09-87fe-9b625349e3a9.jpg",
       "views": 90,
-      "createdAt": "04.02.2026",
+      "createdAt": "04.03.2020",
       "type": [
-        "ski",
-        "sea"
+        "фрирайд",
+        "трассовое катание"
       ],
       "blocks": [
         {
@@ -94,10 +94,10 @@
       "subtitle": "От легендарных Олимпийских трасс до бескрайнего фрирайда — где рождается ваш горнолыжный миф.",
       "img": "https://resize.tripster.ru/JkJnz8k5TxD9TatTNkr4lMxgC6k=/fit-in/1080x810/filters:no_upscale()/https://cdn.tripster.ru/photos/9d94324a-cd3d-4d09-87fe-9b625349e3a9.jpg",
       "views": 32,
-      "createdAt": "25.02.2026",
+      "createdAt": "25.02.2019",
       "type": [
-        "ski",
-        "sea"
+        "Фрирайд",
+        "Трассовое катание"
       ],
       "blocks": [
         {
@@ -154,10 +154,9 @@
       "subtitle": "От легендарных Олимпийских трасс до бескрайнего фрирайда — где рождается ваш горнолыжный миф.",
       "img": "https://resize.tripster.ru/JkJnz8k5TxD9TatTNkr4lMxgC6k=/fit-in/1080x810/filters:no_upscale()/https://cdn.tripster.ru/photos/9d94324a-cd3d-4d09-87fe-9b625349e3a9.jpg",
       "views": 67,
-      "createdAt": "14.02.2026",
+      "createdAt": "14.01.2025",
       "type": [
-        "ski",
-        "sea"
+        "Трассовое катание"
       ],
       "blocks": [
         {
@@ -210,14 +209,13 @@
     {
       "id": "4",
       "userId": "1",
-      "title": "Камчатка",
+      "title": "Архыз",
       "subtitle": "От легендарных Олимпийских трасс до бескрайнего фрирайда — где рождается ваш горнолыжный миф.",
       "img": "https://resize.tripster.ru/JkJnz8k5TxD9TatTNkr4lMxgC6k=/fit-in/1080x810/filters:no_upscale()/https://cdn.tripster.ru/photos/9d94324a-cd3d-4d09-87fe-9b625349e3a9.jpg",
-      "views": 90,
-      "createdAt": "04.02.2026",
+      "views": 65,
+      "createdAt": "09.08.2024",
       "type": [
-        "ski",
-        "sea"
+        "Трассовое катание"
       ],
       "blocks": [
         {
@@ -270,14 +268,13 @@
     {
       "id": "5",
       "userId": "2",
-      "title": "Архыз",
+      "title": "Домбай",
       "subtitle": "От легендарных Олимпийских трасс до бескрайнего фрирайда — где рождается ваш горнолыжный миф.",
       "img": "https://resize.tripster.ru/JkJnz8k5TxD9TatTNkr4lMxgC6k=/fit-in/1080x810/filters:no_upscale()/https://cdn.tripster.ru/photos/9d94324a-cd3d-4d09-87fe-9b625349e3a9.jpg",
-      "views": 45,
+      "views": 34,
       "createdAt": "04.02.2026",
       "type": [
-        "ski",
-        "sea"
+        "Трассовое катание"
       ],
       "blocks": [
         {
@@ -330,14 +327,13 @@
      {
       "id": "6",
       "userId": "2",
-      "title": "Нижний Новгород",
+      "title": "Эльбрус",
       "subtitle": "От легендарных Олимпийских трасс до бескрайнего фрирайда — где рождается ваш горнолыжный миф.",
       "img": "https://resize.tripster.ru/JkJnz8k5TxD9TatTNkr4lMxgC6k=/fit-in/1080x810/filters:no_upscale()/https://cdn.tripster.ru/photos/9d94324a-cd3d-4d09-87fe-9b625349e3a9.jpg",
       "views": 45,
-      "createdAt": "04.02.2026",
+      "createdAt": "04.03.2021",
       "type": [
-        "ski",
-        "sea"
+        "Трассовое катание", "Фрирайд"
       ],
       "blocks": [
         {
@@ -390,14 +386,13 @@
      {
       "id": "6",
       "userId": "2",
-      "title": "Гудаури",
+      "title": "Мамисон",
       "subtitle": "От легендарных Олимпийских трасс до бескрайнего фрирайда — где рождается ваш горнолыжный миф.",
       "img": "https://resize.tripster.ru/JkJnz8k5TxD9TatTNkr4lMxgC6k=/fit-in/1080x810/filters:no_upscale()/https://cdn.tripster.ru/photos/9d94324a-cd3d-4d09-87fe-9b625349e3a9.jpg",
-      "views": 45,
-      "createdAt": "04.02.2026",
+      "views": 12,
+      "createdAt": "04.10.2025",
       "type": [
-        "ski",
-        "sea"
+        "Трассовое катание"
       ],
       "blocks": [
         {
@@ -450,14 +445,13 @@
      {
       "id": "7",
       "userId": "2",
-      "title": "Мамисон",
+      "title": "Абзаково",
       "subtitle": "От легендарных Олимпийских трасс до бескрайнего фрирайда — где рождается ваш горнолыжный миф.",
       "img": "https://resize.tripster.ru/JkJnz8k5TxD9TatTNkr4lMxgC6k=/fit-in/1080x810/filters:no_upscale()/https://cdn.tripster.ru/photos/9d94324a-cd3d-4d09-87fe-9b625349e3a9.jpg",
-      "views": 45,
-      "createdAt": "04.02.2026",
+      "views": 2,
+      "createdAt": "23.01.2024",
       "type": [
-        "ski",
-        "sea"
+        "Трассовое катание"
       ],
       "blocks": [
         {
@@ -510,14 +504,13 @@
      {
       "id": "8",
       "userId": "2",
-      "title": "ПАпцапмавымамв",
+      "title": "Манжерок",
       "subtitle": "От легендарных Олимпийских трасс до бескрайнего фрирайда — где рождается ваш горнолыжный миф.",
       "img": "https://resize.tripster.ru/JkJnz8k5TxD9TatTNkr4lMxgC6k=/fit-in/1080x810/filters:no_upscale()/https://cdn.tripster.ru/photos/9d94324a-cd3d-4d09-87fe-9b625349e3a9.jpg",
-      "views": 45,
-      "createdAt": "04.02.2026",
+      "views": 65,
+      "createdAt": "04.07.2021",
       "type": [
-        "ski",
-        "sea"
+        "Трассовое катание"
       ],
       "blocks": [
         {
@@ -570,14 +563,13 @@
      {
       "id": "9",
       "userId": "2",
-      "title": "Архыз444333",
+      "title": "Большой Вудъявр",
       "subtitle": "От легендарных Олимпийских трасс до бескрайнего фрирайда — где рождается ваш горнолыжный миф.",
       "img": "https://resize.tripster.ru/JkJnz8k5TxD9TatTNkr4lMxgC6k=/fit-in/1080x810/filters:no_upscale()/https://cdn.tripster.ru/photos/9d94324a-cd3d-4d09-87fe-9b625349e3a9.jpg",
-      "views": 45,
-      "createdAt": "04.02.2026",
+      "views": 220,
+      "createdAt": "02.07.2026",
       "type": [
-        "ski",
-        "sea"
+    "Трассовое катание"
       ],
       "blocks": [
         {
@@ -630,14 +622,13 @@
      {
       "id": "10",
       "userId": "2",
-      "title": "Сочи543443",
+      "title": "Горный воздух",
       "subtitle": "От легендарных Олимпийских трасс до бескрайнего фрирайда — где рождается ваш горнолыжный миф.",
       "img": "https://resize.tripster.ru/JkJnz8k5TxD9TatTNkr4lMxgC6k=/fit-in/1080x810/filters:no_upscale()/https://cdn.tripster.ru/photos/9d94324a-cd3d-4d09-87fe-9b625349e3a9.jpg",
-      "views": 45,
-      "createdAt": "04.02.2026",
+      "views": 13,
+      "createdAt": "10.06.2025",
       "type": [
-        "ski",
-        "sea"
+        "Фрирайд"
       ],
       "blocks": [
         {
@@ -690,14 +681,13 @@
      {
       "id": "11",
       "userId": "2",
-      "title": "Шерегеш1111",
+      "title": "Валь Торанс",
       "subtitle": "От легендарных Олимпийских трасс до бескрайнего фрирайда — где рождается ваш горнолыжный миф.",
       "img": "https://resize.tripster.ru/JkJnz8k5TxD9TatTNkr4lMxgC6k=/fit-in/1080x810/filters:no_upscale()/https://cdn.tripster.ru/photos/9d94324a-cd3d-4d09-87fe-9b625349e3a9.jpg",
-      "views": 45,
-      "createdAt": "04.02.2026",
+      "views": 99,
+      "createdAt": "04.05.2023",
       "type": [
-        "ski",
-        "sea"
+        "Трассовое катание"
       ],
       "blocks": [
         {
@@ -750,14 +740,13 @@
      {
       "id": "12",
       "userId": "2",
-      "title": "Кировск5454",
+      "title": "Куршевель",
       "subtitle": "От легендарных Олимпийских трасс до бескрайнего фрирайда — где рождается ваш горнолыжный миф.",
       "img": "https://resize.tripster.ru/JkJnz8k5TxD9TatTNkr4lMxgC6k=/fit-in/1080x810/filters:no_upscale()/https://cdn.tripster.ru/photos/9d94324a-cd3d-4d09-87fe-9b625349e3a9.jpg",
-      "views": 45,
+      "views": 789,
       "createdAt": "04.02.2026",
       "type": [
-        "ski",
-        "sea"
+        "Трассовое катание"
       ],
       "blocks": [
         {
@@ -810,14 +799,13 @@
      {
       "id": "13",
       "userId": "2",
-      "title": "Архызекпкпк",
+      "title": "Церматт",
       "subtitle": "От легендарных Олимпийских трасс до бескрайнего фрирайда — где рождается ваш горнолыжный миф.",
       "img": "https://resize.tripster.ru/JkJnz8k5TxD9TatTNkr4lMxgC6k=/fit-in/1080x810/filters:no_upscale()/https://cdn.tripster.ru/photos/9d94324a-cd3d-4d09-87fe-9b625349e3a9.jpg",
-      "views": 45,
-      "createdAt": "04.02.2026",
+      "views": 24,
+      "createdAt": "08.12.2020",
       "type": [
-        "ski",
-        "sea"
+        "Трассовое катание"
       ],
       "blocks": [
         {
@@ -870,14 +858,13 @@
      {
       "id": "14",
       "userId": "2",
-      "title": "1112233",
+      "title": "Нисеко",
       "subtitle": "От легендарных Олимпийских трасс до бескрайнего фрирайда — где рождается ваш горнолыжный миф.",
       "img": "https://resize.tripster.ru/JkJnz8k5TxD9TatTNkr4lMxgC6k=/fit-in/1080x810/filters:no_upscale()/https://cdn.tripster.ru/photos/9d94324a-cd3d-4d09-87fe-9b625349e3a9.jpg",
-      "views": 45,
-      "createdAt": "04.02.2026",
+      "views": 123,
+      "createdAt": "04.06.2021",
       "type": [
-        "ski",
-        "sea"
+        "Трассовое катание", "Фрирайд"
       ],
       "blocks": [
         {
@@ -930,14 +917,13 @@
      {
       "id": "15",
       "userId": "2",
-      "title": "9999990",
+      "title": "Банско",
       "subtitle": "От легендарных Олимпийских трасс до бескрайнего фрирайда — где рождается ваш горнолыжный миф.",
       "img": "https://resize.tripster.ru/JkJnz8k5TxD9TatTNkr4lMxgC6k=/fit-in/1080x810/filters:no_upscale()/https://cdn.tripster.ru/photos/9d94324a-cd3d-4d09-87fe-9b625349e3a9.jpg",
-      "views": 45,
+      "views": 98,
       "createdAt": "04.02.2026",
       "type": [
-        "ski",
-        "sea"
+        "Трассовое катание"
       ],
       "blocks": [
         {
@@ -990,14 +976,13 @@
      {
       "id": "16",
       "userId": "2",
-      "title": "щзщзщзщз",
+      "title": "Фурано",
       "subtitle": "От легендарных Олимпийских трасс до бескрайнего фрирайда — где рождается ваш горнолыжный миф.",
       "img": "https://resize.tripster.ru/JkJnz8k5TxD9TatTNkr4lMxgC6k=/fit-in/1080x810/filters:no_upscale()/https://cdn.tripster.ru/photos/9d94324a-cd3d-4d09-87fe-9b625349e3a9.jpg",
-      "views": 45,
-      "createdAt": "04.02.2026",
+      "views": 1004,
+      "createdAt": "08.04.2024",
       "type": [
-        "ski",
-        "sea"
+        "Трассовое катание", "Фрирайд"
       ],
       "blocks": [
         {
@@ -1050,14 +1035,13 @@
      {
       "id": "17",
       "userId": "2",
-      "title": "щщщщщщщщ",
+      "title": "Русуцу",
       "subtitle": "От легендарных Олимпийских трасс до бескрайнего фрирайда — где рождается ваш горнолыжный миф.",
       "img": "https://resize.tripster.ru/JkJnz8k5TxD9TatTNkr4lMxgC6k=/fit-in/1080x810/filters:no_upscale()/https://cdn.tripster.ru/photos/9d94324a-cd3d-4d09-87fe-9b625349e3a9.jpg",
-      "views": 45,
-      "createdAt": "04.02.2026",
+      "views": 32,
+      "createdAt": "04.11.2023",
       "type": [
-        "ski",
-        "sea"
+        "Трассовое катание", "Фрирайд"
       ],
       "blocks": [
         {

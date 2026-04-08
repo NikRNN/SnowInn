@@ -25,9 +25,9 @@ export interface ArticleImageBlock extends ArticleBlockBase {
 export type ArticleBlock = ArticleImageBlock | ArticleTextBlock
 
 export enum ArticleType {
-SKI = "SKI",
-SEA = "SEA",
-MOUNTAINS = "mountains"
+SKI_TRACK = "Трассовое катание",
+FREERIDE = "Фрирайд",
+ALL = "Все статьи"
 }
 
 export interface Article {
@@ -45,4 +45,10 @@ export interface Article {
 export enum ArticleTypeView {
     LIST = "list",
     TILE = "tile"
+}
+
+export enum ArticleSortField { // поле, по которому будет идти сортировка статей
+    VIEWS = "views",
+    TITLE = "title",
+    CREATED = "createdAt"
 }

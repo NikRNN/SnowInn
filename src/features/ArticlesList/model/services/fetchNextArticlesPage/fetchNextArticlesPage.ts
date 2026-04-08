@@ -5,7 +5,7 @@ import {
     getArticleListHasMore, getArticleListPageNum, getArticleListIsLoading,
 } from "../../selectors/articlesListSelector";
 import { fetchArticlesList } from "../fetchArticlesList/fetchArticlesList";
-import { articlesListActions } from "../../slices/addArticlesList";
+import { addArticlesListActions } from "../../slices/addArticlesListSlice";
 
 export const fetchNextArticlesPage = createAsyncThunk<void, void, {rejectValue: string, extra : ThunkApi, state: StateSchema}>( // типы: массив Comment - то, что вернется в случае успеха, второе - входные данные thunk и тип ошибки
     "articlesList/fetchNextArticlesPage", // первый аргумент, название thunk
@@ -15,8 +15,8 @@ export const fetchNextArticlesPage = createAsyncThunk<void, void, {rejectValue: 
         const isLoading = getArticleListIsLoading(thunkAPI.getState());
 
         if (hasMore && !isLoading) {
-            thunkAPI.dispatch(fetchArticlesList({ page: page + 1 }));
-            thunkAPI.dispatch(articlesListActions.setPage(page + 1));
+            thunkAPI.dispatch(fetchArticlesList({}));
+            thunkAPI.dispatch(addArticlesListActions.setPage(page + 1));
         }
     },
 );

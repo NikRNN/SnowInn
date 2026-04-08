@@ -4,21 +4,25 @@ import {
     memo, HTMLAttributes,
     ReactNode,
 } from "react";
-import { Article, ArticleTypeView } from "entities/Article";
 import cls from "./Card.module.scss";
 
+export enum CardTheme {
+    NORMAL = "normal",
+    OUTLINED = "outlined"
+}
 interface CardProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;
- children?: ReactNode
+ children?: ReactNode;
+ theme?: CardTheme;
 }
 
 export const Card = memo(({
-    className, children, ...otherProps
+    className, children, theme = CardTheme.NORMAL, ...otherProps
 }: CardProps) => {
     const { t } = useTranslation();
 
     return (
-        <div className={classNames(cls.Card, [className])} {...otherProps}>
+        <div className={classNames(cls.Card, [className, cls[theme]])} {...otherProps}>
             {children}
         </div>
     );

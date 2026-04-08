@@ -55,10 +55,6 @@ export const Input = memo((props: InputProps) => {
         }
     }, [autofocus]);
 
-    const mods : Mods = {
-        [cls.readonly]: readonly,
-    };
-
     const isCaretVisible = isFocused && !readonly;
 
     return (

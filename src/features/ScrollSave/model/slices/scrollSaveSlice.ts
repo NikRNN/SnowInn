@@ -5,7 +5,7 @@ const initialState: ScrollSaveSchema = {
     scroll: {},
 };
 
-const ScrollSaveSlice = createSlice({
+const scrollSaveSlice = createSlice({
     name: "ScrollSave",
     initialState,
     reducers: {
@@ -15,5 +15,5 @@ const ScrollSaveSlice = createSlice({
     },
 });
 
-export const { actions: ScrollSaveActions } = ScrollSaveSlice; // перемеиновал экспорт
-export const { reducer: ScrollSaveReducer } = ScrollSaveSlice;
+export const { actions: scrollSaveActions } = scrollSaveSlice; // перемеиновал экспорт
+export const { reducer: scrollSaveReducer } = scrollSaveSlice;

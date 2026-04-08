@@ -72,7 +72,7 @@ describe("profileSlice.test", () => {
             isLoading: false, validateError: [ValidateProfileError.INCORRECT_FIRSTNAME_LASTNAME],
 
         };
-        expect(ProfileReducer(state as ProfileSchema, updateProfileData.pending("requestId", undefined))).toEqual({
+        expect(ProfileReducer(state as ProfileSchema, updateProfileData.pending("requestId", "1"))).toEqual({
             isLoading: true,
             validateError: undefined,
         });
@@ -90,7 +90,7 @@ describe("profileSlice.test", () => {
             country: Country.Austria,
             city: "sar",
             username: "ggg",
-        }, ""))).toEqual({
+        }, "", ""))).toEqual({
             isLoading: false,
             readonly: true,
             data: {

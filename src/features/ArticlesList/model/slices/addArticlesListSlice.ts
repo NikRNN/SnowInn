@@ -6,7 +6,8 @@ import {
 import { StateSchema } from "app/providers/StoreProvider";
 import { Article, ArticleTypeView } from "entities/Article";
 import { ARTICLE_VIEW_LOCALSTORAGE } from "shared/const/localstorage";
-import { ArticleBlockType } from "entities/Article/model/types/article";
+import { ArticleSortField, ArticleType } from "entities/Article/model/types/article";
+import { SortTypeOrder } from "shared/types";
 import { ArticlesListSchema } from "../types/articleListSchema";
 import { fetchArticlesList } from "../services/fetchArticlesList/fetchArticlesList";
 
@@ -20,7 +21,7 @@ export const getArticles = articlesAdapter.getSelectors<StateSchema>( // сел�
     (state) => state.articlesList || articlesAdapter.getInitialState(),
 );
 
-const articlesListSlice = createSlice({
+const addArticlesListSlice = createSlice({
     name: "articlesListSlice",
     initialState: articlesAdapter.getInitialState<ArticlesListSchema>({
         ids: [],
@@ -31,6 +32,10 @@ const articlesListSlice = createSlice({
         page: 1,
         hasMore: true,
         _inited: false,
+        sort: ArticleSortField.VIEWS,
+        order: "asc",
+        search: "",
+        type: ArticleType.ALL,
     }),
     reducers: {
         setView: (state, action : PayloadAction<ArticleTypeView>) => {
@@ -39,6 +44,18 @@ const articlesListSlice = createSlice({
         },
         setPage: (state, action : PayloadAction<number>) => {
             state.page = action.payload;
+        },
+        setSort: (state, action : PayloadAction<ArticleSortField>) => {
+            state.sort = action.payload;
+        },
+        setOrder: (state, action : PayloadAction<SortTypeOrder>) => {
+            state.order = action.payload;
+        },
+        setSearch: (state, action : PayloadAction<string>) => {
+            state.search = action.payload;
+        },
+        setType: (state, action: PayloadAction<ArticleType>) => {
+            state.type = action.payload;
         },
         initState: (state) => {
             const view = localStorage.getItem(ARTICLE_VIEW_LOCALSTORAGE) as ArticleTypeView;
@@ -50,15 +67,24 @@ const articlesListSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder
-            .addCase(fetchArticlesList.pending, (state) => {
+            .addCase(fetchArticlesList.pending, (state, action) => {
                 state.error = undefined;
                 state.isLoading = true;
+
+                if (action.meta.arg.replace) {
+                    articlesAdapter.removeAll(state);
+                }
             })
-            .addCase(fetchArticlesList.fulfilled, (state, action : PayloadAction<Article[]>) => { // для action указан тип, который ожидаю на вход
+            .addCase(fetchArticlesList.fulfilled, (state, action) => { // для action указан тип, который ожидаю на вход
                 state.isLoading = false;
                 state.error = undefined;
-                articlesAdapter.addMany(state, action.payload);
                 state.hasMore = action.payload.length > 0;
+
+                if (action.meta.arg.replace) { // тут отрабатывает флаг replace
+                    articlesAdapter.setAll(state, action.payload);
+                } else {
+                    articlesAdapter.addMany(state, action.payload);
+                }
             })
             .addCase(fetchArticlesList.rejected, (state, action) => {
                 state.error = action.payload;
@@ -68,5 +94,5 @@ const articlesListSlice = createSlice({
 
 });
 
-export const { reducer: articlesListReducer } = articlesListSlice;
-export const { actions: articlesListActions } = articlesListSlice;
+export const { reducer: addArticlesListReducer } = addArticlesListSlice;
+export const { actions: addArticlesListActions } = addArticlesListSlice;
