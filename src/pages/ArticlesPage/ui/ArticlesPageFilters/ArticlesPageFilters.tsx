@@ -3,17 +3,18 @@ import { useTranslation } from "react-i18next";
 import { memo, useCallback } from "react";
 import { ArticleTypeTabs, ArticleTypeView } from "entities/Article";
 import { useSelector } from "react-redux";
-import { getArticleListView } from "features/ArticlesList/model/selectors/articlesListSelector";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
-import { addArticlesListActions } from "features/ArticlesList/model/slices/addArticlesListSlice";
+import { addArticlesListActions } from "pages/ArticlesPage/model/slices/addArticlesListSlice";
 import { Card } from "shared/ui/Card/Card";
 import { Input } from "shared/ui/Input/Input";
-import { getArticlesListOrder, getArticlesListSort, getArticlesListType } from "pages/ArticlesPage/model/selectors/articlesPageSelectors";
+import {
+    getArticlesListOrder, getArticlesListSort, getArticlesListType, getArticleListView,
+} from "pages/ArticlesPage/model/selectors/articlesPageSelectors";
 import { ArticlesSortSelectors } from "entities/Article/ui/ArticlesSortSelectors/ArticlesSortSelectors";
 import { SortTypeOrder } from "shared/types";
 import { ArticleSortField, ArticleType } from "entities/Article/model/types/article";
-import { fetchArticlesList } from "features/ArticlesList/model/services/fetchArticlesList/fetchArticlesList";
 import { useDebounce } from "shared/lib/hooks/useDebounce/useDebounce";
+import { fetchArticlesList } from "../../model/services/fetchArticlesList/fetchArticlesList";
 import cls from "./ArticlesPageFilters.module.scss";
 import { ArticleViewSelector } from "../ArticleViewSelector/ArticleViewSelector";
 

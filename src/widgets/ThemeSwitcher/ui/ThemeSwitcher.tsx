@@ -1,28 +1,52 @@
 import { UseTheme, Theme } from "app/providers/ThemeProvider/index.js";
 import { classNames } from "shared/lib/classNames/classNames.js";
-import { Button, ButtonTheme } from "shared/ui/Button/Button.js";
-// import DarkIcon from "../../../shared/assets/icons/dark-theme.svg"; - для dev и prod
-// import LightIcon from "../../../shared/assets/icons/light-theme.svg"; - для dev и prod, ниже импорт для тестов
-import { DarkIcon } from "widgets/Sidebar/ui/Sidebar/storybook/DarkTheme.js";
-import { LightIcon } from "widgets/Sidebar/ui/Sidebar/storybook/LightTheme.js";
 import { memo } from "react";
+import { IconWrapper } from "shared/ui/IconWrapper/IconWrapper";
+import cls from "./ThemeSwitcher.module.scss";
+import MoonIcon from "../../../shared/assets/icons/moon-20-20.svg";
+import SunIcon from "../../../shared/assets/icons/sun-20-20.svg";
+
+const Moon = MoonIcon as unknown as React.FC<React.SVGProps<SVGSVGElement>>;
+const Sun = SunIcon as unknown as React.FC<React.SVGProps<SVGSVGElement>>;
 
 export interface ThemeSwitcherProps {
   className?: string;
+  collapsed?: boolean;
 }
 
 export const ThemeSwitcher = memo(
-    ({ className }: ThemeSwitcherProps) => {
+    ({ className, collapsed }: ThemeSwitcherProps) => {
         const { theme, toggleTheme } = UseTheme();
 
-        return (
-            <Button
-                theme={ButtonTheme.CLEAR}
-                className={classNames("", [className])}
-                onClick={toggleTheme}
+        const checkbox = (
+            <label
+                aria-label="Переключить тему"
+                htmlFor="theme-switch"
+                className={classNames(cls.themeSwitcher, [className])}
             >
-                {theme === Theme.DARK ? <DarkIcon /> : <LightIcon />}
-            </Button>
+                <input
+                    checked={theme === Theme.LIGHT}
+                    type="checkbox"
+                    id="theme-switch"
+                    onChange={toggleTheme}
+                />
+            </label>
+        );
+
+        const fullView = (
+            <div>
+                <IconWrapper className={cls.moons} Svg={Moon} />
+                {checkbox}
+                <IconWrapper className={cls.sun} Svg={Sun} />
+            </div>
+        );
+
+        const compactView = <div>{checkbox}</div>;
+
+        return (
+            <div>
+                {collapsed ? compactView : fullView}
+            </div>
         );
     },
 );

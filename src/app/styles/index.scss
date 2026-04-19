@@ -2,12 +2,14 @@
 @use "./themes/dark.scss";
 @use "./themes/normal.scss";
 @use "./variables/global.scss";
-@use "./themes/sunset.scss";
+@use "./fonts.scss";
+
 
 body {
     font: var(--font-m);
     color: var(--primary-color);
     min-height: 100vh;
+    
 }
 
 .app {
@@ -17,4 +19,28 @@ body {
 
 .content-page {
     display: flex;
+}
+
+//стилизация скролла
+
+*::-webkit-scrollbar {
+    width: 10px;           /* ширина вертикального скролла */
+    height: 8px;          /* высота горизонтального скролла */
+}
+
+/* Дорожка (трек) */
+*::-webkit-scrollbar-track {
+    background: var(--card-bg);
+    border-radius: 10px;
+}
+
+/* Ползунок (thumb) */
+*::-webkit-scrollbar-thumb {
+    background: var(--about-bg);
+    border-radius: 10px;
+}
+
+/* Ползунок при наведении */
+*::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

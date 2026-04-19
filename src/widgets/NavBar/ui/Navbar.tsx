@@ -5,6 +5,8 @@ import { useCallback, useState, memo } from "react";
 import { LoginModal } from "features/AuthByUsername";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserAuthData, userActions } from "entities/User";
+import { AppLink } from "shared/ui/AppLink/AppLink";
+import { RoutePath } from "shared/config/routeConfig/routeConfig";
 import cls from "./Navbar.module.scss";
 
 export interface NavbarProps {
@@ -33,6 +35,7 @@ export const Navbar = memo(
         if (authData) {
             return (
                 <div className={classNames(cls.navbar, [className])}>
+                    <AppLink className={cls.createBtn} to={RoutePath.article_create}>Создать статью...</AppLink>
                     <Button onClick={onLogout} theme={ButtonTheme.CLEAR_INVERTED} className={cls.links}>
                         {t("Выйти")}
                     </Button>

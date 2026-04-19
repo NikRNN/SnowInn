@@ -27,13 +27,8 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     componentDidCatch(error: Error, info:ErrorInfo) {
         console.log(
             error,
-            // Example "componentStack":
-            //   in ComponentThatThrows (created by App)
-            //   in ErrorBoundary (created by App)
-            //   in div (created by App)
-            //   in App
+
             info.componentStack,
-            // Warning: `captureOwnerStack` is not available in production.
 
         );
     }
@@ -42,7 +37,6 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
         const { hasError } = this.state;
         const { children } = this.props;
         if (hasError) {
-            // You can render any custom fallback UI
             return <Suspense fallback=""><PageError /></Suspense>;
         }
 

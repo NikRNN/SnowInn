@@ -6,6 +6,7 @@ import cls from "./Text.module.scss";
 export enum TextTheme {
     PRIMARY = "primary",
     ERROR = "error",
+    MAIN = "main",
 }
 
 export enum TextPosition {
@@ -17,7 +18,9 @@ export enum TextPosition {
 export enum TextSize {
     M = "size_m",
     L = "size_l",
-    S = "size_s"
+    S = "size_s",
+    XXL = "size_xxl",
+    XXL_SECONDARY_FONT = "size_xxl_secondary_font"
 }
 
 interface TextProps {

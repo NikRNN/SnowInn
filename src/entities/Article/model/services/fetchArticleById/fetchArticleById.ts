@@ -6,7 +6,11 @@ export const fetchArticleById = createAsyncThunk<Article, string, {rejectValue: 
     "articleDetails/fetchArticleById", // первый аргумент, название thunk
     async (articleId, thunkAPI) => {
         try {
-            const response = await thunkAPI.extra.api.get<Article>(`/articles/${articleId}`); // полный адрес запроса идет из $api, адрес смотри в базе данных
+            const response = await thunkAPI.extra.api.get<Article>(`/articles/${articleId}`, {
+                params: {
+                    expand: "user",
+                },
+            }); // полный адрес запроса идет из $api, адрес смотри в базе данных
 
             if (!response.data) {
                 throw new Error();

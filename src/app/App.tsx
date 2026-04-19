@@ -20,7 +20,6 @@ function App() {
         <div className={classNames("app", [])}>
             <Suspense fallback="">
                 <Navbar />
-
                 <div className="content-page">
                     <Sidebar />
                     {inited && <AppRouter />}

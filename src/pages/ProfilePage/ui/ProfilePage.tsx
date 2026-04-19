@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { useCallback, useEffect } from "react";
+import { useCallback } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { PageWrapper } from "widgets/PageWrapper/PageWrapper.js";
@@ -19,6 +19,7 @@ import { TextTheme, Text } from "../../../shared/ui/Text/Text";
 import { ValidateProfileError } from "../../../entities/Profile/model/types/profile";
 import { useInitialEffect } from "../../../shared/lib/hooks/useInitialEffect/useInitialEffect";
 import { ProfilePageHeader } from "./ProfilePageHeader/ProfilePageHeader";
+import cls from "./ProfilePage.module.scss";
 
 interface ProfilePageProps {
   className?: string;
@@ -101,7 +102,7 @@ export function ProfilePage({ className }: ProfilePageProps) {
 
     return (
         <DynamicSomethingLoader reducers={reducers} removeAfterUnmount>
-            <PageWrapper className={classNames("", [className])}>
+            <PageWrapper className={classNames(cls.ProfilePage, [className])}>
                 {validateErrors?.length && validateErrors.map((err) => <Text theme={TextTheme.ERROR} text={translateValidateErrors[err]} key={err} />)}
                 <ProfilePageHeader />
                 <ProfileCard

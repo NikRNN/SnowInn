@@ -7,11 +7,11 @@ import {
 import { ProfileSchema } from "entities/Profile";
 import type { AxiosInstance } from "axios";
 import { ArticleDetailsSchema } from "entities/Article";
-import { ArticleDetailsCommentSchema } from "features/ArticleCommentsList";
 import { AddNewCommentSchema } from "features/AddNewComment";
-import { ArticlesListSchema } from "features/ArticlesList";
 import { CustomOptionalRecord } from "app/types/global";
 import { ScrollSaveSchema } from "features/ScrollSave/index";
+import { ArticleDetailsPageSchema, ArticleDetailsRecommendedSchema, ArticleDetailsCommentSchema } from "pages/ArticlesDetailsPage";
+import { ArticlesListSchema } from "../../../../pages/ArticlesPage/model/types/articleListSchema";
 
 export interface StateSchema {
     user: UserSchema;
@@ -21,9 +21,11 @@ export interface StateSchema {
     loginForm?: LoginSchema;
     profile?: ProfileSchema;
     articleDetails?: ArticleDetailsSchema;
-    articleDetailsComments?: ArticleDetailsCommentSchema;
     addNewComment?: AddNewCommentSchema;
-    articlesList?: ArticlesListSchema
+    articlesList?: ArticlesListSchema;
+    // articleDetailsRecommendations?: ArticleDetailsRecommendedSchema;
+    // articleDetailsComments?: ArticleDetailsCommentSchema - заменил их на нижестоящую схему
+    articleDetailsPage?: ArticleDetailsPageSchema
 }
 
 export type StateSchemaKey = keyof StateSchema

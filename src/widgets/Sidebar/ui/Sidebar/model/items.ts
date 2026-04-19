@@ -31,7 +31,7 @@ export const SideBarItemsList : ItemsPropsType[] = [
     {
         path: RoutePath.about,
         Icon: AboutIcon,
-        text: "О нас",
+        text: "О проекте",
     },
     {
         path: RoutePath.profile,

@@ -5,3 +5,4 @@ export { fetchArticleById } from "./model/services/fetchArticleById/fetchArticle
 
 export { ArticleTypeView } from "./model/types/article";
 export { ArticleTypeTabs } from "./ui/ArticleTypeTabs/ArticleTypeTabs";
+export { getArticleDetailsData } from "./model/selectors/articleDetails";

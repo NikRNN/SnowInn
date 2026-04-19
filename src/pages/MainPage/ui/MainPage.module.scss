@@ -1,0 +1,25 @@
+.mainPage {
+    width: 100%;
+    background: url('../../../shared/assets/picture/main_page.webp') no-repeat center center / cover;
+    min-height: 100vh;
+    padding-left: var(--sidebar-width);
+    padding-top: var(--navbar-height);
+    position: relative;
+    background-color: var(--main-image-overlay);
+    background-blend-mode: var(--bg-blend-mode)
+}
+
+.mainText {
+    position: absolute;
+    top: 290px;
+    right: 100px;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 20px;
+    
+    text-shadow: 
+    0 2px 6px rgba(0, 0, 0, 0.75),
+    0 2px 6px rgba(0, 0, 0, 0.55);
+}
+

@@ -1,3 +1,9 @@
+.ArticlePage {
+    min-height: 100vh;
+    padding-top: var(--navbar-height);
+    padding-left: calc(var(--sidebar-width) + var(--padding-left-from-sidebar));
+}
+
 .tile {
     // display: flex;
     // flex-wrap: wrap;

@@ -5,6 +5,7 @@ import { classNames } from "shared/lib/classNames/classNames";
 import { useSelector } from "react-redux";
 import { getUserAuthData } from "entities/User";
 import { RoutePath } from "shared/config/routeConfig/routeConfig";
+import { Text } from "shared/ui/Text/Text";
 import { ItemsPropsType } from "../Sidebar/model/items";
 import cls from "./SidebarItem.module.scss";
 
@@ -35,9 +36,7 @@ export const SidebarItem = memo(
 
                 <Icon className={cls.icon} />
 
-                <span className={cls.link}>
-                    {t(text)}
-                </span>
+                <Text className={cls.link} text={t(text)} />
             </AppLink>
         );
     },

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { ArticleType, ArticleTypeView, ArticleSortField } from "entities/Article/model/types/article";
+import { ArticleType, ArticleTypeView } from "entities/Article/model/types/article";
 import { StoreDecoratorWithState } from "shared/config/storybook/StoreDecorator/StoreDecorator";
-import { addArticlesListReducer } from "features/ArticlesList/model/slices/addArticlesListSlice";
+import { addArticlesListReducer } from "pages/ArticlesPage/model/slices/addArticlesListSlice";
 import ArticlesPage from "./ArticlesPage";
 
 const meta: Meta<typeof ArticlesPage> = {

@@ -1,0 +1,17 @@
+.ArticleDetailsPage {
+    min-height: 100vh;
+    padding-top: var(--navbar-height);
+    padding-left: calc(var(--sidebar-width) + var(--padding-left-from-sidebar));
+}
+
+.commentsTitle {
+    margin-top: 25px;
+}
+
+.recommendations {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    
+}

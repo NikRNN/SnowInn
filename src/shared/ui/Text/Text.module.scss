@@ -1,9 +1,20 @@
-.title {
+.primary {
+    .title {
     color: var(--primary-color);
 }
+    .text {
+    color: var(--primary-color);
+}
+}
 
-.text {
-    color: var(--secondary-color);
+
+.main {
+    .title {
+        color: var(--color-main-text)
+    }
+     .text {
+        color: var(--color-main-text)
+    }
 }
 
 .error {
@@ -15,6 +26,8 @@
         color: var(--color-red-dark);
     }
 }
+
+
 
 .left {
     text-align: left;
@@ -47,3 +60,28 @@
         font: var(--font-l);
     }
 }
+
+.size_xxl {
+    .title {
+        font: var(--font-xxl);
+        cursor: default;
+    }
+
+    .text {
+        font: var(--font-xxl);
+    }
+}
+
+.size_xxl_secondary_font {
+    .title {
+        font: var(--font-xxl-secondary-font);
+        cursor: default;
+        
+        
+    }
+
+    .text {
+        font: var(--font-xxl-secondary-font);
+    }
+}
+

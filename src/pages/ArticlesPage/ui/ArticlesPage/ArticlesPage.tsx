@@ -4,17 +4,17 @@ import { memo, useCallback } from "react";
 import { ArticleList } from "entities/Article/ui/ArticleList/ArticleList";
 import { Article } from "entities/Article";
 import { DynamicSomethingLoader, ReducersList } from "shared/lib/component/DynamicSomethingLoader";
-import { addArticlesListReducer, getArticles } from "features/ArticlesList/model/slices/addArticlesListSlice";
+import { addArticlesListReducer, getArticles } from "pages/ArticlesPage/model/slices/addArticlesListSlice";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEffect";
 import { useSelector } from "react-redux";
+import { PageWrapper } from "widgets/PageWrapper/PageWrapper";
+import { useSearchParams } from "react-router-dom";
+import { initArticlesPage } from "pages/ArticlesPage/model/services/initArticlesPage/initArticlesPage";
+import { fetchNextArticlesPage } from "../../model/services/fetchNextArticlesPage/fetchNextArticlesPage";
 import {
     getArticleListError, getArticleListIsLoading, getArticleListView,
-} from "features/ArticlesList/model/selectors/articlesListSelector";
-import { PageWrapper } from "widgets/PageWrapper/PageWrapper";
-import { fetchNextArticlesPage } from "features/ArticlesList/model/services/fetchNextArticlesPage/fetchNextArticlesPage";
-import { fetchInitArticlesPage } from "features/ArticlesList/model/services/initArticlesPage/initArticlesPage";
-import { useSearchParams } from "react-router-dom";
+} from "../../model/selectors/articlesPageSelectors";
 import cls from "./ArticlePage.module.scss";
 import { ArticlesPageFilters } from "../ArticlesPageFilters/ArticlesPageFilters";
 
@@ -43,7 +43,7 @@ function ArticlesPage({ className }: ArticlePageProps) {
     }, [dispatch]);
 
     useInitialEffect(() => {
-        dispatch(fetchInitArticlesPage(searchParams));
+        dispatch(initArticlesPage(searchParams));
     });
 
     return (

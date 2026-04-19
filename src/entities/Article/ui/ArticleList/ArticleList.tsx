@@ -1,5 +1,5 @@
 import { classNames } from "shared/lib/classNames/classNames.js";
-import { memo } from "react";
+import { HTMLAttributeAnchorTarget, memo } from "react";
 import { Article, ArticleTypeView } from "entities/Article/model/types/article";
 import cls from "./ArticleList.module.scss";
 import { ArticleListItem } from "../ArticleListItem/ArticleListItem";
@@ -10,14 +10,17 @@ interface ArticleListProps {
   articles: Article[];
   isLoading?: boolean;
   view?: ArticleTypeView;
-  error?: string
+  error?: string;
+  linkTarget?: HTMLAttributeAnchorTarget
 }
 
 export const ArticleList = memo(({
-    className, articles, isLoading, view = ArticleTypeView.LIST, error,
+    className, articles, isLoading, view = ArticleTypeView.TILE, error, linkTarget,
 }: ArticleListProps) => {
+    console.log(linkTarget);
     const renderArticle = (article : Article) => (
-        <ArticleListItem article={article} view={view} className={cls.card} key={article.id} />
+
+        <ArticleListItem linkTarget={linkTarget} article={article} view={view} className={cls.card} key={article.id} />
     );
 
     return (
