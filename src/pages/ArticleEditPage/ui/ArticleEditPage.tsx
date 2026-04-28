@@ -5,7 +5,7 @@ import { PageWrapper } from "widgets/PageWrapper/PageWrapper";
 import { useParams } from "react-router-dom";
 import cls from "./ArticleEditPage.module.scss";
 
-interface ArticleDetailsPageProps {
+export interface ArticleDetailsPageProps {
   className?: string;
 }
 

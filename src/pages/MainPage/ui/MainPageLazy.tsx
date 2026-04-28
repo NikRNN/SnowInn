@@ -1,15 +1,5 @@
 import { lazy } from "react";
 
 export const MainPageLazy = lazy(
-    () => new Promise(
-        (resolve) => {
-            setTimeout(
-                // eslint-disable-next-line
-                // @ts-expect-error
-
-                () => resolve(import("./MainPage")),
-                1500,
-            );
-        },
-    ),
+    () => import("./MainPage"),
 );

@@ -10,7 +10,7 @@ import { Input } from "../../../../shared/ui/Input/Input";
 import { Button, ButtonTheme } from "../../../../shared/ui/Button/Button";
 import { useAppDispatch } from "../../../../shared/lib/hooks/useAppDispatch/useAppDispatch";
 
-interface AddNewCommentProps {
+export interface AddNewCommentProps {
   className?: string;
   onSendComment: (text : string)=>void
 }

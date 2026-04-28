@@ -18,7 +18,7 @@ import {
 import cls from "./ArticlePage.module.scss";
 import { ArticlesPageFilters } from "../ArticlesPageFilters/ArticlesPageFilters";
 
-interface ArticlePageProps {
+export interface ArticlePageProps {
   className?: string;
 
 }

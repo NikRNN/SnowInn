@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "concurrently \"vite --mode development\" \"node ./json-server/index.js\"",
     "start:json:server": "node ./json-server/index.js",
-    "build": "vite build --mode production",
+    "build:dev": "vite build --mode production",
+    "build:prod": "vite build --mode production",
     "preview": "vite preview",
     "serve": "http-server ./build --port 3000 -o",
     "lint": "eslint src config --ext .ts,.tsx,.js",
