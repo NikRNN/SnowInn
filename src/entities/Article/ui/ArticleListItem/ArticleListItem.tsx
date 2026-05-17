@@ -28,7 +28,6 @@ export const ArticleListItem = memo(({
     className, article, view, linkTarget,
 }: ArticleListItemProps) => {
     const { t } = useTranslation();
-    console.log(linkTarget);
     const [isHover, funcHover] = useHover();
 
     // const navigate = useNavigate(); //убрал, т.к. статьи открывались в той же вкладке

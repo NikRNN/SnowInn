@@ -60,7 +60,7 @@ const addArticlesListSlice = createSlice({
         initState: (state) => {
             const view = localStorage.getItem(ARTICLE_VIEW_LOCALSTORAGE) as ArticleTypeView;
             state.view = view;
-            state.limit = view === ArticleTypeView.LIST ? 3 : 9;
+            state.limit = view === ArticleTypeView.LIST ? 3 : 10;
             // eslint-disable-next-line
             state._inited = true;
         },

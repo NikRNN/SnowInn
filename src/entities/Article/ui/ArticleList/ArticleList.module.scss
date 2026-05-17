@@ -1,18 +1,34 @@
+.ArticleList {
+    padding-bottom: 75px;
+}
+
 .tile {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 25px;
-
-    // .card {
-    //     margin-right: 30px;
-    //     margin-bottom: 30px;
-    // }
+    
 }
 
 .list {
     display: block;
+}
 
-    .card {
-        margin-bottom: 30px;
-    }
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+
+.skeletonsWrapperList {
+margin-top: 60px;
+}
+
+.skeletonsWrapperTile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
 }

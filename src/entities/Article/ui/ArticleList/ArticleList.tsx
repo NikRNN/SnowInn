@@ -1,6 +1,10 @@
 import { classNames } from "shared/lib/classNames/classNames.js";
-import { HTMLAttributeAnchorTarget, memo } from "react";
+import {
+    HTMLAttributeAnchorTarget, memo, useCallback,
+    useMemo,
+} from "react";
 import { Article, ArticleTypeView } from "entities/Article/model/types/article";
+import { Virtuoso } from "react-virtuoso";
 import cls from "./ArticleList.module.scss";
 import { ArticleListItem } from "../ArticleListItem/ArticleListItem";
 import { SkeletonListItem } from "../ArticleListItem/skeletonListItem";
@@ -11,33 +15,123 @@ interface ArticleListProps {
   isLoading?: boolean;
   view?: ArticleTypeView;
   error?: string;
-  linkTarget?: HTMLAttributeAnchorTarget
+  linkTarget?: HTMLAttributeAnchorTarget;
+  onScrollEnd?: ()=>void;
+  virtualized?: boolean;
 }
 
+const getSkeletons = (view : ArticleTypeView) => (new Array(view === ArticleTypeView.TILE ? 9 : 3)
+    .fill(0)
+    .map((item, index) => (
+        <SkeletonListItem
+            className={cls.card}
+            // eslint-disable-next-line
+            key={index}
+            view={view}
+        />
+    )));
+
 export const ArticleList = memo(({
-    className, articles, isLoading, view = ArticleTypeView.TILE, error, linkTarget,
+    className, articles, isLoading, view = ArticleTypeView.TILE, error, linkTarget, onScrollEnd, virtualized,
 }: ArticleListProps) => {
-    console.log(linkTarget);
-    const renderArticle = (article : Article) => (
+    const renderArticle = useCallback((index: number) => {
+        const item = articles[index];
+        return (
+            <ArticleListItem
+                linkTarget={linkTarget}
+                article={item}
+                view={view}
+                className={cls.card}
+            />
+        );
+    }, [articles, linkTarget, view]);
 
-        <ArticleListItem linkTarget={linkTarget} article={article} view={view} className={cls.card} key={article.id} />
-    );
+    const rows = useMemo(() => {
+        const result: Article[][] = [];
+        for (let i = 0; i < articles.length; i += 5) {
+            result.push(articles.slice(i, i + 5));
+        }
+        return result;
+    }, [articles]);
 
-    return (
-        <div className={classNames(cls.ArticleList, [className, cls[view]])}>
+    const skeletonRows = useMemo(() => new Array(3).fill(0).map(() => [0, 1, 2, 3, 4]), []);
 
-            {articles.length ? articles.map((article) => renderArticle(article)) : null}
-            {isLoading && new Array(view === ArticleTypeView.TILE ? 9 : 3)
-                .fill(0)
-                .map((item, index) => (
-                    <SkeletonListItem
-                        className={cls.card}
-                        // eslint-disable-next-line
-                        key={index}
+    if (!virtualized) {
+        return (
+            <div className={classNames(cls.ArticleList, [className, cls[view]])}>
+                {isLoading && getSkeletons(view)}
+                {articles.map((item) => (
+                    <ArticleListItem
+                        key={item.id}
+                        linkTarget={linkTarget}
+                        article={item}
                         view={view}
+                        className={cls.card}
                     />
                 ))}
+            </div>
+        );
+    }
 
+    if (view === ArticleTypeView.TILE) {
+        const totalRows = isLoading ? rows.length + skeletonRows.length : rows.length;
+
+        return (
+            <div className={classNames(cls.ArticleList, [className, cls[view]])}>
+                <Virtuoso
+                    totalCount={totalRows}
+                    itemContent={(index) => {
+                        if (index >= rows.length) {
+                            return (
+                                <div className={cls.row}>
+                                    {[0, 1, 2, 3, 4].map((_, i) => (
+                                        <SkeletonListItem
+                                            key={`skeleton-${index}-${i}`}
+                                            className={cls.card}
+                                            view={view}
+                                        />
+                                    ))}
+                                </div>
+                            );
+                        }
+                        // Статьи
+                        return (
+                            <div className={cls.row}>
+                                {rows[index].map((article) => (
+                                    <ArticleListItem
+                                        key={article.id}
+                                        linkTarget={linkTarget}
+                                        article={article}
+                                        view={view}
+                                        className={cls.card}
+                                    />
+                                ))}
+                            </div>
+                        );
+                    }}
+                    endReached={() => {
+                        onScrollEnd?.();
+                    }}
+                    useWindowScroll
+                />
+            </div>
+        );
+    }
+
+    // LIST
+    return (
+        <div className={classNames(cls.ArticleList, [className, cls[view]])}>
+            <Virtuoso
+                totalCount={articles.length}
+                itemContent={(index) => renderArticle(index)}
+                useWindowScroll
+                endReached={() => {
+                    onScrollEnd?.();
+                }}
+            />
+            <div className={cls.skeletonsWrapperList}>
+                {isLoading && getSkeletons(view)}
+            </div>
         </div>
     );
 });

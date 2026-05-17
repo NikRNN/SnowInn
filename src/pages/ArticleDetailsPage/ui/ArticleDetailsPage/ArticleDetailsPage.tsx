@@ -69,16 +69,18 @@ export function ArticleDetailsPage({ className }: ArticlesDetailsPageProps) {
     return (
         <DynamicSomethingLoader reducers={reducers} removeAfterUnmount>
             <PageWrapper className={classNames(cls.ArticleDetailsPage, [className])}>
-                <ArticleDetailsPageHeader />
-                <ArticleDetails id={id!} />
-                <Text size={TextSize.L} className={cls.commentsTitle} title={t("Может заинтересовать")} />
-                <ArticleList linkTarget="_blank" className={cls.recommendations} articles={recommendations} isLoading={recommendationsIsLoading} />
-                <Text size={TextSize.L} className={cls.commentsTitle} title={t("Комментарии")} />
-                <AddNewComment onSendComment={onSendComment} />
-                <CommentList
-                    isLoading={commentsIsLoading}
-                    comments={comments}
-                />
+                <div>
+                    <ArticleDetailsPageHeader />
+                    <ArticleDetails id={id!} />
+                    <Text size={TextSize.L} className={cls.commentsTitle} title={t("Может заинтересовать")} />
+                    <ArticleList linkTarget="_blank" virtualized={false} className={cls.recommendations} articles={recommendations} isLoading={recommendationsIsLoading} />
+                    <Text size={TextSize.L} className={cls.commentsTitle} title={t("Комментарии")} />
+                    <AddNewComment onSendComment={onSendComment} />
+                    <CommentList
+                        isLoading={commentsIsLoading}
+                        comments={comments}
+                    />
+                </div>
             </PageWrapper>
         </DynamicSomethingLoader>
 

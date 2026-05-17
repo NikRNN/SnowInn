@@ -10,7 +10,7 @@ import { ArticleDetailsSchema } from "entities/Article";
 import { AddNewCommentSchema } from "features/AddNewComment";
 import { CustomOptionalRecord } from "app/types/global";
 import { ScrollSaveSchema } from "features/ScrollSave/index";
-import { ArticleDetailsPageSchema, ArticleDetailsRecommendedSchema, ArticleDetailsCommentSchema } from "pages/ArticlesDetailsPage";
+import { ArticleDetailsPageSchema, ArticleDetailsRecommendedSchema, ArticleDetailsCommentSchema } from "pages/ArticleDetailsPage";
 import { ArticlesListSchema } from "../../../../pages/ArticlesPage/model/types/articleListSchema";
 
 export interface StateSchema {

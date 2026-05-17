@@ -2,7 +2,6 @@ import { classNames } from "shared/lib/classNames/classNames.js";
 import { useTranslation } from "react-i18next";
 import { memo, useCallback } from "react";
 import { ArticleList } from "entities/Article/ui/ArticleList/ArticleList";
-import { Article } from "entities/Article";
 import { DynamicSomethingLoader, ReducersList } from "shared/lib/component/DynamicSomethingLoader";
 import { addArticlesListReducer, getArticles } from "pages/ArticlesPage/model/slices/addArticlesListSlice";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
@@ -48,7 +47,8 @@ function ArticlesPage({ className }: ArticlePageProps) {
 
     return (
         <DynamicSomethingLoader reducers={reducers} removeAfterUnmount={false}>
-            <PageWrapper onScrollEnd={onLoadNextPart} className={classNames(cls.ArticlePage, [className, cls[view]])}>
+            <PageWrapper className={classNames(cls.ArticlePage, [className, cls[view]])} isPageWrapperEnabled={false}>
+
                 <ArticlesPageFilters />
                 <ArticleList
                     error={error}
@@ -56,7 +56,10 @@ function ArticlesPage({ className }: ArticlePageProps) {
                     view={view}
                     articles={articlesSelectors}
                     className={cls.listArticles}
+                    onScrollEnd={onLoadNextPart}
+                    virtualized
                 />
+
             </PageWrapper>
         </DynamicSomethingLoader>
 

@@ -19,9 +19,12 @@ interface PageProps {
   className?: string;
   children?: ReactNode;
   onScrollEnd?: ()=>void;
+  isPageWrapperEnabled?: boolean
 }
 
-export const PageWrapper = memo(({ className, children, onScrollEnd }: PageProps) => {
+export function PageWrapper({
+    className, children, onScrollEnd, isPageWrapperEnabled = true,
+}: PageProps) {
     const triggerRef = useRef(null) as unknown as RefObject<HTMLDivElement>;
     const wrapperRef = useRef(null) as unknown as RefObject<HTMLDivElement>;
     const dispatch = useAppDispatch();
@@ -38,14 +41,13 @@ export const PageWrapper = memo(({ className, children, onScrollEnd }: PageProps
     useInitialEffect(() => { wrapperRef.current.scrollTop = scrollPos; });
 
     useInfiniteScroll({
-        triggerRef, wrapperRef, callback: onScrollEnd,
+        triggerRef, wrapperRef, callback: onScrollEnd, enabled: isPageWrapperEnabled,
     });
 
     return (
-        <section onScroll={onScroll} ref={wrapperRef} className={classNames(cls.PageWrapper, [className])}>
+        <section id="PAGE_WRAPPER_ID" onScroll={onScroll} ref={wrapperRef} className={classNames(cls.PageWrapper, [className])}>
             {children}
             <div ref={triggerRef} />
         </section>
-
     );
-});
+}

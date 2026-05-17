@@ -29,7 +29,7 @@ export const fetchArticlesList = createAsyncThunk<Article[], fetchArticlesListPr
                 params: {
                     _expand: "user",
                     _limit: limit, // см документацию к json server по всему этому аргументу
-                    _page: pageNum, // -/-
+                    _page: props.page ?? pageNum, // -/-
                     _order: order,
                     _sort: sort,
                     type: type === ArticleType.ALL ? undefined : type,

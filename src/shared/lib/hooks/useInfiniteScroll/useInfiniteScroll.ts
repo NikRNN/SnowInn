@@ -3,14 +3,22 @@ import { RefObject, useEffect } from "react";
 export interface useInfiniteScrollProps {
     callback?: ()=> void;
     triggerRef : RefObject<HTMLDivElement>; // элемент, прохождение которого является сигналом для вызова callback
-    wrapperRef: RefObject<HTMLDivElement> // элемент, на котором висит скролл
+    wrapperRef: RefObject<HTMLDivElement>; // элемент, на котором висит скролл
+    enabled: boolean;
 }
 
-export const useInfiniteScroll = ({ callback, triggerRef, wrapperRef } : useInfiniteScrollProps) => {
+export const useInfiniteScroll = ({
+    callback, triggerRef, wrapperRef, enabled,
+} : useInfiniteScrollProps) => {
     useEffect(() => {
+        // if (!enabled) {
+        //     return undefined;
+        // }
+
         let observer : IntersectionObserver | null = null;
         const wrapperElem = wrapperRef.current;
         const triggerElem = triggerRef.current; // сделал замыкание, т.к. при размонтировании элемента метод unobserve выдавал ошибку (triggerRef.current был уже undefined)
+
         if (callback) {
             const options = {
                 root: wrapperRef.current,
@@ -35,5 +43,5 @@ export const useInfiniteScroll = ({ callback, triggerRef, wrapperRef } : useInfi
             }
 
         );
-    }, [triggerRef, wrapperRef, callback]);
+    }, [triggerRef, wrapperRef, callback, enabled]);
 };
