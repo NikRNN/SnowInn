@@ -8,7 +8,7 @@ import { getUserInited, userActions } from "entities/User";
 import { useSelector } from "react-redux";
 import { UseAppDispatch } from "./providers/StoreProvider/lib/UseAppDispatch";
 
-/* eslint-disable i18next/no-literal-string */
+ 
 function App() {
     const { theme } = UseTheme(); // раньше использовал, чтобы вешать глобальные стили; потом в useTheme вешаю их на body сразу
     const dispatch = UseAppDispatch();

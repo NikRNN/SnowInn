@@ -1,28 +1,16 @@
 .sidebar {
     height: calc(100vh);
     width: var(--sidebar-width);
-    background: var(--inverted-bg-color);
-    position: relative;
     transition: width 0.5s;
-    
     position: fixed;
     top: 0; // ниже navbar
     left: 0;
     bottom: 0;
-
-    
-
-    background: rgba(255, 255, 255, 0.05); // прозрачность
-    backdrop-filter: blur(10px); // 🔥 магия стекла
-    -webkit-backdrop-filter: blur(10px); // для Safari
-
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
-
+    background: rgb(255 255 255 / 5%); // прозрачность // 🔥 магия стекла
+    backdrop-filter: blur(10px); // для Safari
+    border-right: 1px solid rgb(255 255 255 / 20%);
     z-index: 50;
-
-    
 }
-
 
 .collapsedBtn {
     position: absolute;
@@ -65,13 +53,16 @@
 
 .collapsed {
     width: var(--sidebar-width-collapsed);
+
     .switchers {
         flex-direction: column;
         align-items: center;
     }
+
     .lang {
         margin-left: 0;
     }
+
     .link {
         opacity: 0;
         width: 0;

@@ -28,7 +28,7 @@ export const Tabs = memo(({
             {tabsList.map((tab, index) => (
                 // eslint-disable-next-line
     // @ts-ignore 
-                // eslint-disable-next-line
+                 
                 <Card onClick={clickHandler(tab)} theme={tab.value === value ? CardTheme.NORMAL : CardTheme.OUTLINED} className={cls.tab} key={index}>
                     {tab.content}
                 </Card>

@@ -1,19 +1,20 @@
 .primary {
     .title {
-    color: var(--primary-color);
-}
-    .text {
-    color: var(--primary-color);
-}
-}
+        color: var(--primary-color);
+    }
 
+    .text {
+        color: var(--primary-color);
+    }
+}
 
 .main {
     .title {
-        color: var(--color-main-text)
+        color: var(--color-main-text);
     }
-     .text {
-        color: var(--color-main-text)
+
+    .text {
+        color: var(--color-main-text);
     }
 }
 
@@ -26,8 +27,6 @@
         color: var(--color-red-dark);
     }
 }
-
-
 
 .left {
     text-align: left;
@@ -76,12 +75,9 @@
     .title {
         font: var(--font-xxl-secondary-font);
         cursor: default;
-        
-        
     }
 
     .text {
         font: var(--font-xxl-secondary-font);
     }
 }
-

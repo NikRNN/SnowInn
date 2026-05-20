@@ -25,7 +25,7 @@ const getSkeletons = (view : ArticleTypeView) => (new Array(view === ArticleType
     .map((item, index) => (
         <SkeletonListItem
             className={cls.card}
-            // eslint-disable-next-line
+             
             key={index}
             view={view}
         />

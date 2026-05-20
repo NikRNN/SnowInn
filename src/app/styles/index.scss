@@ -4,12 +4,10 @@
 @use "./variables/global.scss";
 @use "./fonts.scss";
 
-
 body {
     font: var(--font-m);
     color: var(--primary-color);
     min-height: 100vh;
-    
 }
 
 .app {
@@ -21,7 +19,7 @@ body {
     display: flex;
 }
 
-//стилизация скролла
+// стилизация скролла
 
 *::-webkit-scrollbar {
     width: 10px;           /* ширина вертикального скролла */

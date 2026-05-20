@@ -1,5 +1,6 @@
 .aboutPage {
     width: 100%;
+
     // background: url('../../../shared/assets/picture/about-us.webp') no-repeat center center / cover;
     background-color: var(--about-bg);
     min-height: 100vh;
@@ -9,14 +10,12 @@
     display: flex;
     flex-direction: column;
     padding-right: 40px;
-    
-    
 }
 
 .textBlock {
     margin-top: 35px;
 }
 
-.text{
+.text {
     margin-top: 15px;
 }

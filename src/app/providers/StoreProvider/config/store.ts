@@ -29,7 +29,7 @@ export function createReduxStore(initialState?: StateSchema, asyncReducers?: Red
 
     // eslint-disable-next-line
     // @ts-ignore 
-    // eslint-disable-next-line
+     
     store.reducerManager = reducerManager; //внутри стора создал свое поле, в котором лежит взыов createReducerManager
 
     return store;
