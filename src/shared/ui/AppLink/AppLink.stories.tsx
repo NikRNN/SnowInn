@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator.js";
 import { Theme } from "app/providers/ThemeProvider/index.js";
 import { AppLink, AppLinkTheme } from "./AppLink.js";
+import { RouterDecorator } from "shared/config/storybook/RouterDecorator/RouterDecorator.js";
 
 const meta = {
     title: "shared/AppLink",
@@ -22,26 +23,29 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
     args: { theme: AppLinkTheme.PRIMARY, children: "text" },
+    decorators: [RouterDecorator("/", "/*")]
 
 };
 
 export const Secondary: Story = {
     args: { theme: AppLinkTheme.SECONDARY, children: "text" },
+    decorators: [RouterDecorator("/", "/*")]
 };
 
 export const Red: Story = {
     args: { theme: AppLinkTheme.RED, children: "text" },
+    decorators: [RouterDecorator("/", "/*")]
 };
 
 export const PrimaryDark: Story = {
     args: { theme: AppLinkTheme.PRIMARY, children: "text" },
-    decorators: [ThemeDecorator(Theme.DARK)],
+    decorators: [ThemeDecorator(Theme.DARK), RouterDecorator("/", "/*")],
 };
 
 export const SecondaryDark: Story = {
-    args: { theme: AppLinkTheme.SECONDARY, children: "text" }, decorators: [ThemeDecorator(Theme.DARK)],
+    args: { theme: AppLinkTheme.SECONDARY, children: "text" }, decorators: [ThemeDecorator(Theme.DARK), RouterDecorator("/", "/*")],
 };
 
 export const RedDark: Story = {
-    args: { theme: AppLinkTheme.RED, children: "text" }, decorators: [ThemeDecorator(Theme.DARK)],
+    args: { theme: AppLinkTheme.RED, children: "text" }, decorators: [ThemeDecorator(Theme.DARK), RouterDecorator("/", "/*")],
 };

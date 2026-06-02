@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
+import { RouterDecorator } from "shared/config/storybook/RouterDecorator/RouterDecorator.js";
 import { PageWrapper } from "./PageWrapper.js";
 
 const meta: Meta<typeof PageWrapper> = {
@@ -24,5 +24,6 @@ export const Dark: Story = {
         children: <p>ggrefrg gtrergvre gtrev bvgrebgb bgbg...</p>,
         onScrollEnd: () => alert("Scrolled to end!"),
     },
+    decorators: [RouterDecorator("/", "/*")]
 
 };

@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { ArticleType, ArticleTypeView } from "entities/Article/model/types/article";
 import { StoreDecoratorWithState } from "shared/config/storybook/StoreDecorator/StoreDecorator";
-import { addArticlesListReducer } from "pages/ArticlesPage/model/slices/addArticlesListSlice";
+import { addArticlesListReducer } from "../../model/slices/addArticlesListSlice";
+import { RouterDecorator } from "shared/config/storybook/RouterDecorator/RouterDecorator";
 import ArticlesPage from "./ArticlesPage";
 
 const meta: Meta<typeof ArticlesPage> = {
@@ -54,5 +55,6 @@ export const Primary: Story = {
                 _inited: true,
             },
         }, { articlesList: addArticlesListReducer }),
+        RouterDecorator("/", "/*")
     ],
 };

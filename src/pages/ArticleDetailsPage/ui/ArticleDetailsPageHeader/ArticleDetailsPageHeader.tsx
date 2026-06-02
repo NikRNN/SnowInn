@@ -3,13 +3,13 @@ import { useTranslation } from "react-i18next";
 import { memo, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { getCanEditArticle } from "pages/ArticleDetailsPage/model/selectors/editArticle/editArticle";
+import { getCanEditArticle } from "../../model/selectors/editArticle/editArticle";
 import { getArticleDetailsData } from "entities/Article";
 import { RoutePath } from "../../../../shared/config/routeConfig/routeConfig";
 import cls from "./ArticleDetailsPageHeader.module.scss";
 import { Button } from "../../../../shared/ui/Button/Button";
 
-interface ArticleDetailsPageHeaderProps {
+export interface ArticleDetailsPageHeaderProps {
   className?: string;
 }
 

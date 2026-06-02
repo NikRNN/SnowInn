@@ -1,6 +1,6 @@
 import { classNames } from "shared/lib/classNames/classNames.js";
 import { useTranslation } from "react-i18next";
-import { memo, useEffect } from "react";
+import { memo} from "react";
 import { PageWrapper } from "widgets/PageWrapper/PageWrapper";
 import { useParams } from "react-router-dom";
 import cls from "./ArticleEditPage.module.scss";

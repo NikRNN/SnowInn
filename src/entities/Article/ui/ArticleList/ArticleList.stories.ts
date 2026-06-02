@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { ArticleTypeView, ArticleType, ArticleBlockType } from "entities/Article/model/types/article.js";
+import { ArticleTypeView, ArticleType, ArticleBlockType } from "../../model/types/article.js";
 import { ArticleList } from "./ArticleList.js";
+import { RouterDecorator } from "shared/config/storybook/RouterDecorator/RouterDecorator.js";
 
 const meta: Meta<typeof ArticleList> = {
     title: "entities/Article/ArticleList",
@@ -88,6 +89,7 @@ export const PrimaryList: Story = {
         })),
         view: ArticleTypeView.LIST,
     },
+    decorators: [RouterDecorator("/", "/*")]
 
 };
 
@@ -100,6 +102,7 @@ export const PrimaryTile: Story = {
         })),
         view: ArticleTypeView.TILE,
     },
+    decorators: [RouterDecorator("/", "/*")]
 };
 
 export const PrimaryListLoading: Story = {
@@ -111,6 +114,7 @@ export const PrimaryListLoading: Story = {
         })),
         view: ArticleTypeView.LIST,
     },
+    decorators: [RouterDecorator("/", "/*")]
 
 };
 
@@ -123,4 +127,5 @@ export const PrimaryTileLoading: Story = {
         })),
         view: ArticleTypeView.TILE,
     },
+    decorators: [RouterDecorator("/", "/*")]
 };

@@ -3,6 +3,7 @@ import { StoreDecoratorWithState } from "shared/config/storybook/StoreDecorator/
 import { Article, ArticleBlockType, ArticleType } from "entities/Article/model/types/article";
 import { ArticleReducer } from "entities/Article/model/slice/ArticleDetailsSlice";
 import { ArticleDetailsPage } from "./ArticleDetailsPage";
+import { RouterDecorator } from "shared/config/storybook/RouterDecorator/RouterDecorator";
 
 const meta: Meta<typeof ArticleDetailsPage> = {
     title: "pages/ArticleDetailsPage",
@@ -94,7 +95,8 @@ export const Primary: Story = {
         {
             articleDetails: ArticleReducer,
         },
-    )],
+    ), 
+    RouterDecorator("/", "/*")],
 };
 
 export const Loading: Story = {
@@ -111,7 +113,7 @@ export const Loading: Story = {
         {
             articleDetails: ArticleReducer,
         },
-    )],
+    ), RouterDecorator("/", "/*")],
 };
 
 export const Error: Story = {
@@ -128,5 +130,5 @@ export const Error: Story = {
         {
             articleDetails: ArticleReducer,
         },
-    )],
+    ), RouterDecorator("/", "/*")],
 };

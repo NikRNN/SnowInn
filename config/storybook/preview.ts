@@ -1,9 +1,9 @@
 import type { Preview } from "@storybook/react";
 import { StoreDecoratorWithoutState } from "shared/config/storybook/StoreDecorator/StoreDecorator";
-import { StyleDecorator } from "../../src/shared/config/storybook/StyleDecorator/StyleDecorator";
-import { ThemeDecorator } from "../../src/shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import { Theme } from "../../src/app/providers/ThemeProvider/index";
-import { RouterDecorator } from "../../src/shared/config/storybook/RouterDecorator/RouterDecorator";
+import { StyleDecorator } from "shared/config/storybook/StyleDecorator/StyleDecorator";
+import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
+import { Theme } from "app/providers/ThemeProvider/index";
+import { RouterDecorator } from "shared/config/storybook/RouterDecorator/RouterDecorator";
 
 const preview: Preview = {
     parameters: {
@@ -33,13 +33,11 @@ const preview: Preview = {
             },
         },
         a11y: {
-            // 'todo' - show a11y violations in the test UI only
-            // 'error' - fail CI on a11y violations
-            // 'off' - skip a11y checks entirely
+          
             test: "todo",
         },
     },
-    decorators: [StyleDecorator, ThemeDecorator(Theme.LIGHT), RouterDecorator, StoreDecoratorWithoutState],
+    decorators: [StyleDecorator, ThemeDecorator(Theme.LIGHT), StoreDecoratorWithoutState],
 };
 
 export default preview;

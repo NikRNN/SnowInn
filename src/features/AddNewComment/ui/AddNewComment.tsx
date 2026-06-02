@@ -3,12 +3,12 @@ import { useTranslation } from "react-i18next";
 import { memo, useCallback } from "react";
 import { useSelector } from "react-redux";
 import { DynamicSomethingLoader, ReducersList } from "shared/lib/component/DynamicSomethingLoader";
-import { AddNewComentActions, AddNewCommentReducer } from "../../model/slices/addNewCommentSlice";
-import { getAddNewCommentError, getAddNewCommentText } from "../../model/selectors/addNewCommentSelectors";
+import { AddNewComentActions, AddNewCommentReducer } from "../model/slices/addNewCommentSlice";
+import { getAddNewCommentError, getAddNewCommentText } from "../model/selectors/addNewCommentSelectors";
 import cls from "./AddNewComment.module.scss";
-import { Input } from "../../../../shared/ui/Input/Input";
-import { Button, ButtonTheme } from "../../../../shared/ui/Button/Button";
-import { useAppDispatch } from "../../../../shared/lib/hooks/useAppDispatch/useAppDispatch";
+import { Input } from "shared/ui/Input/Input";
+import { Button, ButtonTheme } from "shared/ui/Button/Button";
+import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 
 export interface AddNewCommentProps {
   className?: string;
@@ -32,7 +32,7 @@ const AddNewComment = memo(({ className, onSendComment }: AddNewCommentProps) =>
     const onSendHandler = useCallback(() => {
         onSendComment(text || "");
         onCommentChangeText("");
-    }, [dispatch, onCommentChangeText, onSendComment, text]);
+    }, [onCommentChangeText, onSendComment, text]);
 
     return (
         <DynamicSomethingLoader reducers={reducers} removeAfterUnmount>

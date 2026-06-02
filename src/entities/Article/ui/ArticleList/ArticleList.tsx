@@ -3,7 +3,7 @@ import {
     HTMLAttributeAnchorTarget, memo, useCallback,
     useMemo,
 } from "react";
-import { Article, ArticleTypeView } from "entities/Article/model/types/article";
+import { Article, ArticleTypeView } from "../../model/types/article";
 import { Virtuoso } from "react-virtuoso";
 import cls from "./ArticleList.module.scss";
 import { ArticleListItem } from "../ArticleListItem/ArticleListItem";

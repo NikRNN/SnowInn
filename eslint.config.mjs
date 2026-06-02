@@ -8,6 +8,7 @@ import i18next from "eslint-plugin-i18next";
 import tseslint from "typescript-eslint";
 import storybookPlugin from "eslint-plugin-storybook";
 import jsonc from "eslint-plugin-jsonc";
+import petElsintPlugin from "eslint-plugin-for-pet-projects"
 import { fixupConfigRules } from "@eslint/compat";
 
 export default [
@@ -88,11 +89,13 @@ export default [
         languageOptions: { parser: jsonc.parser },
         plugins: { jsonc },
     },
+    
 
     // ===== ОБЩИЕ ПРАВИЛА =====
     {
         plugins: {
             "@typescript-eslint": tseslint.plugin,
+            "for-pet-projects": petElsintPlugin
         },
 
         settings: {
@@ -104,6 +107,9 @@ export default [
         },
 
         rules: {
+            //my custom rules
+            "for-pet-projects/no-var": "error",
+            "for-pet-projects/path-checker": "error",
             // React
             "react/react-in-jsx-scope": "off",
             "react/jsx-filename-extension": [2, { extensions: [".tsx", ".jsx", ".js"] }],

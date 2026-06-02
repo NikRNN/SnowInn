@@ -1,7 +1,7 @@
 import { classNames } from "shared/lib/classNames/classNames.js";
 import { useTranslation } from "react-i18next";
 import { HTMLAttributeAnchorTarget, memo } from "react";
-import { Article, ArticleBlockType, ArticleTypeView } from "entities/Article/model/types/article";
+import { Article, ArticleBlockType, ArticleTypeView } from "../../model/types/article";
 import { Text, TextPosition } from "shared/ui/Text/Text";
 import { IconWrapper } from "shared/ui/IconWrapper/IconWrapper";
 import { Card } from "shared/ui/Card/Card";
@@ -13,6 +13,7 @@ import { AppLink } from "shared/ui/AppLink/AppLink";
 import cls from "./ArticleListItem.module.scss";
 import EyeIconArticle from "../../../../shared/assets/icons/eye-20-20.svg";
 import { ArticleTextBloсkComponent } from "../ArticleTextBlockComponent/ArticleTextBlockComponent";
+
 
 const EyeIcon = EyeIconArticle as unknown as React.FC<React.SVGProps<SVGSVGElement>>;
 

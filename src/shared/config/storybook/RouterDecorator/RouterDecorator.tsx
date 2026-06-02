@@ -1,12 +1,23 @@
 import "app/styles/index.scss";
 import { Decorator } from "@storybook/react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { MemoryRouter, Routes, Route } from "react-router-dom";
 
-export const RouterDecorator: Decorator = (Story) => (
-    <BrowserRouter>
+// export const RouterDecorator: Decorator = (Story) => (
+//     <BrowserRouter>
+//         <Routes>
+//             <Route path="/*" element={<Story />} />
+//         </Routes>
+//     </BrowserRouter>
+
+// );
+
+export const RouterDecorator = (
+    initialPath: string,
+    routePath: string
+): Decorator => function(Story) {
+    return <MemoryRouter initialEntries={[initialPath]}>
         <Routes>
-            <Route path="/*" element={<Story />} />
+            <Route path={routePath} element={<Story />} />
         </Routes>
-    </BrowserRouter>
-
-);
+    </MemoryRouter>
+};

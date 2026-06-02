@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { CommentCard } from "./CommentCard.js";
+import { RouterDecorator } from "shared/config/storybook/RouterDecorator/RouterDecorator.js";
 
 const meta: Meta<typeof CommentCard> = {
     title: "entities/Comment/CommentCard",
@@ -29,8 +30,8 @@ export const Primary: Story = {
                     username: "admin",
                 },
             },
-
     },
+    decorators: [RouterDecorator("/", "/*")]
 };
 
 export const IsLoading: Story = {
@@ -45,6 +46,6 @@ export const IsLoading: Story = {
                     username: "admin",
                 },
             },
-
     },
+    decorators: [RouterDecorator("/", "/*")]
 };

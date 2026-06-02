@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { StoreDecoratorWithState } from "shared/config/storybook/StoreDecorator/StoreDecorator";
-import { AddNewCommentReducer } from "features/AddNewComment/model/slices/addNewCommentSlice";
+import { AddNewCommentReducer } from "../model/slices/addNewCommentSlice";
 import AddNewComment from "./AddNewComment";
 
 const meta: Meta<typeof AddNewComment> = {

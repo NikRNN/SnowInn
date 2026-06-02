@@ -7,6 +7,7 @@ import { Avatar } from "shared/ui/Avatar/Avatar";
 import { Country } from "entities/Country/model/types/country";
 import { CountrySelect } from "entities/Country/ui/CountrySelect";
 import { Profile } from "../../model/types/profile";
+import { HStack } from "shared/ui/Stack";
 
 import cls from "./ProfileCard.module.scss";
 
@@ -40,9 +41,9 @@ export function ProfileCard({
 
     if (error) {
         return (
-            <div className={classNames(cls.ProfileCard, [className, cls.error], {})}>
+            <HStack justifyContent="center" className={classNames(cls.ProfileCard, [className, cls.error], {})}>
                 <Text position={TextPosition.CENTER} theme={TextTheme.ERROR} title={t("У нас что-то сломалось, уже чиним")} text={t("А вы пока попробуйте обновить страницу")} />
-            </div>
+            </HStack>
         );
     }
 

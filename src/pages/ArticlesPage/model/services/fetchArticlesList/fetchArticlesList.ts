@@ -4,7 +4,7 @@ import type { Article } from "entities/Article";
 import {
     getArticlesListSearch, getArticlesListSort, getArticlesListOrder, getArticlesListType,
     getArticleListLimit, getArticleListPageNum,
-} from "pages/ArticlesPage/model/selectors/articlesPageSelectors";
+} from "../../../model/selectors/articlesPageSelectors";
 import { addQueryParams } from "shared/lib/url/addQueryParams";
 import { ArticleType } from "entities/Article/model/types/article";
 

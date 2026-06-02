@@ -1,7 +1,7 @@
 import { classNames } from "shared/lib/classNames/classNames.js";
 import { useTranslation } from "react-i18next";
 import { DynamicSomethingLoader, ReducersList } from "shared/lib/component/DynamicSomethingLoader";
-import { ArticleReducer } from "entities/Article/model/slice/ArticleDetailsSlice";
+import { ArticleReducer } from "../../model/slice/ArticleDetailsSlice";
 import { useEffect, memo, useCallback } from "react";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { useSelector } from "react-redux";
@@ -11,7 +11,7 @@ import {
 import { Skeleton } from "shared/ui/Skeleton/Skeleton";
 import { Avatar } from "shared/ui/Avatar/Avatar";
 import { IconWrapper } from "shared/ui/IconWrapper/IconWrapper";
-import { ArticleBlock, ArticleBlockType } from "entities/Article/model/types/article";
+import { ArticleBlock, ArticleBlockType } from "../../model/types/article";
 import EyeIconArticle from "../../../../shared/assets/icons/eye-20-20.svg";
 import CalendarIconArticle from "../../../../shared/assets/icons/calendar-20-20.svg";
 import { getArticleDetailsData, getArticleDetailsError, getArticleDetailsIsLoading } from "../../model/selectors/articleDetails";
@@ -19,6 +19,7 @@ import cls from "./ArticleDetails.module.scss";
 import { fetchArticleById } from "../../model/services/fetchArticleById/fetchArticleById";
 import { ArticleImageBlockComponent } from "../ArticleImageBlockComponent/ArticleImageBlockComponent";
 import { ArticleTextBloсkComponent } from "../ArticleTextBlockComponent/ArticleTextBlockComponent";
+import { HStack } from "shared/ui/Stack";
 
 const EyeIcon = EyeIconArticle as unknown as React.FC<React.SVGProps<SVGSVGElement>>;
 const CalendarIcon = CalendarIconArticle as unknown as React.FC<React.SVGProps<SVGSVGElement>>;
@@ -86,20 +87,20 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
         content = (
             <>
 
-                <div className={cls.avatarWrapper}>
+                <HStack >
                     <Avatar size={200} src={dataArticle?.img} className={cls.avatar} />
 
-                </div>
+                </HStack>
 
                 <Text title={dataArticle?.title} text={dataArticle?.subtitle} size={TextSize.L} />
-                <div className={cls.articleBlock}>
+                <HStack >
                     <IconWrapper className={cls.iconDetails} Svg={EyeIcon} />
                     <Text text={String(dataArticle?.views)} />
-                </div>
-                <div className={cls.articleBlock}>
+                </HStack>
+                <HStack >
                     <IconWrapper className={cls.iconDetails} Svg={CalendarIcon} />
                     <Text text={dataArticle?.createdAt} />
-                </div>
+                </HStack>
 
                 {dataArticle?.blocks.map((block) => renderBlock(block))}
             </>

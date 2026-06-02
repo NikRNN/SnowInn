@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import {
     ArticleTypeView, ArticleType, ArticleBlockType, Article,
-} from "entities/Article/model/types/article.js";
-import { RouterDecorator } from "shared/config/storybook/RouterDecorator/RouterDecorator.js";
+} from "../../model/types/article.js";
 import { ArticleListItem } from "./ArticleListItem.js";
+import { RouterDecorator } from "shared/config/storybook/RouterDecorator/RouterDecorator.js";
 
 const meta: Meta<typeof ArticleListItem> = {
     title: "entities/Article/ArticleListItem",
@@ -88,7 +88,7 @@ export const PrimaryList: Story = {
         article,
         view: ArticleTypeView.LIST,
     },
-
+    decorators: [RouterDecorator("/", "/*")]
 };
 
 export const PrimaryTile: Story = {
@@ -97,21 +97,6 @@ export const PrimaryTile: Story = {
         article,
         view: ArticleTypeView.TILE,
     },
+    decorators: [RouterDecorator("/", "/*")]
 };
 
-export const PrimaryListLoading: Story = {
-    args: {
-        isLoading: true,
-        article,
-        view: ArticleTypeView.LIST,
-    },
-
-};
-
-export const PrimaryTileLoading: Story = {
-    args: {
-        isLoading: true,
-        article,
-        view: ArticleTypeView.TILE,
-    },
-};

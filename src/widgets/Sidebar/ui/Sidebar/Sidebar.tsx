@@ -7,12 +7,11 @@ import { useTranslation } from "react-i18next";
 import cls from "./Sidebar.module.scss";
 import { SideBarItemsList } from "./model/items";
 import { SidebarItem } from "../SidebarItems/SibebarItem";
+import { VStack } from "shared/ui/Stack/VStack/VStack";
 
 export interface SidebarProps {
   className?: string;
 }
-
-// storybook тказывается работать с svg, поэтому для тестов вместо svg использую компоненты (для prod расскоментируй комметарии выше и ниже)
 
 export const Sidebar = memo(
     ({ className }: SidebarProps) => {
@@ -39,11 +38,11 @@ export const Sidebar = memo(
                     {collapsed ? ">" : "<"}
                 </Button>
 
-                <div className={cls.items}>
+                <VStack gap="10" className={cls.items}>
 
                     {SideBarItemsList.map((item) => <SidebarItem key={item.path} item={item} collapsed={collapsed} />)}
 
-                </div>
+                </VStack>
 
                 <div className={cls.switchers}>
                     <ThemeSwitcher collapsed={collapsed} />

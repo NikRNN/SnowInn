@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { StoreDecoratorWithState } from "shared/config/storybook/StoreDecorator/StoreDecorator";
-import { Article, ArticleBlockType, ArticleType } from "entities/Article/model/types/article";
-import { ArticleReducer } from "entities/Article/model/slice/ArticleDetailsSlice";
+import { Article, ArticleBlockType, ArticleType } from "../../model/types/article";
+import { ArticleReducer } from "../../model/slice/ArticleDetailsSlice";
 import { ArticleDetails } from "./ArticleDetails";
 
 const meta: Meta<typeof ArticleDetails> = {

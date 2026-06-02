@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { CommentList } from "./CommentList.js";
+import { RouterDecorator } from "shared/config/storybook/RouterDecorator/RouterDecorator.js";
 
 const meta: Meta<typeof CommentList> = {
     title: "entities/Comment/CommentList",
@@ -40,6 +41,7 @@ export const Primary: Story = {
         ],
 
     },
+    decorators: [RouterDecorator("/", "/*")]
 };
 
 export const IsLoading: Story = {
@@ -63,14 +65,14 @@ export const IsLoading: Story = {
                 },
             },
         ],
-
     },
+    decorators: [RouterDecorator("/", "/*")]
 };
 
 export const IsEmpty: Story = {
     args: {
         isLoading: false,
         comments: [],
-
     },
+    decorators: [RouterDecorator("/", "/*")]
 };

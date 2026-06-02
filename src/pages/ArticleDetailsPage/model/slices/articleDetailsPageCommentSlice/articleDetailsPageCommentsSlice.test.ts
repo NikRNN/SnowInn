@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import type { DeepPartial } from "app/types/global";
 import type { ArticleDetailsCommentSchema } from "../../types/ArticleDetailsCommentSchema";
-import { articleDetailsCommentsReducer } from "./articleDetailsPageCommentsSlice";
+import { articleDetailsPageCommentsReducer } from "./articleDetailsPageCommentsSlice";
 import { fetchCommentByArticleId } from "../../services/fetchCommentsByArticleId/fetchCommentByArticleId";
 
 describe("articleDetailsCommentSlice.test", () => {
@@ -10,7 +10,7 @@ describe("articleDetailsCommentSlice.test", () => {
             isLoading: false, error: undefined, ids: [], entities: {},
 
         };
-        expect(articleDetailsCommentsReducer(state as ArticleDetailsCommentSchema, fetchCommentByArticleId.pending("test-id", ""))).toEqual({
+        expect(articleDetailsPageCommentsReducer(state as ArticleDetailsCommentSchema, fetchCommentByArticleId.pending("test-id", ""))).toEqual({
             isLoading: true,
             error: undefined,
             ids: [],
@@ -23,7 +23,7 @@ describe("articleDetailsCommentSlice.test", () => {
             isLoading: true, error: undefined, ids: [], entities: {},
 
         };
-        expect(articleDetailsCommentsReducer(state as ArticleDetailsCommentSchema, fetchCommentByArticleId.fulfilled( // fulfilled принимает несколько аргументов, см спецификацию
+        expect(articleDetailsPageCommentsReducer(state as ArticleDetailsCommentSchema, fetchCommentByArticleId.fulfilled( // fulfilled принимает несколько аргументов, см спецификацию
             [{ id: "1", text: "abc", user: { id: "1", username: "nik" } }, { id: "2", text: "bca", user: { id: "2", username: "nikita" } }],
             "",
             "",

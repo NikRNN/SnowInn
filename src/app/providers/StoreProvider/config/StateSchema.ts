@@ -10,8 +10,8 @@ import { ArticleDetailsSchema } from "entities/Article";
 import { AddNewCommentSchema } from "features/AddNewComment";
 import { CustomOptionalRecord } from "app/types/global";
 import { ScrollSaveSchema } from "features/ScrollSave/index";
-import { ArticleDetailsPageSchema, ArticleDetailsRecommendedSchema, ArticleDetailsCommentSchema } from "pages/ArticleDetailsPage";
-import { ArticlesListSchema } from "../../../../pages/ArticlesPage/model/types/articleListSchema";
+import { ArticleDetailsPageSchema } from "pages/ArticleDetailsPage";
+import { ArticlesListSchema } from "pages/ArticlesPage/model/types/articleListSchema";
 
 export interface StateSchema {
     user: UserSchema;
@@ -23,8 +23,6 @@ export interface StateSchema {
     articleDetails?: ArticleDetailsSchema;
     addNewComment?: AddNewCommentSchema;
     articlesList?: ArticlesListSchema;
-    // articleDetailsRecommendations?: ArticleDetailsRecommendedSchema;
-    // articleDetailsComments?: ArticleDetailsCommentSchema - заменил их на нижестоящую схему
     articleDetailsPage?: ArticleDetailsPageSchema
 }
 

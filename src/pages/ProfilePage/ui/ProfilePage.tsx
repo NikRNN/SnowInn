@@ -3,21 +3,21 @@ import { useCallback } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { PageWrapper } from "widgets/PageWrapper/PageWrapper.js";
-import { classNames } from "../../../shared/lib/classNames/classNames.js";
-import { DynamicSomethingLoader, ReducersList } from "../../../shared/lib/component/DynamicSomethingLoader";
+import { classNames } from "shared/lib/classNames/classNames.js";
+import { DynamicSomethingLoader, ReducersList } from "shared/lib/component/DynamicSomethingLoader";
 import {
     fetchProfileData, ProfileReducer, getProfileError, getProfileForm,
     getProfileisLoading,
     ProfileActions,
     getProfileReadOnly,
     getProfileValidateError,
-} from "../../../entities/Profile";
-import { useAppDispatch } from "../../../shared/lib/hooks/useAppDispatch/useAppDispatch";
-import { ProfileCard } from "../../../entities/User";
-import { Country } from "../../../entities/Country/model/types/country";
-import { TextTheme, Text } from "../../../shared/ui/Text/Text";
-import { ValidateProfileError } from "../../../entities/Profile/model/types/profile";
-import { useInitialEffect } from "../../../shared/lib/hooks/useInitialEffect/useInitialEffect";
+} from "entities/Profile";
+import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
+import { ProfileCard } from "entities/User";
+import { Country } from "entities/Country/model/types/country";
+import { TextTheme, Text } from "shared/ui/Text/Text";
+import { ValidateProfileError } from "entities/Profile/model/types/profile";
+import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEffect";
 import { ProfilePageHeader } from "./ProfilePageHeader/ProfilePageHeader";
 import cls from "./ProfilePage.module.scss";
 
@@ -119,9 +119,7 @@ export function ProfilePage({ className }: ProfilePageProps) {
                     onChangeAvatar={onChangeAvatar}
                 />
             </PageWrapper>
-
         </DynamicSomethingLoader>
-
     );
 }
 

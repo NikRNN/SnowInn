@@ -2,7 +2,7 @@ import { classNames } from "shared/lib/classNames/classNames.js";
 import {
     ReactNode, useCallback, useEffect, useRef, useState,
 } from "react";
-import { Portal } from "shared/ui/Portal/Portal.js";
+import { Portal } from "../Portal/Portal.js";
 import cls from "./Modal.module.scss";
 
 interface ModalProps {

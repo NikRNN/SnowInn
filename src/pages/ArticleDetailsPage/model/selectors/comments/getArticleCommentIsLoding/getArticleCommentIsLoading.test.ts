@@ -13,8 +13,6 @@ describe("getArticleCommentIsLoading.test", () => {
             },
         };
 
-        expect(getArticleCommentIsLoading(state as StateSchema)).toEqual(
-            true,
-        );
+        expect(getArticleCommentIsLoading(state as StateSchema)).toEqual(true);
     });
 });

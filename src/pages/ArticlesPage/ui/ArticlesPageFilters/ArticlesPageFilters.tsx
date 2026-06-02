@@ -4,12 +4,12 @@ import { memo, useCallback } from "react";
 import { ArticleTypeTabs, ArticleTypeView } from "entities/Article";
 import { useSelector } from "react-redux";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
-import { addArticlesListActions } from "pages/ArticlesPage/model/slices/addArticlesListSlice";
+import { addArticlesListActions } from "../../model/slices/addArticlesListSlice";
 import { Card } from "shared/ui/Card/Card";
 import { Input } from "shared/ui/Input/Input";
 import {
     getArticlesListOrder, getArticlesListSort, getArticlesListType, getArticleListView,
-} from "pages/ArticlesPage/model/selectors/articlesPageSelectors";
+} from "../../model/selectors/articlesPageSelectors";
 import { ArticlesSortSelectors } from "entities/Article/ui/ArticlesSortSelectors/ArticlesSortSelectors";
 import { SortTypeOrder } from "shared/types";
 import { ArticleSortField, ArticleType } from "entities/Article/model/types/article";
