@@ -22,7 +22,7 @@ jobs:
         - name: install modules
           run: npm install
         - name: make build production project
-          run: npm run build
+          run: npm run build:prod
         - name: typescript listing
           if: always()
           run: npm run lint
