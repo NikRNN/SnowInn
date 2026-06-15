@@ -40,8 +40,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
             onSuccess();
         }
     }, [dispatch, username, password, onSuccess]);
-    console.log(username.length)
-    console.log(password.length)
+    
 
     return (
         <DynamicSomethingLoader removeAfterUnmount reducers={initialReducers}>
