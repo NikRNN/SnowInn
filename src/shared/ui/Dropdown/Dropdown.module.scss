@@ -1,0 +1,47 @@
+.Dropdown {
+    position: relative;
+}
+
+.button {
+    background: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.menu.main {
+    background: none;
+    z-index: 1000;
+    border-radius: 8px;
+    border: 0.7px solid var(--primary-color);
+}
+
+.menu {
+    background: var(--card-bg);
+    z-index: 1000;
+    border-radius: 8px;
+    border: 0.7px solid var(--primary-color);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.item {
+    position: relative;
+    padding: 5px 15px;
+    width: 100%;
+    z-index: 1000;
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--primary-color);
+    cursor: pointer;
+
+    &:hover {
+        background-color: grey;
+        border-radius: 8px;
+    }
+}

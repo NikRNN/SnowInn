@@ -8,6 +8,7 @@ import { getUserInited, userActions } from "entities/User";
 import { useSelector } from "react-redux";
 import { UseAppDispatch } from "./providers/StoreProvider/lib/UseAppDispatch";
 
+
  
 function App() {
     const { theme } = UseTheme(); // раньше использовал, чтобы вешать глобальные стили; потом в useTheme вешаю их на body сразу

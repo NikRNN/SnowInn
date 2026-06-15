@@ -69,14 +69,13 @@ export const Input = memo((props: InputProps) => {
                     {...otherProps}
                     ref={ref}
                     type={type}
-                    value={value}
+                    value={`${value}`}
                     onChange={onChangeHandler}
                     className={cls.input}
                     onFocus={onFocus}
                     onBlur={onBlur}
                     onSelect={onSelect}
                     readOnly={readonly}
-
                 />
                 {isCaretVisible && (<span className={cls.caret} style={{ left: `${caretPos * 9}px` }} />)}
 

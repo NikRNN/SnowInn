@@ -4,6 +4,7 @@ import progress from "vite-plugin-progress";
 import svgr from "vite-plugin-svgr";
 import { ViteMinifyPlugin } from "vite-plugin-minify";
 import { analyzer } from "vite-bundle-analyzer";
+import tailwindcss from "@tailwindcss/vite";
 
 export function buildPlugins(): PluginOption[] {
     return [
@@ -17,5 +18,6 @@ export function buildPlugins(): PluginOption[] {
         analyzer({
             openAnalyzer: false,
         }),
+        tailwindcss()
     ];
 }

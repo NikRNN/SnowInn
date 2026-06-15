@@ -1,0 +1,88 @@
+.ListBox {
+    position: relative;
+    display: flex;
+}
+
+.list {
+    background-color: var(--card-bg);
+    z-index: 100;
+    position: absolute;
+    border-radius: 12px;
+    box-shadow: 4px 4px 8px var(--card-bg);
+}
+
+.dropdown {
+    position: absolute;
+    width: var(--anchor-width) !important;
+}
+
+.item {
+    padding: 9px 20px;
+
+    &:hover {
+        border-radius: 12px;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    &[data-highlighted] {
+        background: var(--inverted-primary-color);
+    }
+
+    &[data-selected] {
+        background: blue;
+        border-radius: 12px;
+    }
+}
+
+.selectLabel {
+    margin-right: 10px;
+}
+
+.trigger {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.chevron {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.2s;
+}
+
+.trigger[data-pressed] .chevron {
+    transform: rotate(180deg);
+}
+
+.disabled {
+    &:hover {
+        cursor: default;
+    }
+}
+
+.activeTrigger {
+    cursor: pointer;
+}
+
+.disabledTrigger {
+    cursor: default;
+}
+
+.top-right {
+    bottom: calc(100% + var(--margin-for-listbox-topborder));
+    right: 0;
+}
+
+.top-left {
+    bottom: calc(100% + var(--margin-for-listbox-topborder));
+    left: 0;
+}
+
+.bottom-right {
+    right: 0;
+}
+
+.bottom-left {
+    left: 0;
+}

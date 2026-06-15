@@ -19,8 +19,8 @@ export enum TextSize {
     M = "size_m",
     L = "size_l",
     S = "size_s",
-    XXL = "size_xxl",
-    XXL_SECONDARY_FONT = "size_xxl_secondary_font"
+    XL = "size_xl",
+    XL_SECONDARY_FONT = "size_xl_secondary_font"
 }
 
 interface TextProps {
@@ -32,9 +32,21 @@ interface TextProps {
   size?: TextSize
 }
 
+type HeaderTagType = "h1" | "h2" | "h3" | "h4"
+
+const mapSizeToHeaderTag : Record <TextSize, HeaderTagType> = {
+    [TextSize.XL] : "h1",
+    [TextSize.XL_SECONDARY_FONT]: "h1",
+    [TextSize.L]: "h2",
+    [TextSize.M]: "h3",
+    [TextSize.S]: "h4"
+}
+
+
+
 export const Text = memo(
     ({
-        className, title, text, theme = TextTheme.PRIMARY, position = TextPosition.CENTER, size = TextSize.M,
+        className, title, text, theme = TextTheme.PRIMARY, position = TextPosition.CENTER, size = TextSize.S,
     }: TextProps) => {
         const mods : Mods = {
             [cls[theme]]: true,
@@ -42,9 +54,11 @@ export const Text = memo(
             [cls[size]]: true,
         };
 
+        const HeaderTag = mapSizeToHeaderTag[size]
+
         return (
             <div className={classNames(cls.Text, [className], mods)}>
-                {title && <p className={cls.title}>{title}</p>}
+                {title && <HeaderTag className={cls.title}>{title}</HeaderTag>}
                 {text && <p className={cls.text}>{text}</p>}
             </div>
 

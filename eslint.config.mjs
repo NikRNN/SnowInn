@@ -21,7 +21,9 @@ export default [
             "json-server/**",
             "favicon/site.webmanifest",
             "package.json",           // ← добавить
-            "package-lock.json",  
+            "package-lock.json",
+            "tsconfig.json",        // ← добавить
+            "tsconfig.*.json"  
         ],
     },
 

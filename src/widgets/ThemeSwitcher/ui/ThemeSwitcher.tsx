@@ -3,8 +3,8 @@ import { classNames } from "shared/lib/classNames/classNames.js";
 import { memo } from "react";
 import { IconWrapper } from "shared/ui/IconWrapper/IconWrapper";
 import cls from "./ThemeSwitcher.module.scss";
-import MoonIcon from "../../../shared/assets/icons/moon-20-20.svg";
-import SunIcon from "../../../shared/assets/icons/sun-20-20.svg";
+import MoonIcon from "shared/assets/icons/moon-20-20.svg";
+import SunIcon from "shared/assets/icons/sun-20-20.svg";
 
 const Moon = MoonIcon as unknown as React.FC<React.SVGProps<SVGSVGElement>>;
 const Sun = SunIcon as unknown as React.FC<React.SVGProps<SVGSVGElement>>;

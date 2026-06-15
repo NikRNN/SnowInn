@@ -21,14 +21,14 @@ export const Sidebar = memo(
         const { t } = useTranslation();
 
         return (
-            <menu
+            <aside
                 data-testid="sidebar"
                 className={classNames(cls.sidebar, [className], {
                     [cls.collapsed]: collapsed,
                 })}
             >
                 <Button
-                    size={SizeButton.L}
+                    size={SizeButton.M}
                     square
                     theme={ButtonTheme.BACKGROUND_INVERTED}
                     className={classNames(cls.collapsedBtn)}
@@ -38,7 +38,7 @@ export const Sidebar = memo(
                     {collapsed ? ">" : "<"}
                 </Button>
 
-                <VStack gap="10" className={cls.items}>
+                <VStack role="navigation" gap="10" className={cls.items}>
 
                     {SideBarItemsList.map((item) => <SidebarItem key={item.path} item={item} collapsed={collapsed} />)}
 
@@ -49,7 +49,7 @@ export const Sidebar = memo(
                     <LangSwitcher short={collapsed} className={cls.lang} />
 
                 </div>
-            </menu>
+            </aside>
         );
     },
 

@@ -1,19 +1,19 @@
 {
-  "extends": "./tsconfig.json",
-  "compilerOptions": {
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
 
-    "outDir": "./dist",
-    "target": "es5",
-    "module": "esnext",
-    "jsx": "react-jsx",
-    "noImplicitAny": true,
-    "allowJs": true,
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
-  },
-  "include": ["src", "vite-env.d.ts"]
+        "outDir": "./dist",
+        "target": "es5",
+        "module": "esnext",
+        "jsx": "react-jsx",
+        "noImplicitAny": true,
+        "allowJs": true,
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true
+    },
+    "include": ["src", "vite-env.d.ts"]
 }

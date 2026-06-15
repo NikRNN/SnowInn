@@ -1,24 +1,24 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ],
-  "compilerOptions": {
-    "ignoreDeprecations": "6.0",
-    "composite": true,
-    "baseUrl": "./src",
-    "jsx": "react-jsx",
-    "types": ["vitest/globals", "@testing-library/jest-dom", "vite/client", "vite-plugin-svgr/client"],
-    "paths": {
-      "src/*": ["./src/*"],
-      "app/*": ["app/*"],
-      "shared/*": ["shared/*"],
-      "entities/*": ["entities/*"],
-      "features/*": ["features/*"],
-      "pages/*": ["pages/*"],
-      "widgets/*": ["widgets/*"]
-    }
-  },
-  "include": ["src", "config/storybook", "vite-env.d.ts"]
+    "files": [],
+    "references": [
+        { "path": "./tsconfig.app.json" },
+        { "path": "./tsconfig.node.json" }
+    ],
+    "compilerOptions": {
+        "ignoreDeprecations": "6.0",
+        "composite": true,
+        "baseUrl": "./src",
+        "jsx": "react-jsx",
+        "types": ["vitest/globals", "@testing-library/jest-dom", "vite/client", "vite-plugin-svgr/client"],
+        "paths": {
+            "src/*": ["./src/*"],
+            "app/*": ["app/*"],
+            "shared/*": ["shared/*"],
+            "entities/*": ["entities/*"],
+            "features/*": ["features/*"],
+            "pages/*": ["pages/*"],
+            "widgets/*": ["widgets/*"]
+        }
+    },
+    "include": ["src", "config/storybook", "vite-env.d.ts"]
 }

@@ -13,6 +13,7 @@ export enum ButtonTheme {
 }
 
 export enum SizeButton {
+    S = "size_s",
     M = "size_m",
     L = "size_l",
     XL = "size_xl"
@@ -32,7 +33,7 @@ export function Button(props: ButtonProps) {
         children,
         theme = ButtonTheme.OUTLINE,
         square,
-        size = SizeButton.M,
+        size = SizeButton.S,
         disabled,
         ...otherProps
     } = props;

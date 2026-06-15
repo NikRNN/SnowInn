@@ -40,6 +40,16 @@
     text-align: right;
 }
 
+.size_s {
+    .title {
+        font: var(--font-m);
+    }
+
+    .text {
+        font: var(--font-s);
+    }
+}
+
 .size_m {
     .title {
         font: var(--font-l);
@@ -53,6 +63,7 @@
 .size_l {
     .title {
         font: var(--font-xl);
+        cursor: default;
     }
 
     .text {
@@ -60,24 +71,24 @@
     }
 }
 
-.size_xxl {
+.size_l {
     .title {
-        font: var(--font-xxl);
+        font: var(--font-xl);
         cursor: default;
     }
 
     .text {
-        font: var(--font-xxl);
+        font: var(--font-xl);
     }
 }
 
-.size_xxl_secondary_font {
+.size_xl_secondary_font {
     .title {
-        font: var(--font-xxl-secondary-font);
+        font: var(--font-xl-secondary-font);
         cursor: default;
     }
 
     .text {
-        font: var(--font-xxl-secondary-font);
+        font: var(--font-l-secondary-font);
     }
 }

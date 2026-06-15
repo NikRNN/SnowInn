@@ -36,9 +36,7 @@ export function ProfilePageHeader({ className }: ProfilePageHeaderProps) {
             <Text title={t("Профиль")} />
 
             {canEdit && (
-
                 <>
-
                     {readonly
                         ? (
                             <Button className={cls.editBtn} theme={ButtonTheme.OUTLINE} onClick={onEdit}>
@@ -55,10 +53,8 @@ export function ProfilePageHeader({ className }: ProfilePageHeaderProps) {
                                 </Button>
                             </HStack>
                         )}
-
                 </>
             )}
-
         </HStack>
     );
 }

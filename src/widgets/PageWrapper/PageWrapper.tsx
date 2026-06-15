@@ -1,7 +1,7 @@
 import { classNames } from "shared/lib/classNames/classNames.js";
 
 import {
-    memo, ReactNode, useRef,
+    ReactNode, useRef,
     RefObject,
     UIEvent,
 } from "react";
@@ -45,9 +45,9 @@ export function PageWrapper({
     });
 
     return (
-        <section id="PAGE_WRAPPER_ID" onScroll={onScroll} ref={wrapperRef} className={classNames(cls.PageWrapper, [className])}>
+        <main id="PAGE_WRAPPER_ID" onScroll={onScroll} ref={wrapperRef} className={classNames(cls.PageWrapper, [className])}>
             {children}
             <div ref={triggerRef} />
-        </section>
+        </main>
     );
 }
