@@ -9,7 +9,7 @@ import {
 import { fetchArticlesList } from "../fetchArticlesList/fetchArticlesList";
 import { addArticlesListActions } from "../../slices/addArticlesListSlice";
 
-export const initArticlesPage = createAsyncThunk<void, URLSearchParams, {rejectValue: string, extra : ThunkApi, state: StateSchema}>( // типы: массив Comment - то, что вернется в случае успеха, второе - входные данные thunk и тип ошибки
+export const initArticlesPage = createAsyncThunk<void, URLSearchParams, {rejectValue: string, extra : ThunkApi, state: StateSchema}>( 
     "articlesList/fetchInitArticlesPage", // первый аргумент, название thunk
     async (searchParams, thunkAPI) => {
         const inited = getArticleListIsInited(thunkAPI.getState()); // как и сверху, тут я получю отдельную часть стейта;для использования getState внутри селектора не забудь передать стэйт в третий дженерик

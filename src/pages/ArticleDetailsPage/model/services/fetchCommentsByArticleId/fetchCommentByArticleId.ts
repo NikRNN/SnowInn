@@ -2,7 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import type { ThunkApi } from "app/providers/StoreProvider";
 import type { Comment } from "../../../../../entities/Comment/model/types/comments";
 
-export const fetchCommentByArticleId = createAsyncThunk<Comment[], string | undefined, {rejectValue: string, extra : ThunkApi}>( // типы: массив Comment - то, что вернется в случае успеха, стринг - входные данные thunk и тип ошибки
+export const fetchCommentByArticleId = createAsyncThunk<Comment[], string | undefined, {rejectValue: string, extra : ThunkApi}>( 
     "articleDetailsComments/fetchCommentByArticleId", // первый аргумент, название thunk
     async (articleId, thunkAPI) => {
         if (!articleId) {

@@ -8,7 +8,7 @@ const meta = {
     title: "shared/Skeleton",
     component: Skeleton,
     parameters: {
-        layout: "centered",
+        layout: "fullscreen",
     },
     tags: ["autodocs"],
     argTypes: {},
@@ -29,7 +29,7 @@ export const Primary: Story = {
                 <StoryWithWidth />
             </div>
         ),
-        StyleDecorator, ThemeDecorator(Theme.DARK),
+        StyleDecorator, ThemeDecorator(Theme.LIGHT),
     ],
 };
 

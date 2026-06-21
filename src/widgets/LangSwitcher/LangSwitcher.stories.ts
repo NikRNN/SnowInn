@@ -10,7 +10,6 @@ const meta: Meta<typeof LangSwitcher> = {
     },
     tags: ["autodocs"],
     argTypes: {},
-
     args: {},
 
 } satisfies Meta<typeof LangSwitcher>;

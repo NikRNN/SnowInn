@@ -9,6 +9,7 @@ import { Card } from "shared/ui/Card/Card";
 import { Input } from "shared/ui/Input/Input";
 import {
     getArticlesListOrder, getArticlesListSort, getArticlesListType, getArticleListView,
+    getArticlesListSearch,
 } from "../../model/selectors/articlesPageSelectors";
 import { ArticlesSortSelectors } from "entities/Article/ui/ArticlesSortSelectors/ArticlesSortSelectors";
 import { SortTypeOrder } from "shared/types";
@@ -16,7 +17,7 @@ import { ArticleSortField, ArticleType } from "entities/Article/model/types/arti
 import { useDebounce } from "shared/lib/hooks/useDebounce/useDebounce";
 import { fetchArticlesList } from "../../model/services/fetchArticlesList/fetchArticlesList";
 import cls from "./ArticlesPageFilters.module.scss";
-import { ArticleViewSelector } from "../ArticleViewSelector/ArticleViewSelector";
+import { ArticleViewSelector } from "../../../../entities/Article/ui/ArticleViewSelector/ArticleViewSelector";
 
 interface ArticlesPageFiltersProps {
   className?: string;
@@ -27,10 +28,10 @@ export const ArticlesPageFilters = memo(({ className }: ArticlesPageFiltersProps
     const { t } = useTranslation();
     const view = useSelector(getArticleListView);
     const dispatch = useAppDispatch();
-
     const order = useSelector(getArticlesListOrder);
     const sort = useSelector(getArticlesListSort);
     const tabType = useSelector(getArticlesListType);
+    const search = useSelector(getArticlesListSearch)
 
     const fetchData = useCallback(() => {
         dispatch(fetchArticlesList({ replace: true }));
@@ -73,7 +74,7 @@ export const ArticlesPageFilters = memo(({ className }: ArticlesPageFiltersProps
                 <ArticleViewSelector view={view} onToggleView={onToggleView} />
             </div>
             <Card className={cls.search}>
-                <Input onChange={onChangeSearch} placeholder={t("Поиск")} />
+                <Input value={search} onChange={onChangeSearch} placeholder={t("Поиск")} />
             </Card>
             <ArticleTypeTabs className={cls.tabs} value={tabType} onChangeType={onChangeType} />
 

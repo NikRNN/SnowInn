@@ -23,7 +23,8 @@ export default [
             "package.json",           // ← добавить
             "package-lock.json",
             "tsconfig.json",        // ← добавить
-            "tsconfig.*.json"  
+            "tsconfig.*.json",
+            "scripts/**"  
         ],
     },
 

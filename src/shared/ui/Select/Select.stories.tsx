@@ -20,7 +20,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
     args: {
-        label: "45454",
+        label: "Выберите значение",
         options: [
             { value: "ru", content: "Русский" },
             { value: "en", content: "English" },

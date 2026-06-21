@@ -6,13 +6,13 @@ import { Navbar } from "widgets/NavBar/index.js";
 import { Sidebar } from "widgets/Sidebar/index.js";
 import { getUserInited, userActions } from "entities/User";
 import { useSelector } from "react-redux";
-import { UseAppDispatch } from "./providers/StoreProvider/lib/UseAppDispatch";
+import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 
 
  
 function App() {
     const { theme } = UseTheme(); // раньше использовал, чтобы вешать глобальные стили; потом в useTheme вешаю их на body сразу
-    const dispatch = UseAppDispatch();
+    const dispatch = useAppDispatch();
     const inited = useSelector(getUserInited);
 
     useEffect(() => { dispatch(userActions.initAuthData()); }, [dispatch]);

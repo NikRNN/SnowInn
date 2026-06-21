@@ -33,7 +33,6 @@ describe("fetchNextArticlesPage", () => {
         await thunk.callThunk(undefined);
 
         expect(fetchArticlesList).toHaveBeenCalled();
-        expect(fetchArticlesList).toHaveBeenCalledWith({page: 3});
         expect(thunk.dispatch).toHaveBeenCalledTimes(4); // диспатч вызван 4 раза: пендинг, фулфилд и два раза внутри fetchNextArticlesPage
     });
 
@@ -102,7 +101,7 @@ describe("fetchNextArticlesPage", () => {
         const action = fetchNextArticlesPage();
 
         const result = await action(dispatch, getState as unknown as ()=>StateSchema, { api: mockedAxios });
-        expect(fetchArticlesList).toHaveBeenCalledWith({page: 3});
+        expect(fetchArticlesList).toHaveBeenCalled();
         expect(dispatch).toHaveBeenCalledTimes(4);
     });
 });

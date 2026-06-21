@@ -7,7 +7,7 @@ import {
 } from "react";
 import { useInfiniteScroll } from "shared/lib/hooks/useInfiniteScroll/useInfiniteScroll";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
-import { getScrollPosByPath, scrollSaveActions } from "features/ScrollSave";
+import { getScrollPosByPath, scrollSaveActions } from "features/scrollSave";
 import { useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { StateSchema } from "app/providers/StoreProvider";

@@ -8,12 +8,10 @@ const meta = {
     title: "pages/MainPage",
     component: MainPage,
     parameters: {
-        layout: "centered",
+        layout: "fullscreen",
     },
     tags: ["autodocs"],
-    argTypes: {
-
-    },
+    argTypes: {  },
 
     args: { },
 } satisfies Meta<typeof MainPage>;

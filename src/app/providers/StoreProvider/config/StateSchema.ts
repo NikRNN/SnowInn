@@ -1,22 +1,24 @@
 import { UserSchema } from "entities/User";
-import { LoginSchema } from "features/AuthByUsername";
+import { LoginSchema } from "features/authByUsername";
 import { CounterSchema } from "entities/Counter";
 import {
     EnhancedStore, ReducersMapObject, Action, Reducer,
 } from "@reduxjs/toolkit";
-import { ProfileSchema } from "entities/Profile";
+import { ProfileSchema } from "features/editProfileCard/index";
 import type { AxiosInstance } from "axios";
 import { ArticleDetailsSchema } from "entities/Article";
-import { AddNewCommentSchema } from "features/AddNewComment";
+import { AddNewCommentSchema } from "features/addNewComment";
 import { CustomOptionalRecord } from "app/types/global";
-import { ScrollSaveSchema } from "features/ScrollSave/index";
+import { ScrollSaveSchema } from "features/scrollSave/index";
 import { ArticleDetailsPageSchema } from "pages/ArticleDetailsPage";
 import { ArticlesListSchema } from "pages/ArticlesPage/model/types/articleListSchema";
+import { baseRTKApi } from "shared/api/baseRTKApi";
 
 export interface StateSchema {
     user: UserSchema;
     counter: CounterSchema;
     scrollSave: ScrollSaveSchema;
+    [baseRTKApi.reducerPath]: ReturnType<typeof baseRTKApi.reducer>
     // дальше пойдут асинхронные редьюсеры (поэтому и необязательные)
     loginForm?: LoginSchema;
     profile?: ProfileSchema;

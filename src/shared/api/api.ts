@@ -4,7 +4,6 @@ import { AUTH_USER_LOCALSTORAGE } from "shared/const/localstorage";
 
 const baseURL = __IS_DEV ? "http://localhost:8000" : "https://snowinn.ru";
 // const baseURL = import.meta.env.VITE_API_URL;
-console.log("BASE URL IS:", import.meta.env.VITE_API_URL);
 
 export const $api = axios.create({
     baseURL,

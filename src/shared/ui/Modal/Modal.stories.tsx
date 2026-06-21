@@ -34,5 +34,6 @@ export const Light: Story = {
         children: "lorem100 yhjhjhjh yhjrhjhgjhgjfhgjhgj jyjhgjrhthdyteyjhitohy hytjhtjhrtt gbeythnynrt hynrtyhnrthnrhnrh",
         isOpen: true,
     },
+    decorators: [ThemeDecorator(Theme.LIGHT)]
 
 };

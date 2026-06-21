@@ -10,7 +10,7 @@ function MainPage() {
 
     return (
         <div className={classNames(cls.mainPage)} style={{ color: "black" }}>
-            <BugButton />
+            {/* <BugButton /> */}
             <div className={cls.mainText}>
                 <Text title="ПРИКЛЮЧЕНИЕ" size={TextSize.XL_SECONDARY_FONT} theme={TextTheme.MAIN} />
                 <Text title="НАЧИНАЕТСЯ" size={TextSize.XL_SECONDARY_FONT} theme={TextTheme.MAIN} />

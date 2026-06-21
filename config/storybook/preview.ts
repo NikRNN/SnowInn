@@ -3,7 +3,13 @@ import { StoreDecoratorWithoutState } from "shared/config/storybook/StoreDecorat
 import { StyleDecorator } from "shared/config/storybook/StyleDecorator/StyleDecorator";
 import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { Theme } from "app/providers/ThemeProvider/index";
+import { initialize, mswLoader } from "msw-storybook-addon";
 import { RouterDecorator } from "shared/config/storybook/RouterDecorator/RouterDecorator";
+
+
+initialize({
+    onUnhandledRequest: "bypass",
+});
 
 const preview: Preview = {
     parameters: {
@@ -38,6 +44,7 @@ const preview: Preview = {
         },
     },
     decorators: [StyleDecorator, ThemeDecorator(Theme.LIGHT), StoreDecoratorWithoutState],
+    loaders: [mswLoader],
 };
 
 export default preview;

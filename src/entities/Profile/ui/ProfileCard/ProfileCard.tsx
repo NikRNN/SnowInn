@@ -6,7 +6,7 @@ import { Loader } from "shared/ui/Loader/Loader";
 import { Avatar } from "shared/ui/Avatar/Avatar";
 import { Country } from "entities/Country/model/types/country";
 import { CountrySelect } from "entities/Country/ui/CountrySelect";
-import { Profile } from "../../model/types/profile";
+import type { Profile } from "../../model/types/profile";
 import { HStack } from "shared/ui/Stack";
 
 import cls from "./ProfileCard.module.scss";

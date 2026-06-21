@@ -3,7 +3,7 @@ import {
 } from "react";
 import { useStore } from "react-redux";
 import { ReduxStoreWithManager } from "app/providers/StoreProvider";
-import { UseAppDispatch } from "app/providers/StoreProvider/lib/UseAppDispatch";
+import { useAppDispatch } from "../hooks/useAppDispatch/useAppDispatch";
 import { StateSchemaKey } from "app/providers/StoreProvider/config/StateSchema";
 import { Reducer } from "@reduxjs/toolkit";
 
@@ -19,7 +19,7 @@ children: ReactNode;
 removeAfterUnmount?: boolean; // на случай, если не хочу удалять редьюсер после размонтирования компонента
 }
 
-// для динамической подгрузки редьюсеров в стор(оборачиваю какой-то компонент, в пропсы сюда передаю список редьюсеров из слайса)
+// для динамической подгрузки редьюсеров в стор(оборачиваю какой-то компонент, в пропсы сюда передаю список редьюсеров из слайса
 
 export const DynamicSomethingLoader: FC<DynamicSomethingLoaderProps> = (props) => {
     const {
@@ -29,7 +29,7 @@ export const DynamicSomethingLoader: FC<DynamicSomethingLoaderProps> = (props) =
     } = props;
 
     const store = useStore() as ReduxStoreWithManager;
-    const dispatch = UseAppDispatch();
+    const dispatch = useAppDispatch();
 
     useEffect(() => {
         const mountedReducers = store.reducerManager.mountedReducers();

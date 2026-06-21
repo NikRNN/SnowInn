@@ -5,9 +5,9 @@ import {
 } from "react";
 import { Article, ArticleTypeView } from "../../model/types/article";
 import { Virtuoso } from "react-virtuoso";
-import cls from "./ArticleList.module.scss";
 import { ArticleListItem } from "../ArticleListItem/ArticleListItem";
 import { SkeletonListItem } from "../ArticleListItem/skeletonListItem";
+import cls from "./ArticleList.module.scss";
 
 interface ArticleListProps {
   className?: string;
@@ -22,20 +22,21 @@ interface ArticleListProps {
 
 const getSkeletons = (view : ArticleTypeView) => (new Array(view === ArticleTypeView.TILE ? 9 : 3)
     .fill(0)
-    .map((item, index) => (
+    .map((_, index) => (
         <SkeletonListItem
             className={cls.card}
-             
             key={index}
             view={view}
         />
     )));
 
 export const ArticleList = memo(({
-    className, articles, isLoading, view = ArticleTypeView.TILE, error, linkTarget, onScrollEnd, virtualized,
+    className, articles, isLoading, view = ArticleTypeView.TILE, linkTarget, onScrollEnd, virtualized,
 }: ArticleListProps) => {
+ 
     const renderArticle = useCallback((index: number) => {
         const item = articles[index];
+        
         return (
             <ArticleListItem
                 linkTarget={linkTarget}
@@ -47,6 +48,7 @@ export const ArticleList = memo(({
     }, [articles, linkTarget, view]);
 
     const rows = useMemo(() => {
+        
         const result: Article[][] = [];
         for (let i = 0; i < articles.length; i += 5) {
             result.push(articles.slice(i, i + 5));
@@ -57,6 +59,7 @@ export const ArticleList = memo(({
     const skeletonRows = useMemo(() => new Array(3).fill(0).map(() => [0, 1, 2, 3, 4]), []);
 
     if (!virtualized) {
+        
         return (
             <div className={classNames(cls.ArticleList, [className, cls[view]])}>
                 {isLoading && getSkeletons(view)}
@@ -75,7 +78,7 @@ export const ArticleList = memo(({
 
     if (view === ArticleTypeView.TILE) {
         const totalRows = isLoading ? rows.length + skeletonRows.length : rows.length;
-
+        
         return (
             <div className={classNames(cls.ArticleList, [className, cls[view]])}>
                 <Virtuoso
