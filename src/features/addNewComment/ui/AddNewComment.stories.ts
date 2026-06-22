@@ -22,13 +22,13 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
     args: {},
     decorators: [StoreDecoratorWithState(
-        // Начальное состояние
+    
         {
             addNewComment: {
                 text: "first comment",
             },
         },
-        // Редьюсеры
+    
         {
             addNewComment: AddNewCommentReducer,
         },
