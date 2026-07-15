@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { ArticleTypeView, ArticleType, ArticleBlockType } from "../../model/types/article.js";
+import { ArticleTypeView , ArticleBlockType, ArticleType} from "../../model/const/consts";
 import { ArticleList } from "./ArticleList.js";
 import { RouterDecorator } from "shared/config/storybook/RouterDecorator/RouterDecorator.js";
 

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { withTranslation } from "shared/config/storybook/TranslationDecorator/translationDecorator";
+import { TranslationDecorator } from "shared/config/storybook/TranslationDecorator/TranslationDecorator";
 import { LangSwitcher } from "./LangSwitcher";
 
 const meta: Meta<typeof LangSwitcher> = {
@@ -19,12 +19,12 @@ type Story = StoryObj<typeof meta>;
 
 export const Short: Story = {
     args: { short: true },
-    decorators: [withTranslation],
+    decorators: [TranslationDecorator],
 
 };
 
 export const Long: Story = {
     args: { short: false },
-    decorators: [withTranslation],
+    decorators: [TranslationDecorator],
 
 };

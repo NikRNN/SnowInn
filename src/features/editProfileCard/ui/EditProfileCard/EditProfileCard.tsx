@@ -10,7 +10,7 @@ import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEf
 import { Country } from "entities/Country";
 import { ProfileCard } from "entities/User";
 import { Text , TextTheme } from "shared/ui/Text/Text";
-import { ValidateProfileError } from "../../model/types/editProfileCardSchema";
+import { ValidateProfileError } from "../../model/const/consts";
 import { DynamicSomethingLoader, ReducersList } from "shared/lib/component/DynamicSomethingLoader";
 import { EditProfileCardHeader } from "../EditProfileCardHeader/EditProfileCardHeader";
 interface EditProfileCardProps {
@@ -88,7 +88,7 @@ export const EditProfileCard = memo((props: EditProfileCardProps) => {
         <DynamicSomethingLoader reducers={reducers}>
             <div className={classNames("", [className], {})}>
                 <EditProfileCardHeader/>
-                {validateErrors?.length && validateErrors.map((err) => <Text theme={TextTheme.ERROR} text={translateValidateErrors[err]} key={err} />)}
+                {validateErrors?.length && validateErrors.map((err) => <Text data-testid="EditProfileCard.Error" theme={TextTheme.ERROR} text={translateValidateErrors[err]} key={err} />)}
                 <ProfileCard
                     data={profileForm}
                     isLoading={isLoading}

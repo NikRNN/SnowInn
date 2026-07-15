@@ -3,10 +3,10 @@ import {
     createSlice,
     PayloadAction,
 } from "@reduxjs/toolkit";
-import { StateSchema } from "app/providers/StoreProvider";
+import type { StateSchema } from "app/providers/StoreProvider/config/types";
 import { Article, ArticleTypeView } from "entities/Article";
 import { ARTICLE_VIEW_LOCALSTORAGE } from "shared/const/localstorage";
-import { ArticleSortField, ArticleType } from "entities/Article/model/types/article";
+import { ArticleSortField, ArticleType } from "entities/Article/model/const/consts";
 import { SortTypeOrder } from "shared/types";
 import { ArticlesListSchema } from "../types/articleListSchema";
 import { fetchArticlesList } from "../services/fetchArticlesList/fetchArticlesList";

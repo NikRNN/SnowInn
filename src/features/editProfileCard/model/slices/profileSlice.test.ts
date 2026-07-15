@@ -1,7 +1,8 @@
 import "@testing-library/jest-dom";
 import type { DeepPartial } from "app/types/global";
 import { Country } from "entities/Country";
-import { ProfileSchema, ValidateProfileError } from "../types/editProfileCardSchema";
+import { ProfileSchema} from "../types/editProfileCardSchema";
+import { ValidateProfileError } from "../const/consts";
 import { ProfileActions, ProfileReducer } from "./profileSlice";
 import { updateProfileData } from "../services/updateProfileData/updateProfileData";
 

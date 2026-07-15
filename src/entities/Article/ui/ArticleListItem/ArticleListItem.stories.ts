@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import {
-    ArticleTypeView, ArticleType, ArticleBlockType, Article,
-} from "../../model/types/article.js";
+import { Article } from "../../model/types/article.js";
+import { ArticleTypeView , ArticleBlockType, ArticleType} from "../../model/const/consts";
 import { ArticleListItem } from "./ArticleListItem.js";
 import { RouterDecorator } from "shared/config/storybook/RouterDecorator/RouterDecorator.js";
 

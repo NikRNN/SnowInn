@@ -1,9 +1,5 @@
-import { User } from "entities/User";
-
-export enum ArticleBlockType {
-TEXT = "TEXT",
-IMAGE = "IMAGE"
-}
+import type { User } from "entities/User/model/types/index";
+import { ArticleBlockType , ArticleType } from "../const/consts";
 
 export interface ArticleBlockBase {
     id: string,
@@ -24,12 +20,6 @@ export interface ArticleImageBlock extends ArticleBlockBase {
 
 export type ArticleBlock = ArticleImageBlock | ArticleTextBlock
 
-export enum ArticleType {
-SKI_TRACK = "Трассовое катание",
-FREERIDE = "Фрирайд",
-ALL = "Все статьи"
-}
-
 export interface Article {
     id: string,
     user: User,
@@ -42,13 +32,4 @@ export interface Article {
     blocks: ArticleBlock[]
 }
 
-export enum ArticleTypeView {
-    LIST = "list",
-    TILE = "tile"
-}
 
-export enum ArticleSortField { // поле, по которому будет идти сортировка статей
-    VIEWS = "views",
-    TITLE = "title",
-    CREATED = "createdAt"
-}

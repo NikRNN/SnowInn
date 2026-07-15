@@ -2,9 +2,8 @@ import { vi } from "vitest";
 import axios from "axios";
 import { Dispatch } from "@reduxjs/toolkit";
 import { StateSchema } from "app/providers/StoreProvider";
-import { TestAsyncThunk } from "shared/lib/tests/testAsyncThunk/TestAsyncThunk";
 import type { DeepPartial } from "app/types/global";
-import { ArticleSortField, ArticleType } from "entities/Article/model/types/article";
+import { ArticleSortField, ArticleType } from "entities/Article/model/const/consts";
 import type { Article } from "entities/Article/model/types/article";
 import { fetchArticlesList } from "./fetchArticlesList";
 

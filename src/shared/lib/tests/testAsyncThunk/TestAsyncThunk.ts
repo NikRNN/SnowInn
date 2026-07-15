@@ -1,4 +1,4 @@
-import { StateSchema } from "app/providers/StoreProvider";
+import type { StateSchema } from "app/providers/StoreProvider/config/types";
 import { vi } from "vitest";
 import { AsyncThunkAction } from "@reduxjs/toolkit";
 import axios, { AxiosInstance } from "axios";

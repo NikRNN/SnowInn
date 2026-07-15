@@ -1,4 +1,4 @@
-import { RoutePath } from "shared/config/routeConfig/routeConfig";
+import { RoutePath } from "shared/config/routeConfig/index";
 import MainPageIcon from "shared/assets/icons/main-page.svg";
 import AboutPageIcon from "shared/assets/icons/about-us.svg";
 import ProfilePageIcon from "shared/assets/icons/profile.svg";

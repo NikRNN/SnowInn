@@ -10,7 +10,7 @@ import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { getScrollPosByPath, scrollSaveActions } from "features/scrollSave";
 import { useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { StateSchema } from "app/providers/StoreProvider";
+import type { StateSchema } from "app/providers/StoreProvider/config/types";
 import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEffect";
 import { useThrottle } from "shared/lib/hooks/useThrottle/useThrottle";
 import cls from "./PageWrapper.module.scss";

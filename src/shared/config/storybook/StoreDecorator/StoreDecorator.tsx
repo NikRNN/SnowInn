@@ -1,5 +1,6 @@
 import type { Decorator } from "@storybook/react";
-import { StateSchema, StoreProvider, createReduxStore } from "app/providers/StoreProvider";
+import { StoreProvider, createReduxStore } from "app/providers/StoreProvider";
+import type { StateSchema } from "app/providers/StoreProvider/config/types";
 import type { DeepPartial } from "app/types/global";
 import { ReducersList } from "shared/lib/component/DynamicSomethingLoader";
 import { Provider } from "react-redux";
@@ -11,18 +12,6 @@ export const StoreDecoratorWithState = (state: DeepPartial<StateSchema>, asyncRe
         </StoreProvider>
     );
 };
-
-// export const StoreDecoratorWithoutState: Decorator = function (Story) {
-//     return (
-
-//         <StoreProvider>
-//             <div>
-//                 <Story />
-//             </div>
-//         </StoreProvider>
-
-//     );
-// };
 
 export const StoreDecoratorWithoutState: Decorator = (Story) => {
     const store = createReduxStore(

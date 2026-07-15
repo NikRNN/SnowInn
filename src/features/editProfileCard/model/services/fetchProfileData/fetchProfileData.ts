@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import type { ThunkApi } from "app/providers/StoreProvider";
-import { ValidateProfileError } from "../../types/editProfileCardSchema";
+import type { ThunkApi } from "app/providers/StoreProvider/config/types";
+import { ValidateProfileError } from "../../const/consts";
 import type { Profile } from "entities/Profile";
 
 export const fetchProfileData = createAsyncThunk<Profile, string, {rejectValue: ValidateProfileError[], extra : ThunkApi}>( // типы: юзер - то, что вернется в случае успеха, логин пропс - входные данные thunk и тип ошибки

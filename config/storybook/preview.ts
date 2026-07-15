@@ -4,7 +4,7 @@ import { StyleDecorator } from "shared/config/storybook/StyleDecorator/StyleDeco
 import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { Theme } from "app/providers/ThemeProvider/index";
 import { initialize, mswLoader } from "msw-storybook-addon";
-import { RouterDecorator } from "shared/config/storybook/RouterDecorator/RouterDecorator";
+import { SuspenseDecorator } from "shared/config/storybook/SuspenseDecorator/SuspenseDecorator";
 
 
 initialize({
@@ -43,7 +43,7 @@ const preview: Preview = {
             test: "todo",
         },
     },
-    decorators: [StyleDecorator, ThemeDecorator(Theme.LIGHT), StoreDecoratorWithoutState],
+    decorators: [StyleDecorator, ThemeDecorator(Theme.LIGHT), StoreDecoratorWithoutState, SuspenseDecorator],
     loaders: [mswLoader],
 };
 

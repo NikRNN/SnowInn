@@ -2,8 +2,7 @@ import { classNames } from "shared/lib/classNames/classNames.js";
 import { useTranslation } from "react-i18next";
 import { Text } from "shared/ui/Text/Text";
 import { Button, ButtonTheme } from "shared/ui/Button/Button";
-import {
-    getProfileData, getProfileReadOnly} from "../../model/selectors/editProfileCardSelectors";
+import { getProfileData, getProfileReadOnly} from "../../model/selectors/editProfileCardSelectors";
 import { updateProfileData } from "../../model/services/updateProfileData/updateProfileData";
 import { ProfileActions } from "../../model/slices/profileSlice";
 import { useSelector } from "react-redux";
@@ -47,16 +46,16 @@ export const EditProfileCardHeader = memo(({ className }: EditProfileCardHeaderP
                     <>
                         {readonly
                             ? (
-                                <Button className={cls.editBtn} theme={ButtonTheme.OUTLINE} onClick={onEdit}>
+                                <Button data-testid="EditProfileCardHeader.EditBtn" className={cls.editBtn} theme={ButtonTheme.OUTLINE} onClick={onEdit}>
                                     {t("Редактировать")}
                                 </Button>
                             )
                             : (
                                 <HStack gap="10">
-                                    <Button className={cls.editBtn} theme={ButtonTheme.OUTLINE} onClick={onSaveProfileData}>
+                                    <Button data-testid="EditProfileCardHeader.SaveBtn" className={cls.editBtn} theme={ButtonTheme.OUTLINE} onClick={onSaveProfileData}>
                                         {t("Сохранить")}
                                     </Button>
-                                    <Button className={cls.cancelBtn} theme={ButtonTheme.OUTLINE_RED} onClick={onCancelEdit}>
+                                    <Button data-testid="EditProfileCardHeader.CancelBtn" className={cls.cancelBtn} theme={ButtonTheme.OUTLINE_RED} onClick={onCancelEdit}>
                                         {t("Отмена")}
                                     </Button>
                                 </HStack>

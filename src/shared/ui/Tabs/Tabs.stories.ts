@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { action } from "@storybook/addon-actions";
+import { fn } from "@storybook/test";
 import { Tabs } from "./Tabs.js";
 
 const meta = {
@@ -9,10 +9,7 @@ const meta = {
         layout: "centered",
     },
     tags: ["autodocs"],
-    argTypes: {
-
-    },
-
+    argTypes: { },
     args: { },
 } satisfies Meta<typeof Tabs>;
 
@@ -36,7 +33,7 @@ export const Primary: Story = {
             },
         ],
         value: "tab 3",
-        onTabClick: action("onTabClick"),
+        onTabClick: fn(),
 
     },
 

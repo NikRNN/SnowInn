@@ -2,7 +2,7 @@ import "@testing-library/jest-dom";
 import { StateSchema } from "app/providers/StoreProvider";
 import { DeepPartial } from "app/types/global";
 import { ArticleTypeView } from "entities/Article";
-import { ArticleSortField, ArticleType } from "entities/Article/model/types/article";
+import { ArticleSortField, ArticleType } from "entities/Article/model/const/consts";
 import {
     getArticleListError, getArticleListIsLoading, getArticleListView, getArticleListLimit, getArticleListPageNum, getArticleListHasMore, getArticleListIsInited, getArticlesListOrder, getArticlesListSort, getArticlesListSearch, getArticlesListType,
 } from "./articlesPageSelectors";

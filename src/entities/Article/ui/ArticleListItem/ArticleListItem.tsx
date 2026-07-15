@@ -1,17 +1,18 @@
 import { classNames } from "shared/lib/classNames/classNames.js";
 import { useTranslation } from "react-i18next";
 import { HTMLAttributeAnchorTarget, memo } from "react";
-import { Article, ArticleBlockType, ArticleTypeView } from "../../model/types/article";
+import { Article } from "../../model/types/article";
+import { ArticleBlockType, ArticleTypeView } from "../../model/const/consts";
 import { Text, TextPosition } from "shared/ui/Text/Text";
 import { IconWrapper } from "shared/ui/IconWrapper/IconWrapper";
 import { Card } from "shared/ui/Card/Card";
 import { useHover } from "shared/lib/hooks/useHover/useHover";
 import { Avatar } from "shared/ui/Avatar/Avatar";
 import { Button, ButtonTheme } from "shared/ui/Button/Button";
-import { RoutePath } from "shared/config/routeConfig/routeConfig";
+import { RoutePath } from "shared/config/routeConfig/index";
 import { AppLink } from "shared/ui/AppLink/AppLink";
 import cls from "./ArticleListItem.module.scss";
-import EyeIconArticle from "../../../../shared/assets/icons/eye-20-20.svg";
+import EyeIconArticle from "shared/assets/icons/eye-20-20.svg";
 import { ArticleTextBloсkComponent } from "../ArticleTextBlockComponent/ArticleTextBlockComponent";
 
 

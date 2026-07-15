@@ -5,7 +5,7 @@ import { StateSchema } from "app/providers/StoreProvider";
 import { TestAsyncThunk } from "shared/lib/tests/testAsyncThunk/TestAsyncThunk";
 import { Country } from "entities/Country";
 import { fetchProfileData } from "./fetchProfileData";
-import { ValidateProfileError } from "../../types/editProfileCardSchema";
+import { ValidateProfileError } from "../../const/consts";
 
 // import "@testing-library/jest-dom"; // тут не нужен, т.к. тут с DOM не работаем
 

@@ -3,8 +3,8 @@ import {
     createSlice,
     PayloadAction,
 } from "@reduxjs/toolkit";
-import { StateSchema } from "app/providers/StoreProvider";
-import { Article } from "entities/Article";
+import type { StateSchema } from "app/providers/StoreProvider/config/types";
+import { Article } from "entities/Article/model/index";
 import { ArticleDetailsRecommendedSchema } from "../../types/ArticleDetailsRecommendedSchema";
 import { fetchArticlesRecommendations } from "../../services/fetchArticlesRecommendations/fetchArticlesRecommendations";
 

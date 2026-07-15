@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import type { StateSchema, ThunkApi } from "app/providers/StoreProvider";
+import type { ThunkApi , StateSchema } from "app/providers/StoreProvider/config/types";
 import { getUserAuthData } from "entities/User";
 import { getArticleDetailsData } from "entities/Article/model/selectors/articleDetails";
 

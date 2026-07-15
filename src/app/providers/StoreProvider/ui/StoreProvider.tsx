@@ -2,10 +2,9 @@ import { Provider } from "react-redux";
 import { ReactNode } from "react";
 import { createReduxStore } from "app/providers/StoreProvider/config/store.js";
 import { DeepPartial } from "app/types/global.js";
-import { ReducersList } from "shared/lib/component/DynamicSomethingLoader.js";
-import { useNavigate } from "react-router-dom";
+import type { ReducersList } from "../config/reducerTypes";
 import { ReducersMapObject } from "@reduxjs/toolkit";
-import { StateSchema } from "../config/StateSchema.js";
+import type { StateSchema } from "../config/types";
 
 interface StoreProviderProps {
   children?: ReactNode;

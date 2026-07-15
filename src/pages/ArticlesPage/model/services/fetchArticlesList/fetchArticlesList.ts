@@ -1,12 +1,13 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import type { StateSchema, ThunkApi } from "app/providers/StoreProvider";
+import type { ThunkApi } from "app/providers/StoreProvider";
+import type { StateSchema} from "app/providers/StoreProvider/config/types";
 import type { Article } from "entities/Article";
 import {
     getArticlesListSearch, getArticlesListSort, getArticlesListOrder, getArticlesListType,
     getArticleListLimit, getArticleListPageNum,
 } from "../../../model/selectors/articlesPageSelectors";
 import { addQueryParams } from "shared/lib/url/addQueryParams";
-import { ArticleType } from "entities/Article/model/types/article";
+import { ArticleType } from "entities/Article/model/const/consts";
 
 interface fetchArticlesListProps {
     page?: number,

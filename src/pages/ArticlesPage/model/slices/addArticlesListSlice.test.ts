@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import type { DeepPartial } from "app/types/global";
-import { ArticleTypeView } from "entities/Article";
-import { ArticleSortField, ArticleType, Article } from "entities/Article/model/types/article";
+import { ArticleTypeView , ArticleSortField, ArticleType } from "entities/Article";
+import { Article } from "entities/Article/model/types/article";
 import type { ArticlesListSchema } from "../types/articleListSchema";
 import { addArticlesListReducer, addArticlesListActions } from "./addArticlesListSlice";
 import { fetchArticlesList } from "../services/fetchArticlesList/fetchArticlesList";

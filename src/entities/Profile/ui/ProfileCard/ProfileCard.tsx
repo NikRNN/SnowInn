@@ -61,8 +61,8 @@ export function ProfileCard({
                     </div>
                 )}
 
-                <Input value={data?.firstname} placeholder={t("Ваше имя")} className={cls.input} onChange={onChangeFirstName} readonly={readonly} />
-                <Input value={data?.lastname} placeholder={t("Ваша фамилия")} className={cls.input} onChange={onChangeLastName} readonly={readonly} />
+                <Input data-testid="ProfileCard.firstname" value={data?.firstname} placeholder={t("Ваше имя")} className={cls.input} onChange={onChangeFirstName} readonly={readonly} />
+                <Input data-testid="ProfileCard.lastname" value={data?.lastname} placeholder={t("Ваша фамилия")} className={cls.input} onChange={onChangeLastName} readonly={readonly} />
                 <Input value={data?.age || ""} placeholder={t("Ваш возраст")} className={cls.input} onChange={onChangeAge} readonly={readonly} />
                 <Input value={data?.city} placeholder={t("Ваш город")} className={cls.input} onChange={onChangeCity} readonly={readonly} />
                 <Input value={data?.username} placeholder={t("Ваше имя пользователя")} className={cls.input} onChange={onChangeUsername} readonly={readonly} />

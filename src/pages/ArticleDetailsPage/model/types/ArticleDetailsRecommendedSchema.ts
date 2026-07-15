@@ -1,5 +1,5 @@
 import { EntityState } from "@reduxjs/toolkit";
-import { Article } from "entities/Article";
+import type { Article } from "entities/Article/model/index";
 
 export interface ArticleDetailsRecommendedSchema extends EntityState<Article, string> {
     isLoading?: boolean,

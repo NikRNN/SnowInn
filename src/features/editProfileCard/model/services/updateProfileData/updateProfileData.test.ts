@@ -6,7 +6,7 @@ import { TestAsyncThunk } from "shared/lib/tests/testAsyncThunk/TestAsyncThunk";
 import { Country } from "entities/Country";
 import { DeepPartial } from "app/types/global";
 import { updateProfileData } from "./updateProfileData";
-import { ValidateProfileError } from "../../types/editProfileCardSchema";
+import { ValidateProfileError } from "../../const/consts";
 
 // import "@testing-library/jest-dom"; // тут не нужен, т.к. тут с DOM не работаем
 

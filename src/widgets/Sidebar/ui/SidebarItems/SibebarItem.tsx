@@ -4,7 +4,7 @@ import { memo } from "react";
 import { classNames } from "shared/lib/classNames/classNames";
 import { useSelector } from "react-redux";
 import { getUserAuthData } from "entities/User";
-import { RoutePath } from "shared/config/routeConfig/routeConfig";
+import { RoutePath } from "shared/config/routeConfig/index";
 import { Text } from "shared/ui/Text/Text";
 import { ItemsPropsType } from "../Sidebar/model/items";
 import cls from "./SidebarItem.module.scss";

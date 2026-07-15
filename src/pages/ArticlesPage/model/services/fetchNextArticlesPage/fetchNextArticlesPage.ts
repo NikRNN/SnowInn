@@ -1,5 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import type { StateSchema, ThunkApi } from "app/providers/StoreProvider";
+import type { ThunkApi } from "app/providers/StoreProvider";
+import type { StateSchema} from "app/providers/StoreProvider/config/types";
 
 import {
     getArticleListHasMore, getArticleListPageNum, getArticleListIsLoading,

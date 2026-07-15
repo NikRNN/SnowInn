@@ -27,6 +27,8 @@
 
 .dropdown {
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .item {
@@ -40,8 +42,9 @@
     color: var(--primary-color);
     cursor: pointer;
 
-    &:hover {
-        background-color: grey;
+    &:hover,
+    &:focus {
+        background-color: var(--inverted-bg-color);
         border-radius: 8px;
     }
 }

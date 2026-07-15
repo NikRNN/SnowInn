@@ -11,9 +11,10 @@ import {
 import { Skeleton } from "shared/ui/Skeleton/Skeleton";
 import { Avatar } from "shared/ui/Avatar/Avatar";
 import { IconWrapper } from "shared/ui/IconWrapper/IconWrapper";
-import { ArticleBlock, ArticleBlockType } from "../../model/types/article";
-import EyeIconArticle from "../../../../shared/assets/icons/eye-20-20.svg";
-import CalendarIconArticle from "../../../../shared/assets/icons/calendar-20-20.svg";
+import { ArticleBlock } from "../../model/types/article";
+import { ArticleBlockType } from "../../model/const/consts";
+import EyeIconArticle from "shared/assets/icons/eye-20-20.svg";
+import CalendarIconArticle from "shared/assets/icons/calendar-20-20.svg";
 import { getArticleDetailsData, getArticleDetailsError, getArticleDetailsIsLoading } from "../../model/selectors/articleDetails";
 import cls from "./ArticleDetails.module.scss";
 import { fetchArticleById } from "../../model/services/fetchArticleById/fetchArticleById";

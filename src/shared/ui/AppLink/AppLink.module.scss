@@ -19,3 +19,9 @@
 .red {
     color: red;
 }
+
+.reset {
+    &:hover {
+        opacity: 1;
+    }
+}

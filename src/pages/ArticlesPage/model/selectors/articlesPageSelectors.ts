@@ -1,5 +1,5 @@
-import { StateSchema } from "app/providers/StoreProvider";
-import { ArticleSortField, ArticleType } from "entities/Article/model/types/article";
+import type { StateSchema } from "app/providers/StoreProvider/config/types";
+import { ArticleSortField, ArticleType } from "entities/Article/model/const/consts";
 import { ArticleTypeView } from "entities/Article";
 
 export const getArticleListError = (state : StateSchema) => state.articlesList?.error;

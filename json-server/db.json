@@ -1132,6 +1132,12 @@
       "userId": "1",
       "text": "привет",
       "id": "cXoHSnQ"
+    },
+    {
+      "articleId": "8",
+      "userId": "1",
+      "text": "vfvfv",
+      "id": "Ig_BJnf"
     }
   ],
   "profile": [
@@ -1171,21 +1177,27 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN",
+      "roles": [
+        "ADMIN"
+      ],
       "avatar": "https://images2.novochag.ru/upload/img_cache/740/7406dbf70c4e6eb6c1ca4a7a34a14553_ce_2370x1580x0x0_cropped_1332x888.webp"
     },
     {
       "id": "2",
-      "username": "user1",
+      "username": "user",
       "password": "123",
-      "role": "USER",
+      "roles": [
+        "USER"
+      ],
       "avatar": "https://sport-marafon.ru/upload/iblock/db3/0757-001.jpg"
     },
     {
       "id": "3",
-      "username": "user2",
+      "username": "editor",
       "password": "123",
-      "role": "USER",
+      "roles": [
+        "EDITOR"
+      ],
       "avatar": "https://preview2.photoxpress.ru/preview/photoxpress_ru/news_info2/3217185610.jpg"
     }
   ]

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { getCanEditArticle } from "../../model/selectors/editArticle/editArticle";
 import { getArticleDetailsData } from "entities/Article";
-import { RoutePath } from "../../../../shared/config/routeConfig/routeConfig";
+import { RoutePath } from "shared/config/routeConfig/index";
 import cls from "./ArticleDetailsPageHeader.module.scss";
 import { Button } from "../../../../shared/ui/Button/Button";
 

@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { ArticleType, ArticleTypeView, ArticleSortField } from "entities/Article/model/types/article";
+import {ArticleSortField} from "entities/Article/model/const/consts"
+import { ArticleTypeView } from "entities/Article/model";
+import {ArticleType} from "entities/Article"
 import { StoreDecoratorWithState } from "shared/config/storybook/StoreDecorator/StoreDecorator";
 import { addArticlesListReducer } from "../../model/slices/addArticlesListSlice";
 import { ArticlesPageFilters } from "./ArticlesPageFilters";

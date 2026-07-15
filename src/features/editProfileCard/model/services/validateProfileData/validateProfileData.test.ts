@@ -1,7 +1,7 @@
 import { vi } from "vitest";
 import { Country } from "entities/Country";
 import { validateProfileData } from "./validateProfileData";
-import { ValidateProfileError } from "../../types/editProfileCardSchema";
+import { ValidateProfileError } from "../../const/consts";
 
 vi.mock("axios"); // заменил модуль axios на mock, далее все методы (get, post, put и т.д.) становятся vi.fn()
 

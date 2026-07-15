@@ -1,22 +1,20 @@
-import { UserSchema } from "entities/User";
-import { LoginSchema } from "features/authByUsername";
-import { CounterSchema } from "entities/Counter";
+import type { UserSchema } from "entities/User/model/types/index"
+import { LoginSchema } from "features/authByUsername/model/types/LoginSchema";
 import {
     EnhancedStore, ReducersMapObject, Action, Reducer,
 } from "@reduxjs/toolkit";
-import { ProfileSchema } from "features/editProfileCard/index";
+import { ProfileSchema } from "features/editProfileCard/model/types/editProfileCardSchema";
 import type { AxiosInstance } from "axios";
-import { ArticleDetailsSchema } from "entities/Article";
-import { AddNewCommentSchema } from "features/addNewComment";
+import { ArticleDetailsSchema } from "entities/Article/model/types/ArticleDetailsSchema";
+import { AddNewCommentSchema } from "features/addNewComment/model/types/addNewComments";
 import { CustomOptionalRecord } from "app/types/global";
-import { ScrollSaveSchema } from "features/scrollSave/index";
-import { ArticleDetailsPageSchema } from "pages/ArticleDetailsPage";
+import { ScrollSaveSchema } from "features/scrollSave/model/types/scrollSchema";
+import type { ArticleDetailsPageSchema } from "pages/ArticleDetailsPage/model/types/index";
 import { ArticlesListSchema } from "pages/ArticlesPage/model/types/articleListSchema";
 import { baseRTKApi } from "shared/api/baseRTKApi";
 
 export interface StateSchema {
     user: UserSchema;
-    counter: CounterSchema;
     scrollSave: ScrollSaveSchema;
     [baseRTKApi.reducerPath]: ReturnType<typeof baseRTKApi.reducer>
     // дальше пойдут асинхронные редьюсеры (поэтому и необязательные)
@@ -47,3 +45,5 @@ export interface ThunkApi {
     api: AxiosInstance,
 
 }
+
+

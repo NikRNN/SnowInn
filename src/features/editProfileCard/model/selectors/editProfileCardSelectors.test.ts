@@ -3,7 +3,7 @@ import type { DeepPartial } from "app/types/global";
 import { StateSchema } from "app/providers/StoreProvider";
 import { Country } from "entities/Country";
 import { getProfileData , getProfileError , getProfileForm , getProfileisLoading , getProfileReadOnly , getProfileValidateError } from "./editProfileCardSelectors";
-import { ValidateProfileError } from "../types/editProfileCardSchema";
+import { ValidateProfileError } from "../const/consts";
 
 describe("getProfileData.test", () => {
     test("test with full state", () => {

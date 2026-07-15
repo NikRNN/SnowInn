@@ -54,3 +54,19 @@ export const Primary: Story = {
     ],
 };
 
+export const WihoutComments: Story = {
+    args: {id: "1"},
+    decorators: [
+        StoreDecoratorWithState({
+            articleDetailsPage: {
+                comments: {
+                    isLoading: false,
+                    error: undefined,
+                    ids: [],
+                    entities: {},
+                }
+            }
+        }, {articleDetailsPage: articleDetailsPageCommentsReducer}),
+        RouterDecorator("/articles/1", "/articles/:id")
+    ],
+};
