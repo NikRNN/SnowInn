@@ -56,11 +56,11 @@ export function Dropdown({ className, trigger,  items, direction }: DropdownProp
     const optionsClasses = mapDirection[direction]
 
     const location = useLocation();
-    const isMainPage = location.pathname === RoutePath.main;
+    // const isMainPage = location.pathname === RoutePath.main;
     
-    const mods : Record <string, boolean | undefined> = {
-        [cls.main]: isMainPage,
-    };
+    // const mods : Record <string, boolean | undefined> = {
+    //     [cls.main]: isMainPage,
+    // };
 
     return (
         <div className={classNames(cls.Dropdown, [className], {})}>
@@ -68,12 +68,11 @@ export function Dropdown({ className, trigger,  items, direction }: DropdownProp
                 <DropdownMenuTrigger asChild>
                     <Button className={cls.button} variant="outline">{trigger}</Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent avoidCollisions={false} className={classNames(cls.menu, [], mods)}  side={optionsClasses.side} align={optionsClasses.align}>
+                <DropdownMenuContent avoidCollisions={false} className={classNames(cls.menu, [], {})}  side={optionsClasses.side} align={optionsClasses.align}>
                     <DropdownMenuGroup  className={classNames(cls.dropdown)}>
                         {items.map(item => {
 
                             if(item.href) {
-                                
                                 return (
                                     <DropdownMenuItem
                                         asChild 
@@ -83,7 +82,7 @@ export function Dropdown({ className, trigger,  items, direction }: DropdownProp
                                         disabled={item.disabled}
                                     >
                                         <AppLink 
-                                            theme={AppLinkTheme.RESET}
+                                            // theme={AppLinkTheme.RESET}
                                             to={item.href}>{item.content}</AppLink>
                                     </DropdownMenuItem>
                                 )

@@ -1,0 +1,7 @@
+.dropdownTrigger{
+transition: transform 0.2s;
+}
+
+[data-state="open"] .dropdownTrigger {
+transform: rotate(180deg);
+}

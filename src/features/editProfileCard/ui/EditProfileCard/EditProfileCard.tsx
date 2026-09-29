@@ -11,7 +11,7 @@ import { Country } from "entities/Country";
 import { ProfileCard } from "entities/User";
 import { Text , TextTheme } from "shared/ui/Text/Text";
 import { ValidateProfileError } from "../../model/const/consts";
-import { DynamicSomethingLoader, ReducersList } from "shared/lib/component/DynamicSomethingLoader";
+import { DynamicSomethingLoader, ReducersList } from "shared/lib/component/DynamicSomethingLoader/DynamicSomethingLoader";
 import { EditProfileCardHeader } from "../EditProfileCardHeader/EditProfileCardHeader";
 interface EditProfileCardProps {
     className?: string;

@@ -1,20 +1,23 @@
-{
-    "extends": "./tsconfig.json",
-    "compilerOptions": {
-
-        "outDir": "./dist",
-        "target": "es5",
-        "module": "esnext",
-        "jsx": "react-jsx",
+{       "extends": "./tsconfig.json",
+        "compilerOptions": {
+        "target": "ES2020",
+        "module": "ESnext",
+        "noEmit": true,
         "isolatedModules": true,
-        "noImplicitAny": true,
+        "strict": true,
         "allowJs": true,
-        "moduleResolution": "node",
+        "lib": ["ES2020", "DOM", "DOM.Iterable"],
+        "moduleResolution": "bundler",
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
-        "strict": true,
         "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true
-    },
-    "include": ["src", "vite-env.d.ts"]
+        "forceConsistentCasingInFileNames": true,
+        },
+        "include": ["src", "vite-env.d.ts"],
+        "exclude": [
+        "src/**/*.test.ts",
+        "src/**/*.test.tsx",
+        "src/**/*.stories.ts",
+        "src/**/*.stories.tsx"
+        ]
 }

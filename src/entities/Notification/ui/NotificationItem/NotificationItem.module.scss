@@ -1,0 +1,18 @@
+.itemHref {
+      padding: 7px 15px;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+       &:hover,
+       &:focus {
+        opacity: 0.6;
+    }
+}
+
+.item {
+       padding: 7px 15px;
+       text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+       &:hover,
+       &:focus {
+        opacity: 0.6;
+        cursor: default
+    }
+}

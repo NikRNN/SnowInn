@@ -1,6 +1,7 @@
 import { classNames } from "shared/lib/classNames/classNames.js";
 import { useTranslation } from "react-i18next";
-import { DynamicSomethingLoader, ReducersList } from "shared/lib/component/DynamicSomethingLoader";
+import { DynamicSomethingLoader } from "shared/lib/component/DynamicSomethingLoader/DynamicSomethingLoader";
+import { ReducersList } from "app/providers/StoreProvider/config/reducerTypes";
 import { ArticleReducer } from "../../model/slice/ArticleDetailsSlice";
 import { useEffect, memo, useCallback } from "react";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
@@ -27,7 +28,8 @@ const CalendarIcon = CalendarIconArticle as unknown as React.FC<React.SVGProps<S
 
 interface ArticleDetailsProps {
   className?: string;
-  id: string
+  id: string;
+//   gfgf: string
 }
 
 export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {

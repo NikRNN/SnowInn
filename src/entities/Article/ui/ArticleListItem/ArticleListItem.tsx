@@ -32,11 +32,6 @@ export const ArticleListItem = memo(({
     const { t } = useTranslation();
     const [isHover, funcHover] = useHover();
 
-    // const navigate = useNavigate(); //убрал, т.к. статьи открывались в той же вкладке
-    // const onOpenArticle = useCallback(() => {
-    //     navigate(RoutePath.article_details + article.id);
-    // }, [article.id, navigate]);
-
     if (view === ArticleTypeView.LIST) {
         const textBlocks = article.blocks.find((block) => block.type === ArticleBlockType.TEXT);
 

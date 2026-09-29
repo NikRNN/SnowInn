@@ -121,7 +121,6 @@ export const Error: Story = {
         // Начальное состояние
         {
             articleDetails: {
-
                 error: "error",
             },
         },

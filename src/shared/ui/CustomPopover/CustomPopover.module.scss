@@ -1,0 +1,21 @@
+.CustomPopover {
+    position: relative;
+}
+
+.button {
+    background: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.content {
+    background: var(--background-popup);
+    backdrop-filter: var(--popup-filter);
+    z-index: 1000;
+    border-radius: 8px;
+    border: 0.7px solid var(--primary-color);
+    padding: 10px 15px;
+}

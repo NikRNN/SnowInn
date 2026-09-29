@@ -75,7 +75,6 @@ export function ListBox(props : ListBoxProps) {
                                     >
                                         {displayItem}
                                     </ComboboxItem>
-                                    
                                 );
                             })}
                     </ComboboxList> 

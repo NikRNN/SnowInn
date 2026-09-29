@@ -1,4 +1,33 @@
 {
+    "notifications": [
+    {
+      "id": "1",
+      "description": "Произошло какое-то событие",
+      "userId": "1"
+    },
+    {
+      "id": "2",
+      "description": "Произошло какое-то событие",
+      "userId": "1",
+      "href": "http://localhost:5173/admin"
+    },
+    {
+      "id": "3",
+      "description": "Произошло какое-то событие",
+      "userId": "1",
+      "href": "http://localhost:5173/admin"
+    },
+    {
+      "id": "4",
+      "description": "Произошло какое-то событие",
+      "userId": "1"
+    },
+    {
+      "id": "5",
+      "description": "Произошло какое-то событие",
+      "userId": "2"
+    }
+  ],
   "posts": [
     {
       "id": "1",

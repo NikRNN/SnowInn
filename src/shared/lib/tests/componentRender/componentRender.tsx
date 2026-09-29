@@ -6,7 +6,7 @@ import i18n from "shared/config/i18n/i18nForTest.js";
 import {  StoreProvider } from "app/providers/StoreProvider/index.js";
 import type { StateSchema } from "app/providers/StoreProvider/config/types";
 import { DeepPartial } from "app/types/global.js";
-import { ReducersList } from "../../component/DynamicSomethingLoader";
+import { ReducersList } from "../../component/DynamicSomethingLoader/DynamicSomethingLoader";
 
 export interface componentRenderOptions {
     route?: string;

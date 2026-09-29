@@ -13,7 +13,7 @@ export function buildViteConfig(options: BuildOptions) {
 
     return {
         mode,
-        plugins: buildPlugins(),
+        plugins: buildPlugins(mode),
         resolve: buildResolvers(paths),
         build: buildOptions(paths),
         server: buildServer(mode),

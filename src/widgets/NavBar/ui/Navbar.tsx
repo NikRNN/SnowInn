@@ -3,16 +3,17 @@ import { useTranslation } from "react-i18next";
 import { Button, ButtonTheme } from "shared/ui/Button/Button.js";
 import { useCallback, useState, memo } from "react";
 import { LoginModal } from "features/authByUsername";
-import { useDispatch, useSelector } from "react-redux";
-import { getUserAuthData, getUserRoles, isAdmin, isEditor, userActions } from "entities/User";
-import { RoutePath } from "shared/config/routeConfig/index";
-import { Dropdown } from "shared/ui/Dropdown/Dropdown";
-import { IconWrapper } from "shared/ui/IconWrapper/IconWrapper";
-import DropdownMenuIcon from "../../../shared/assets/icons/dropdown-icon.svg";
+import { useSelector } from "react-redux";
+import { getUserAuthData} from "entities/User";
+import { HStack } from "shared/ui/Stack";
+import { NotificationBell } from "features/notificationBell";
+import { DropdownMenu } from "features/dropdownMenu";
+import { useMediaQuery } from "react-responsive"
+import { CDrawer } from "shared/ui/CDrawer/CDrawer";
+import { NotificationsList } from "entities/Notification";
+import { AnimationLazyProvider } from "shared/lib/component";
+import { AnimatedModal } from "shared/ui/AnimatedModal/AnimatedModal";
 import cls from "./Navbar.module.scss";
-
-
-const DropDownMenu = DropdownMenuIcon as unknown as React.FC<React.SVGProps<SVGSVGElement>>;
 
 export interface NavbarProps {
   className?: string;
@@ -23,11 +24,7 @@ export const Navbar = memo(
         const { t } = useTranslation();
         const [isOpen, setIsOpen] = useState(false);
         const authData = useSelector(getUserAuthData);
-        const dispatch = useDispatch();
-        const isUserAdmin = useSelector(isAdmin);
-        const isUserEditor = useSelector(isEditor);
-            
-
+        
         const onCloseModal = useCallback(() => {
             setIsOpen(false);
         }, []);
@@ -36,48 +33,23 @@ export const Navbar = memo(
             setIsOpen(true);
         }, []);
 
-        const onLogout = useCallback(() => {
-            dispatch(userActions.logout());
-        }, [dispatch]);
+        const isMobile = useMediaQuery({
+            maxWidth: 767,
+        });
 
-
-        const isAdminPanelAvailable = isUserAdmin || isUserEditor;
-    
+          
         if (authData) {
             return (
                 <div className={classNames(cls.navbar, [className])}>
                     {/* <AppLink className={cls.createBtn} to={RoutePath.article_create}>Создать статью...</AppLink> */}
-                    <Dropdown direction="bottom-left" className={cls.links} items={[
-                        ...(isAdminPanelAvailable ? [  {
-                            content: t("Админ-панель"),
-                            href: RoutePath.admin_panel,
-                            id: "4"
-                        }]: []),
-                        {
-                            content: t("Мой профиль"),
-                            href: RoutePath.profile + authData.id,
-                            id: "1"
-                            
-                        },
-
-                        {
-                            content: t("Мои обзоры"),
-                            id: "2"
-                            
-                        },
-
-                        {
-                            content: t("Создать тему"),
-                            href: RoutePath.article_create,
-                            id: "3"
-                        },
-
-                        {
-                            content: t("Выйти"),
-                            onClick: onLogout,
-                            id: "5"
-                        }
-                    ]} trigger={<IconWrapper className={cls.navbarTrigger} Svg={DropDownMenu}/>}/>
+                    <HStack gap={"16"} className={cls.actions}>
+                        {isMobile? (
+                            <CDrawer>
+                                <NotificationsList/>
+                            </CDrawer>
+                        ) : <NotificationBell/>}
+                        <DropdownMenu/>
+                    </HStack>
                 </div>
             );
         }
@@ -89,14 +61,27 @@ export const Navbar = memo(
                 </Button>
 
                 {isOpen && (
-                    <LoginModal
-                        isOpen={isOpen}
-                        onClose={onCloseModal}
-                    />
+                    
+                    isMobile ? (
+                        <AnimationLazyProvider>
+                            <LoginModal
+                                ModalContent={AnimatedModal}
+                                isOpen={isOpen}
+                                onClose={onCloseModal}
+                            />
+                        </AnimationLazyProvider>
+
+                    ) :
+                        (<LoginModal
+                            isOpen={isOpen}
+                            onClose={onCloseModal}
+                        />)
+                              
                 )}
-            
+
             </header>
         );
     },
-
 );
+
+

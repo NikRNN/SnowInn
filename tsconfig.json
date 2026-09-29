@@ -1,15 +1,9 @@
-{
-    "files": [],
-    "references": [
-        { "path": "./tsconfig.app.json" },
-        { "path": "./tsconfig.node.json" }
-    ],
+{  
     "compilerOptions": {
-        "ignoreDeprecations": "6.0",
-        "composite": true,
-        "baseUrl": "./src",
+        "strict": true,
+        "moduleResolution": "bundler",
         "jsx": "react-jsx",
-        "types": ["vitest/globals", "@testing-library/jest-dom", "vite/client", "vite-plugin-svgr/client"],
+        "baseUrl": "./src",
         "paths": {
             "src/*": ["./src/*"],
             "app/*": ["app/*"],
@@ -18,7 +12,8 @@
             "features/*": ["features/*"],
             "pages/*": ["pages/*"],
             "widgets/*": ["widgets/*"]
-        }
+        },
+        "ignoreDeprecations": "6.0",
+         "types": ["vitest/globals", "@testing-library/jest-dom", "vite/client", "vite-plugin-svgr/client"],
     },
-    "include": ["src", "config/storybook", "vite-env.d.ts"]
 }

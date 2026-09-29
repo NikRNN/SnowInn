@@ -23,14 +23,17 @@
     --sidebar-height-link-collapsed: 30px;
     --margin-for-listbox-topborder: 35px;
 
-    // индексы
+    // индексы, пороговые значения
     --modal-z-index: 10;
-
-    // Цвета (overlay)
+    
+    // Цвета 
     --overlay-color: rgba(0 0 0 / 55%);
     --color-red-light: rgb(242 10 10);
     --color-red-dark: rgb(106 6 6);
     --color-main-text: #dcff00;
+    --background-popup: rgb(0 0 0 / 12%);
+    --popup-filter: blur(24px);
+    --accent-secondary-color: #FBAEC5;
 
     // размеры отступов
     --padding-left-from-sidebar: 50px;

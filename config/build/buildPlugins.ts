@@ -5,8 +5,11 @@ import svgr from "vite-plugin-svgr";
 import { ViteMinifyPlugin } from "vite-plugin-minify";
 import { analyzer } from "vite-bundle-analyzer";
 import tailwindcss from "@tailwindcss/vite";
+import type { BuildMode } from "./types/config";
+import { productionOptimizerVitePlugin } from "./plugins/vite";
 
-export function buildPlugins(): PluginOption[] {
+export function buildPlugins(options: BuildMode): PluginOption[] {
+    const isProd = options === "production";
     return [
         react(),
         progress(),
@@ -14,10 +17,18 @@ export function buildPlugins(): PluginOption[] {
             // экспорт по умолчанию как React компонент
             include: "**/*.svg",
         }),
-        ViteMinifyPlugin({}),
+        isProd && ViteMinifyPlugin({}),
         analyzer({
             openAnalyzer: false,
         }),
-        tailwindcss()
+        tailwindcss(),
+        isProd && productionOptimizerVitePlugin({
+            removeProps: [
+                "data-testid",
+            ],
+            removeConsole: [
+                "log"
+            ]
+        })
     ];
 }

@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { __IS_DEV } from "shared/config/env/env";
-const baseUrl = __IS_DEV ? "http://localhost:8000" : "https://snowinn.ru";
+const baseUrl = __IS_DEV ? "http://localhost:8000" : "тут адрес бэкенда";
 import { AUTH_USER_LOCALSTORAGE } from "shared/const/localstorage";
 
 

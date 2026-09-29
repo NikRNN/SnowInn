@@ -9,7 +9,8 @@ import { getLoginState } from "../../model/selectors/getLoginState/getLoginState
 import { loginByUsername } from "../../model/services/loginByUsername/loginByUsername";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { Text, TextTheme } from "shared/ui/Text/Text";
-import { DynamicSomethingLoader, ReducersList } from "shared/lib/component/DynamicSomethingLoader";
+import { DynamicSomethingLoader} from "shared/lib/component/DynamicSomethingLoader/DynamicSomethingLoader";
+import type { ReducersList } from "app/providers/StoreProvider/config/reducerTypes";
 import cls from "./LoginForm.module.scss";
 
 export interface LoginFormProps {

@@ -7,6 +7,7 @@ export enum TextTheme {
     PRIMARY = "primary",
     ERROR = "error",
     MAIN = "main",
+    BLACK = "black"
 }
 
 export enum TextPosition {

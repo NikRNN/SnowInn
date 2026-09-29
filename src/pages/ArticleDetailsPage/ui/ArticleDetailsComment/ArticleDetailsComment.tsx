@@ -31,6 +31,9 @@ export const ArticleDetailsComment = memo(({ className, id }: ArticleDetailsComm
         dispatch(addCommentForArticle(value));
     }, [dispatch]);
 
+
+    console.log("hello")
+
     return (
         <div className={classNames("", [className])}>
             <Text size={TextSize.L} title={t("Комментарии")} />

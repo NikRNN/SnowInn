@@ -2,7 +2,7 @@ import { classNames } from "shared/lib/classNames/classNames.js";
 import { useTranslation } from "react-i18next";
 import { memo, useCallback } from "react";
 import { useSelector } from "react-redux";
-import { DynamicSomethingLoader, ReducersList } from "shared/lib/component/DynamicSomethingLoader";
+import { DynamicSomethingLoader, ReducersList } from "shared/lib/component/DynamicSomethingLoader/DynamicSomethingLoader";
 import { AddNewComentActions, AddNewCommentReducer } from "../model/slices/addNewCommentSlice";
 import { getAddNewCommentError, getAddNewCommentText } from "../model/selectors/addNewCommentSelectors";
 import cls from "./AddNewComment.module.scss";

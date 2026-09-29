@@ -16,14 +16,28 @@
 }
 
 .links,
-.dropdown {
+.actions {
     margin-left: auto;
 }
 
-.navbarTrigger {
-    transition: transform 0.3s;
+
+[data-slot="drawer-overlay"] {
+    position: fixed;
+    inset: 0;
+    background: var(--overlay-color);
 }
 
-[data-state="open"] .navbarTrigger {
-    transform: rotate(180deg);
+[data-slot="drawer-trigger"] {
+    background: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}  
+
+.group {
+    background: var(--background-popup);
+    backdrop-filter: var(--popup-filter);
 }
+

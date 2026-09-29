@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { PageWrapper } from "widgets/PageWrapper/PageWrapper.js";
 import { classNames } from "../../../../shared/lib/classNames/classNames";
 import { ArticleDetails } from "../../../../entities/Article";
-import { DynamicSomethingLoader, ReducersList } from "../../../../shared/lib/component/DynamicSomethingLoader";
+import { DynamicSomethingLoader, ReducersList } from "../../../../shared/lib/component/DynamicSomethingLoader/DynamicSomethingLoader";
 import cls from "./ArticleDetailsPage.module.scss";
 import { articleDetailsPageReducer } from "../../model/slices";
 import { ArticleDetailsPageHeader } from "../ArticleDetailsPageHeader/ArticleDetailsPageHeader";
