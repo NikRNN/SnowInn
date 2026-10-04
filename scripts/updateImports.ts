@@ -1,4 +1,4 @@
-import {Project, SourceFile} from "ts-morph";
+import {Project} from "ts-morph";
 
 const project = new Project({});
 
@@ -28,8 +28,13 @@ files.forEach(sourceFile => {
 
         if(isAbsolute(value)) {
             importDeclaration.setModuleSpecifier("@/"+value)
+            console.log(`"${value}" → "@/${value}"`);
         }
+        console.log(importDeclaration.getText());
     })
-});
+    
+}
+
+);
 
 project.save();
