@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator.js";
-import { Theme } from "app/providers/ThemeProvider/index.js";
+import { ThemeDecorator } from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator.js";
+import { Theme } from "@/app/providers/ThemeProvider/index.js";
 import { AppLink, AppLinkTheme } from "./AppLink.js";
-import { RouterDecorator } from "shared/config/storybook/RouterDecorator/RouterDecorator.js";
+import { RouterDecorator } from "@/shared/config/storybook/RouterDecorator/RouterDecorator.js";
 
 const meta = {
     title: "shared/AppLink",

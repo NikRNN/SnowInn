@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
-import { StateSchema } from "app/providers/StoreProvider";
-import { DeepPartial } from "app/types/global";
+import { StateSchema } from "@/app/providers/StoreProvider";
+import { DeepPartial } from "@/app/types/global";
 import { getArticleCommentError } from "./getArticleCommentError";
 
 describe("getArticleCommentError.test", () => {

@@ -1,10 +1,10 @@
-import { classNames } from "shared/lib/classNames/classNames.js";
+import { classNames } from "@/shared/lib/classNames/classNames.js";
 import {
     useCallback, useEffect, useRef, useState,
 } from "react";
 import { Portal } from "../Portal/Portal.js";
 import { Overlay } from "../Overlay/Overlay.js";
-import { useAnimationLibs } from "shared/lib/component/AnimationLazyProvider/AnimationLazyProvider.js";
+import { useAnimationLibs } from "@/shared/lib/component/AnimationLazyProvider/AnimationLazyProvider.js";
 import { Loader } from "../Loader/Loader.js";
 import { ModalProps } from "../Modal/Modal.js";
 import cls from "./AnimatedModal.module.scss";

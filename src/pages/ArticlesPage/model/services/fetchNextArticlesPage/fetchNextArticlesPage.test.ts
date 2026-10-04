@@ -1,9 +1,9 @@
 import { vi } from "vitest";
 import axios from "axios";
 import { Dispatch } from "@reduxjs/toolkit";
-import { StateSchema } from "app/providers/StoreProvider";
-import { TestAsyncThunk } from "shared/lib/tests/testAsyncThunk/TestAsyncThunk";
-import type { DeepPartial } from "app/types/global";
+import { StateSchema } from "@/app/providers/StoreProvider";
+import { TestAsyncThunk } from "@/shared/lib/tests/testAsyncThunk/TestAsyncThunk";
+import type { DeepPartial } from "@/app/types/global";
 import { fetchNextArticlesPage } from "./fetchNextArticlesPage";
 import { fetchArticlesList } from "../fetchArticlesList/fetchArticlesList";
 

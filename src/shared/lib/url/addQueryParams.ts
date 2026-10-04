@@ -1,4 +1,4 @@
-import { CustomOptionalRecord } from "app/types/global";
+import { CustomOptionalRecord } from "@/app/types/global";
 
 export function getQueryParams(params : CustomOptionalRecord<string, string>) {
     const searchParams = new URLSearchParams();

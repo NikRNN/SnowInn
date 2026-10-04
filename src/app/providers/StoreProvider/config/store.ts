@@ -1,12 +1,12 @@
 import { configureStore, ReducersMapObject } from "@reduxjs/toolkit";
-import { userReducer } from "entities/User";
+import { userReducer } from "@/entities/User";
 import { ReducersList } from "./reducerTypes";
-import { $api } from "shared/api/api.js";
+import { $api } from "@/shared/api/api.js";
 import { To, NavigateOptions } from "react-router-dom";
-import { scrollSaveReducer } from "features/scrollSave/index.js";
+import { scrollSaveReducer } from "@/features/scrollSave/index.js";
 import type { StateSchema } from "./StateSchema.js";
 import { createReducerManager } from "./ReducerManager.js";
-import { baseRTKApi } from "shared/api/baseRTKApi.js";
+import { baseRTKApi } from "@/shared/api/baseRTKApi.js";
 
 export function createReduxStore(initialState?: StateSchema, asyncReducers?: ReducersList, navigate?: (to: To, options?: NavigateOptions) => void) {
     const rootReducers: ReducersMapObject<StateSchema> = {

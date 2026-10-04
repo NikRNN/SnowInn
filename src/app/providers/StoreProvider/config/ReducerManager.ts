@@ -1,7 +1,7 @@
 import {
     Action, Reducer, ReducersMapObject, combineReducers,
 } from "@reduxjs/toolkit";
-import { CustomOptionalRecord } from "app/types/global";
+import { CustomOptionalRecord } from "@/app/types/global";
 import type { ReducerManager, StateSchema, StateSchemaKey } from "./StateSchema";
 
 export function createReducerManager(initialReducers: ReducersMapObject<StateSchema>) : ReducerManager { // функция принимает на вход какие-то исходные редьюсеры (в моем случае - это userReducer, loginREducer...)

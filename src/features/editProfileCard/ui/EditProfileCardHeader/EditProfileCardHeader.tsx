@@ -1,15 +1,15 @@
-import { classNames } from "shared/lib/classNames/classNames.js";
+import { classNames } from "@/shared/lib/classNames/classNames.js";
 import { useTranslation } from "react-i18next";
-import { Text } from "shared/ui/Text/Text";
-import { Button, ButtonTheme } from "shared/ui/Button/Button";
+import { Text } from "@/shared/ui/Text/Text";
+import { Button, ButtonTheme } from "@/shared/ui/Button/Button";
 import { getProfileData, getProfileReadOnly} from "../../model/selectors/editProfileCardSelectors";
 import { updateProfileData } from "../../model/services/updateProfileData/updateProfileData";
 import { ProfileActions } from "../../model/slices/profileSlice";
 import { useSelector } from "react-redux";
 import { useCallback , memo } from "react";
-import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
-import { getUserAuthData } from "entities/User";
-import { HStack } from "shared/ui/Stack/HStack/HStack";
+import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
+import { getUserAuthData } from "@/entities/User";
+import { HStack } from "@/shared/ui/Stack/HStack/HStack";
 import cls from "./EditProfileCerdHeader.module.scss";
 
 interface EditProfileCardHeaderProps {

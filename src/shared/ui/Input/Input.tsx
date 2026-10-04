@@ -1,4 +1,4 @@
-import { classNames, Mods } from "shared/lib/classNames/classNames.js";
+import { classNames} from "@/shared/lib/classNames/classNames.js";
 import {
     InputHTMLAttributes, memo, useEffect, useRef, useState,
 } from "react";

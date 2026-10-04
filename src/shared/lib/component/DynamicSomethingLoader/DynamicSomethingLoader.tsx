@@ -2,7 +2,7 @@ import {
     FC, ReactNode, useEffect,
 } from "react";
 import { useStore } from "react-redux";
-import type { ReduxStoreWithManager , StateSchemaKey ,ReducersList} from "app/providers/StoreProvider/config/types";
+import type { ReduxStoreWithManager , StateSchemaKey ,ReducersList} from "@/app/providers/StoreProvider/config/types";
 import { useAppDispatch } from "../../hooks/useAppDispatch/useAppDispatch";
 import { Reducer } from "@reduxjs/toolkit";
 

@@ -1,4 +1,4 @@
-import { classNames } from "shared/lib/classNames/classNames.js";
+import { classNames } from "@/shared/lib/classNames/classNames.js";
 import {memo, ReactNode } from "react";
 import { Button } from "../Shadcn/button"
 import {

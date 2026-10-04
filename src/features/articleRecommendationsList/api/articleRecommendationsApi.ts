@@ -1,5 +1,5 @@
-import { baseRTKApi } from "shared/api/baseRTKApi"
-import { Article } from "entities/Article"
+import { baseRTKApi } from "@/shared/api/baseRTKApi"
+import { Article } from "@/entities/Article"
 
 const recommendationsApi = baseRTKApi.injectEndpoints({
     endpoints: (build) => ({

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { IconWrapper } from "./IconWrapper";
-import EyeIconArticle from "../../assets/icons/eye-20-20.svg";
+import EyeIconArticle from "@/../../assets/icons/eye-20-20.svg";
 
 const EyeIcon = EyeIconArticle as unknown as React.FC<React.SVGProps<SVGSVGElement>>;
 

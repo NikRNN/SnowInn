@@ -1,9 +1,9 @@
 import { vi } from "vitest";
 import axios from "axios";
 import { Dispatch } from "@reduxjs/toolkit";
-import { StateSchema } from "app/providers/StoreProvider";
-import { userActions } from "entities/User";
-import { TestAsyncThunk } from "shared/lib/tests/testAsyncThunk/TestAsyncThunk";
+import { StateSchema } from "@/app/providers/StoreProvider";
+import { userActions } from "@/entities/User";
+import { TestAsyncThunk } from "@/shared/lib/tests/testAsyncThunk/TestAsyncThunk";
 import { loginByUsername } from "./loginByUsername";
 
 // import "@testing-library/jest-dom"; // тут не нужен, т.к. тут с DOM не работаем

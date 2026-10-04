@@ -1,14 +1,14 @@
-import { classNames } from "shared/lib/classNames/classNames.js";
+import { classNames } from "@/shared/lib/classNames/classNames.js";
 import { useTranslation } from "react-i18next";
 import { memo, useCallback } from "react";
 import { useSelector } from "react-redux";
-import { DynamicSomethingLoader, ReducersList } from "shared/lib/component/DynamicSomethingLoader/DynamicSomethingLoader";
+import { DynamicSomethingLoader, ReducersList } from "@/shared/lib/component/DynamicSomethingLoader/DynamicSomethingLoader";
 import { AddNewComentActions, AddNewCommentReducer } from "../model/slices/addNewCommentSlice";
 import { getAddNewCommentError, getAddNewCommentText } from "../model/selectors/addNewCommentSelectors";
 import cls from "./AddNewComment.module.scss";
-import { Input } from "shared/ui/Input/Input";
-import { Button, ButtonTheme } from "shared/ui/Button/Button";
-import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
+import { Input } from "@/shared/ui/Input/Input";
+import { Button, ButtonTheme } from "@/shared/ui/Button/Button";
+import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
 
 export interface AddNewCommentProps {
   className?: string;

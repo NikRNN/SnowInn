@@ -1,5 +1,5 @@
 import { http, HttpResponse } from "msw";
-import { ArticleType } from "entities/Article";
+import { ArticleType } from "@/entities/Article";
 
 
 const articles = [

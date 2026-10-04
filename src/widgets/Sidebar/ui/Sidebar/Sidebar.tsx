@@ -1,13 +1,13 @@
-import { classNames } from "shared/lib/classNames/classNames";
+import { classNames } from "@/shared/lib/classNames/classNames";
 import { useState, memo } from "react";
-import { ThemeSwitcher } from "widgets/ThemeSwitcher/ui/ThemeSwitcher";
-import { LangSwitcher } from "widgets/LangSwitcher/LangSwitcher.js";
-import { Button, ButtonTheme, SizeButton } from "shared/ui/Button/Button";
+import { ThemeSwitcher } from "@/widgets/ThemeSwitcher/ui/ThemeSwitcher";
+import { LangSwitcher } from "@/widgets/LangSwitcher/LangSwitcher.js";
+import { Button, ButtonTheme, SizeButton } from "@/shared/ui/Button/Button";
 import { useTranslation } from "react-i18next";
 import cls from "./Sidebar.module.scss";
 import { SideBarItemsList } from "./model/items";
 import { SidebarItem } from "../SidebarItems/SibebarItem";
-import { VStack } from "shared/ui/Stack/VStack/VStack";
+import { VStack } from "@/shared/ui/Stack/VStack/VStack";
 
 export interface SidebarProps {
   className?: string;

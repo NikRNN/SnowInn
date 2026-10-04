@@ -1,15 +1,15 @@
-import { classNames } from "shared/lib/classNames/classNames.js";
+import { classNames } from "@/shared/lib/classNames/classNames.js";
 import { useTranslation } from "react-i18next";
 import {memo , useCallback } from "react";
-import { Text , TextSize } from "shared/ui/Text/Text";
-import { AddNewComment } from "features/addNewComment";
-import { CommentList } from "entities/Comment";
-import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
+import { Text , TextSize } from "@/shared/ui/Text/Text";
+import { AddNewComment } from "@/features/addNewComment";
+import { CommentList } from "@/entities/Comment";
+import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { addCommentForArticle } from "../../../ArticleDetailsPage/model/services/addCommentForArticle/addCommentForArticle";
 import { useSelector } from "react-redux";
 import {getArticleComments} from "../../model/slices/articleDetailsPageCommentSlice/articleDetailsPageCommentsSlice"
 import { getArticleCommentIsLoading } from "../../model/selectors/comments/getArticleCommentIsLoding/getArticleCommentIsLoading";
-import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEffect";
+import { useInitialEffect } from "@/shared/lib/hooks/useInitialEffect/useInitialEffect";
 import { fetchCommentByArticleId } from "../../model/services/fetchCommentsByArticleId/fetchCommentByArticleId";
 export interface ArticleDetailsCommentProps {
   className?: string;

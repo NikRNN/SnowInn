@@ -12,7 +12,7 @@ import petElsintPlugin from "eslint-plugin-for-pet-projects"
 import { fixupConfigRules } from "@eslint/compat";
 
 export default [
-    // ===== IGNORES =====
+    
     {
         ignores: [
             "node_modules/**",
@@ -20,15 +20,15 @@ export default [
             "build/**",
             "json-server/**",
             "favicon/site.webmanifest",
-            "package.json",           // ← добавить
+            "package.json",           
             "package-lock.json",
-            "tsconfig.json",        // ← добавить
+            "tsconfig.json",        
             "tsconfig.*.json",
             "scripts/**"  
         ],
     },
 
-    // ===== ОСНОВНЫЕ ФАЙЛЫ =====
+    
     {
         files: ["src/**/*.{js,jsx,ts,tsx}", "config/**/*.{js,jsx,ts,tsx}"],
         ...js.configs.recommended,

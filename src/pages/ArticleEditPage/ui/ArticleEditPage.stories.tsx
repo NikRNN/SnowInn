@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import ArticleEditPage from "./ArticleEditPage.js";
-import { RouterDecorator } from "shared/config/storybook/RouterDecorator/RouterDecorator.js";
+import { RouterDecorator } from "@/shared/config/storybook/RouterDecorator/RouterDecorator.js";
 
 
 const meta = {

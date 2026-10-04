@@ -1,5 +1,5 @@
 import { vi } from "vitest";
-import { Country } from "entities/Country";
+import { Country } from "@/entities/Country";
 import { validateProfileData } from "./validateProfileData";
 import { ValidateProfileError } from "../../const/consts";
 

@@ -1,10 +1,10 @@
 import { vi } from "vitest";
 import axios from "axios";
 import { Dispatch } from "@reduxjs/toolkit";
-import { StateSchema } from "app/providers/StoreProvider";
-import type { DeepPartial } from "app/types/global";
-import { ArticleSortField, ArticleType } from "entities/Article/model/const/consts";
-import type { Article } from "entities/Article/model/types/article";
+import { StateSchema } from "@/app/providers/StoreProvider";
+import type { DeepPartial } from "@/app/types/global";
+import { ArticleSortField, ArticleType } from "@/entities/Article/model/const/consts";
+import type { Article } from "@/entities/Article/model/types/article";
 import { fetchArticlesList } from "./fetchArticlesList";
 
 // import "@testing-library/jest-dom"; // тут не нужен, т.к. тут с DOM не работаем

@@ -1,13 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator.js";
-import { Theme } from "app/providers/ThemeProvider/index.js";
-import { StoreDecoratorWithState } from "shared/config/storybook/StoreDecorator/StoreDecorator.js";
-import { ProfileReducer } from "features/editProfileCard/index.js";
-import { Country } from "entities/Country/index.js";
-import { RouterDecorator } from "shared/config/storybook/RouterDecorator/RouterDecorator.js";
+import { ThemeDecorator } from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator.js";
+import { Theme } from "@/app/providers/ThemeProvider/index.js";
+import { StoreDecoratorWithState } from "@/shared/config/storybook/StoreDecorator/StoreDecorator.js";
+import { ProfileReducer } from "@/features/editProfileCard/index.js";
+import { Country } from "@/entities/Country/index.js";
+import { RouterDecorator } from "@/shared/config/storybook/RouterDecorator/RouterDecorator.js";
 import ProfilePage from "./ProfilePage.js";
-import Avatar from "../../../shared/assets/icons/avatar.jpg";
-import { truncate } from "node:fs";
+import Avatar from "@/../../../shared/assets/icons/avatar.jpg";
 
 const meta = {
     title: "pages/ProfilePage",

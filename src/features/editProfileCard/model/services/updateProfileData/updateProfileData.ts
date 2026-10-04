@@ -1,9 +1,9 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import type { ThunkApi , StateSchema } from "app/providers/StoreProvider/config/types";
+import type { ThunkApi , StateSchema } from "@/app/providers/StoreProvider/config/types";
 import { ValidateProfileError} from "../../const/consts";
 import { getProfileForm } from "../../selectors/editProfileCardSelectors";
 import { validateProfileData } from "../validateProfileData/validateProfileData";
-import type { Profile } from "entities/Profile";
+import type { Profile } from "@/entities/Profile";
 
 export const updateProfileData = createAsyncThunk<Profile, void, {rejectValue: ValidateProfileError[], extra : ThunkApi}>( // типы: profile - то, что вернется в случае успеха, входных данных нет, и тип ошибки
     "profile/updateProfileData", // первый аргумент, название thunk

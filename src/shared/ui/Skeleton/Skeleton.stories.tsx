@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { StyleDecorator } from "shared/config/storybook/StyleDecorator/StyleDecorator.js";
-import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator.js";
-import { Theme } from "app/providers/ThemeProvider/index.js";
+import { StyleDecorator } from "@/shared/config/storybook/StyleDecorator/StyleDecorator.js";
+import { ThemeDecorator } from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator.js";
+import { Theme } from "@/app/providers/ThemeProvider/index.js";
 import { Skeleton } from "./Skeleton.js";
 
 const meta = {

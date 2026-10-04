@@ -1,9 +1,9 @@
 import { vi } from "vitest";
 import axios from "axios";
 import { Dispatch } from "@reduxjs/toolkit";
-import { StateSchema } from "app/providers/StoreProvider";
-import { TestAsyncThunk } from "shared/lib/tests/testAsyncThunk/TestAsyncThunk";
-import { Country } from "entities/Country";
+import { StateSchema } from "@/app/providers/StoreProvider";
+import { TestAsyncThunk } from "@/shared/lib/tests/testAsyncThunk/TestAsyncThunk";
+import { Country } from "@/entities/Country";
 import { fetchProfileData } from "./fetchProfileData";
 import { ValidateProfileError } from "../../const/consts";
 

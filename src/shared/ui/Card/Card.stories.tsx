@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { StyleDecorator } from "shared/config/storybook/StyleDecorator/StyleDecorator.js";
+import { StyleDecorator } from "@/shared/config/storybook/StyleDecorator/StyleDecorator.js";
 import { Card } from "./Card.js";
 import { Text } from "../Text/Text.js";
 

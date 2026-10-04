@@ -1,5 +1,5 @@
 import "@testing-library/jest-dom";
-import type { DeepPartial } from "app/types/global";
+import type { DeepPartial } from "@/app/types/global";
 import { LoginSchema } from "../types/LoginSchema";
 import { LoginActions, LoginReducer } from "./loginSlice";
 import { loginByUsername } from "../services/loginByUsername/loginByUsername";

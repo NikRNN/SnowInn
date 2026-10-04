@@ -1,4 +1,4 @@
-import type { User } from "entities/User/model/types/index";
+import type { User } from "@/entities/User/model/types/index";
 import { ArticleBlockType , ArticleType } from "../const/consts";
 
 export interface ArticleBlockBase {

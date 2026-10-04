@@ -1,17 +1,17 @@
-import { classNames } from "shared/lib/classNames/classNames";
+import { classNames } from "@/shared/lib/classNames/classNames";
 import { useTranslation } from "react-i18next";
 import { memo , useCallback } from "react";
-import {getProfileError, getProfileForm, getProfileisLoading, getProfileReadOnly, getProfileValidateError} from "../../model/selectors/editProfileCardSelectors";
+import {getProfileError, getProfileForm, getProfileisLoading, getProfileReadOnly, getProfileValidateError} from "@/../../model/selectors/editProfileCardSelectors";
 import { fetchProfileData } from "../../model/services/fetchProfileData/fetchProfileData";
 import { ProfileActions, ProfileReducer } from "../../model/slices/profileSlice";
 import { useSelector } from "react-redux";
-import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
-import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEffect";
-import { Country } from "entities/Country";
-import { ProfileCard } from "entities/User";
-import { Text , TextTheme } from "shared/ui/Text/Text";
+import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
+import { useInitialEffect } from "@/shared/lib/hooks/useInitialEffect/useInitialEffect";
+import { Country } from "@/entities/Country";
+import { ProfileCard } from "@/entities/User";
+import { Text , TextTheme } from "@/shared/ui/Text/Text";
 import { ValidateProfileError } from "../../model/const/consts";
-import { DynamicSomethingLoader, ReducersList } from "shared/lib/component/DynamicSomethingLoader/DynamicSomethingLoader";
+import { DynamicSomethingLoader, ReducersList } from "@/shared/lib/component/DynamicSomethingLoader/DynamicSomethingLoader";
 import { EditProfileCardHeader } from "../EditProfileCardHeader/EditProfileCardHeader";
 interface EditProfileCardProps {
     className?: string;

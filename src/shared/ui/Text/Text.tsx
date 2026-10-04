@@ -1,4 +1,4 @@
-import { classNames, Mods } from "shared/lib/classNames/classNames.js";
+import { classNames, Mods } from "@/shared/lib/classNames/classNames.js";
 
 import { memo } from "react";
 import cls from "./Text.module.scss";

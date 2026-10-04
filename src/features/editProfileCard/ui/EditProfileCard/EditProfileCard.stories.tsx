@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { EditProfileCard } from "./EditProfileCard.js";
-import { StoreDecoratorWithState } from "shared/config/storybook/StoreDecorator/StoreDecorator.js";
-import { Country } from "entities/Country/index.js";
+import { StoreDecoratorWithState } from "@/shared/config/storybook/StoreDecorator/StoreDecorator.js";
+import { Country } from "@/entities/Country/index.js";
 import { ProfileReducer } from "../../index.js";
 
 

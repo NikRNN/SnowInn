@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { DropdownMenu } from "./DropdownMenu.js";
-import { StoreDecoratorWithState } from "shared/config/storybook/StoreDecorator/StoreDecorator.js";
-import { userReducer, UsersRoles } from "entities/User/index.js";
-import { RouterDecorator } from "shared/config/storybook/RouterDecorator/RouterDecorator.js";
+import { StoreDecoratorWithState } from "@/shared/config/storybook/StoreDecorator/StoreDecorator.js";
+import { userReducer, UsersRoles } from "@/entities/User/index.js";
+import { RouterDecorator } from "@/shared/config/storybook/RouterDecorator/RouterDecorator.js";
 
 
 const meta: Meta<typeof DropdownMenu> = {

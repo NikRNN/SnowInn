@@ -1,27 +1,27 @@
-import { classNames } from "shared/lib/classNames/classNames.js";
+import { classNames } from "@/shared/lib/classNames/classNames.js";
 import { useTranslation } from "react-i18next";
-import { DynamicSomethingLoader } from "shared/lib/component/DynamicSomethingLoader/DynamicSomethingLoader";
-import { ReducersList } from "app/providers/StoreProvider/config/reducerTypes";
+import { DynamicSomethingLoader } from "@/shared/lib/component/DynamicSomethingLoader/DynamicSomethingLoader";
+import { ReducersList } from "@/app/providers/StoreProvider/config/reducerTypes";
 import { ArticleReducer } from "../../model/slice/ArticleDetailsSlice";
 import { useEffect, memo, useCallback } from "react";
-import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
+import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { useSelector } from "react-redux";
 import {
     Text, TextPosition, TextSize, TextTheme,
-} from "shared/ui/Text/Text";
-import { Skeleton } from "shared/ui/Skeleton/Skeleton";
-import { Avatar } from "shared/ui/Avatar/Avatar";
-import { IconWrapper } from "shared/ui/IconWrapper/IconWrapper";
+} from "@/shared/ui/Text/Text";
+import { Skeleton } from "@/shared/ui/Skeleton/Skeleton";
+import { Avatar } from "@/shared/ui/Avatar/Avatar";
+import { IconWrapper } from "@/shared/ui/IconWrapper/IconWrapper";
 import { ArticleBlock } from "../../model/types/article";
 import { ArticleBlockType } from "../../model/const/consts";
-import EyeIconArticle from "shared/assets/icons/eye-20-20.svg";
-import CalendarIconArticle from "shared/assets/icons/calendar-20-20.svg";
+import EyeIconArticle from "@/shared/assets/icons/eye-20-20.svg";
+import CalendarIconArticle from "@/shared/assets/icons/calendar-20-20.svg";
 import { getArticleDetailsData, getArticleDetailsError, getArticleDetailsIsLoading } from "../../model/selectors/articleDetails";
 import cls from "./ArticleDetails.module.scss";
 import { fetchArticleById } from "../../model/services/fetchArticleById/fetchArticleById";
 import { ArticleImageBlockComponent } from "../ArticleImageBlockComponent/ArticleImageBlockComponent";
 import { ArticleTextBloсkComponent } from "../ArticleTextBlockComponent/ArticleTextBlockComponent";
-import { HStack } from "shared/ui/Stack";
+import { HStack } from "@/shared/ui/Stack";
 
 const EyeIcon = EyeIconArticle as unknown as React.FC<React.SVGProps<SVGSVGElement>>;
 const CalendarIcon = CalendarIconArticle as unknown as React.FC<React.SVGProps<SVGSVGElement>>;

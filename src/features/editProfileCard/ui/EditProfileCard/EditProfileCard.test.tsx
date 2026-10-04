@@ -1,12 +1,12 @@
 import { screen} from "@testing-library/react";
 import "@testing-library/jest-dom";
-import { componentRender } from "shared/lib/tests/componentRender/componentRender.js";
+import { componentRender } from "@/shared/lib/tests/componentRender/componentRender.js";
 import { EditProfileCard } from "./EditProfileCard";
-import { Profile } from "entities/Profile";
-import { Country } from "entities/Country";
+import { Profile } from "@/entities/Profile";
+import { Country } from "@/entities/Country";
 import { ProfileReducer } from "../../model/slices/profileSlice";
 import userEvent from "@testing-library/user-event";
-import { $api } from "shared/api/api";
+import { $api } from "@/shared/api/api";
 
 const dataUser : Profile = {
     id: "1",

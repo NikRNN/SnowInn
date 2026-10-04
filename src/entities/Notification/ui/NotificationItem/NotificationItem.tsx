@@ -1,9 +1,9 @@
-import { classNames } from "shared/lib/classNames/classNames.js";
+import { classNames } from "@/shared/lib/classNames/classNames.js";
 import {memo} from "react";
 import type { Notification } from "../../model/types/notifications";
 import cls from "./NotificationItem.module.scss";
-import { AppLink } from "shared/ui/AppLink/AppLink";
-import { Text } from "shared/ui/Text/Text";
+import { AppLink } from "@/shared/ui/AppLink/AppLink";
+import { Text } from "@/shared/ui/Text/Text";
 
 interface NotificationItemProps {
   className?: string;

@@ -1,8 +1,8 @@
-import { classNames } from "shared/lib/classNames/classNames.js";
+import { classNames } from "@/shared/lib/classNames/classNames.js";
 import { memo } from "react";
-import { Skeleton } from "shared/ui/Skeleton/Skeleton";
+import { Skeleton } from "@/shared/ui/Skeleton/Skeleton";
 import { ArticleTypeView } from "../../model/const/consts";
-import { Card } from "shared/ui/Card/Card";
+import { Card } from "@/shared/ui/Card/Card";
 import cls from "./ArticleListItem.module.scss";
 
 interface SkeletonListItemProps {

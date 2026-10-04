@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { CDrawer } from "./CDrawer.js";
-import { Button } from "../Button/Button.js";
 
 
 const meta: Meta<typeof CDrawer> = {

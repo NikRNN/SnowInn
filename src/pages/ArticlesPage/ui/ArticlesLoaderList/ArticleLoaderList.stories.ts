@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import {ArticlesLoaderList} from "./ArticlesLoaderList";
-import { StoreDecoratorWithState } from "shared/config/storybook/StoreDecorator/StoreDecorator.js";
+import { StoreDecoratorWithState } from "@/shared/config/storybook/StoreDecorator/StoreDecorator.js";
 import { addArticlesListReducer } from "../../model/slices/addArticlesListSlice";
-import { ArticleTypeView , ArticleSortField , ArticleType , Article, ArticleBlockType } from "entities/Article";
-import { RouterDecorator } from "shared/config/storybook/RouterDecorator/RouterDecorator";
+import { ArticleTypeView , ArticleSortField , ArticleType , ArticleBlockType } from "@/entities/Article";
+import { RouterDecorator } from "@/shared/config/storybook/RouterDecorator/RouterDecorator";
 
 const meta = {
     title: "pages/ArticlestPage/ArticlesLoaderList",

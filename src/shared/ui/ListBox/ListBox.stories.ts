@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { ListBox } from "./ListBox.js";
-import { Country } from "entities/Country/index.js";
+import { Country } from "@/entities/Country/index.js";
 
 const meta: Meta<typeof ListBox> = {
     title: "shared/ListBox",

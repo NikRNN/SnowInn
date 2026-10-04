@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import {ArticleDetailsComment} from "./ArticleDetailsComment.js";
-import { StoreDecoratorWithState } from "shared/config/storybook/StoreDecorator/StoreDecorator.js";
+import { StoreDecoratorWithState } from "@/shared/config/storybook/StoreDecorator/StoreDecorator.js";
 import { articleDetailsPageCommentsReducer } from "../../model/slices/articleDetailsPageCommentSlice/articleDetailsPageCommentsSlice.js";
-import { RouterDecorator } from "shared/config/storybook/RouterDecorator/RouterDecorator.js";
+import { RouterDecorator } from "@/shared/config/storybook/RouterDecorator/RouterDecorator.js";
 
 const meta = {
     title: "pages/ArticleDetailstPage/ArticleDetailsComment",

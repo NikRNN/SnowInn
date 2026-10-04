@@ -1,4 +1,4 @@
-import { classNames } from "shared/lib/classNames/classNames.js";
+import { classNames } from "@/shared/lib/classNames/classNames.js";
 import { useTranslation } from "react-i18next";
 import { useMemo, memo, ChangeEvent } from "react";
 import cls from "./Select.module.scss";

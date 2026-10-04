@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { StoreDecoratorWithState } from "shared/config/storybook/StoreDecorator/StoreDecorator.js";
+import { StoreDecoratorWithState } from "@/shared/config/storybook/StoreDecorator/StoreDecorator.js";
 import { LoginReducer } from "../../model/slice/loginSlice.js";
 import LoginForm from "./LoginForm.js";
 

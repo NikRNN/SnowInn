@@ -1,18 +1,18 @@
-import { classNames} from "shared/lib/classNames/classNames.js";
+import { classNames} from "@/shared/lib/classNames/classNames.js";
 import { useTranslation } from "react-i18next";
-import { Button, ButtonTheme } from "shared/ui/Button/Button.js";
+import { Button, ButtonTheme } from "@/shared/ui/Button/Button.js";
 import { useCallback, useState, memo } from "react";
-import { LoginModal } from "features/authByUsername";
+import { LoginModal } from "@/features/authByUsername";
 import { useSelector } from "react-redux";
-import { getUserAuthData} from "entities/User";
-import { HStack } from "shared/ui/Stack";
-import { NotificationBell } from "features/notificationBell";
-import { DropdownMenu } from "features/dropdownMenu";
+import { getUserAuthData} from "@/entities/User";
+import { HStack } from "@/shared/ui/Stack";
+import { NotificationBell } from "@/features/notificationBell";
+import { DropdownMenu } from "@/features/dropdownMenu";
 import { useMediaQuery } from "react-responsive"
-import { CDrawer } from "shared/ui/CDrawer/CDrawer";
-import { NotificationsList } from "entities/Notification";
-import { AnimationLazyProvider } from "shared/lib/component";
-import { AnimatedModal } from "shared/ui/AnimatedModal/AnimatedModal";
+import { CDrawer } from "@/shared/ui/CDrawer/CDrawer";
+import { NotificationsList } from "@/entities/Notification";
+import { AnimationLazyProvider } from "@/shared/lib/component";
+import { AnimatedModal } from "@/shared/ui/AnimatedModal/AnimatedModal";
 import cls from "./Navbar.module.scss";
 
 export interface NavbarProps {

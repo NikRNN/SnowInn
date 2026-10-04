@@ -1,11 +1,10 @@
-import { classNames } from "shared/lib/classNames/classNames.js";
-import { useTranslation } from "react-i18next";
-import {memo, useEffect} from "react";
+import { classNames } from "@/shared/lib/classNames/classNames.js";
+import {memo} from "react";
 import cls from "./NotificationsList.module.scss";
 import { useNotification } from "../../api/notificationApi";
-import { VStack } from "shared/ui/Stack";
+import { VStack } from "@/shared/ui/Stack";
 import { NotificationItem } from "../NotificationItem/NotificationItem";
-import { Skeleton } from "shared/ui/Skeleton/Skeleton";
+import { Skeleton } from "@/shared/ui/Skeleton/Skeleton";
 
 interface NotificationListProps {
   className?: string;

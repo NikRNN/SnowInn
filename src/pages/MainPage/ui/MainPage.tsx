@@ -1,9 +1,8 @@
 import { useTranslation } from "react-i18next";
-import { BugButton } from "app/providers/ErrorBoundary/index.js";
-import { classNames } from "shared/lib/classNames/classNames";
-import { Text, TextSize, TextTheme } from "shared/ui/Text/Text";
+import { BugButton } from "@/app/providers/ErrorBoundary/index.js";
+import { classNames } from "@/shared/lib/classNames/classNames";
+import { Text, TextSize, TextTheme } from "@/shared/ui/Text/Text";
 import cls from "./MainPage.module.scss";
-import { Dropdown } from "shared/ui/Dropdown/Dropdown";
 
 function MainPage() {
     const { t } = useTranslation("home");

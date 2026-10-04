@@ -1,20 +1,20 @@
-import { classNames } from "shared/lib/classNames/classNames.js";
+import { classNames } from "@/shared/lib/classNames/classNames.js";
 import { useTranslation } from "react-i18next";
 import { memo, useCallback } from "react";
-import { ArticleTypeTabs, ArticleTypeView } from "entities/Article";
+import { ArticleTypeTabs, ArticleTypeView } from "@/entities/Article";
 import { useSelector } from "react-redux";
-import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
+import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { addArticlesListActions } from "../../model/slices/addArticlesListSlice";
-import { Card } from "shared/ui/Card/Card";
-import { Input } from "shared/ui/Input/Input";
+import { Card } from "@/shared/ui/Card/Card";
+import { Input } from "@/shared/ui/Input/Input";
 import {
     getArticlesListOrder, getArticlesListSort, getArticlesListType, getArticleListView,
     getArticlesListSearch,
 } from "../../model/selectors/articlesPageSelectors";
-import { ArticlesSortSelectors } from "entities/Article/ui/ArticlesSortSelectors/ArticlesSortSelectors";
-import { SortTypeOrder } from "shared/types";
-import { ArticleSortField, ArticleType } from "entities/Article/model/types/article";
-import { useDebounce } from "shared/lib/hooks/useDebounce/useDebounce";
+import { ArticlesSortSelectors } from "@/entities/Article/ui/ArticlesSortSelectors/ArticlesSortSelectors";
+import { SortTypeOrder } from "@/shared/types";
+import { ArticleSortField, ArticleType } from "@/entities/Article/model/const/consts";
+import { useDebounce } from "@/shared/lib/hooks/useDebounce/useDebounce";
 import { fetchArticlesList } from "../../model/services/fetchArticlesList/fetchArticlesList";
 import cls from "./ArticlesPageFilters.module.scss";
 import { ArticleViewSelector } from "../../../../entities/Article/ui/ArticleViewSelector/ArticleViewSelector";

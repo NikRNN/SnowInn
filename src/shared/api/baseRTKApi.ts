@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { __IS_DEV } from "shared/config/env/env";
+import { __IS_DEV } from "@/shared/config/env/env";
 const baseUrl = __IS_DEV ? "http://localhost:8000" : "тут адрес бэкенда";
-import { AUTH_USER_LOCALSTORAGE } from "shared/const/localstorage";
+import { AUTH_USER_LOCALSTORAGE } from "@/shared/const/localstorage";
 
 
 // Define a service using a base URL and expected endpoints

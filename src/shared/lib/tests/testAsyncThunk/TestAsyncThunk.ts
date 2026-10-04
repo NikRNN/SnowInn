@@ -1,9 +1,9 @@
-import type { StateSchema } from "app/providers/StoreProvider/config/types";
+import type { StateSchema } from "@/app/providers/StoreProvider/config/types";
 import { vi } from "vitest";
 import { AsyncThunkAction } from "@reduxjs/toolkit";
 import axios, { AxiosInstance } from "axios";
 import type { AxiosStatic } from "axios";
-import { DeepPartial } from "app/types/global";
+import { DeepPartial } from "@/app/types/global";
 
 type ActionCreatorType<Return, Arg, RejectedValue> = (arg: Arg) => AsyncThunkAction<Return, Arg, {rejectValue: RejectedValue}>;
 //

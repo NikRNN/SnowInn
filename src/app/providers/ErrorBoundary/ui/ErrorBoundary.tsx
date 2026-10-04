@@ -1,7 +1,7 @@
 import {
     ErrorInfo, ReactNode, Component, Suspense,
 } from "react";
-import { PageError } from "widgets/PageError/index.js";
+import { PageError } from "@/widgets/PageError/index.js";
 // import { withTranslation } from 'react-i18next'; - если хотим экспортировать с переводом
 
 interface ErrorBoundaryProps {

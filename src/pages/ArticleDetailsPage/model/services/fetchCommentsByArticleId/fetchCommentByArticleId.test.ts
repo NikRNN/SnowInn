@@ -1,5 +1,5 @@
 import axios from "axios";
-import { StateSchema } from "app/providers/StoreProvider";
+import { StateSchema } from "@/app/providers/StoreProvider";
 import { fetchCommentByArticleId } from "./fetchCommentByArticleId";
 
 vi.mock("axios");

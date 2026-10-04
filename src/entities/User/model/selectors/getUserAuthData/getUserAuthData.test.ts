@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
-import type { DeepPartial } from "app/types/global";
-import { StateSchema } from "app/providers/StoreProvider";
+import type { DeepPartial } from "@/app/types/global";
+import { StateSchema } from "@/app/providers/StoreProvider";
 import { getUserAuthData } from "./getUserAuthData";
 
 describe("getUserAuthData.test", () => {

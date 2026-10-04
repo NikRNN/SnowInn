@@ -1,11 +1,11 @@
 import { useTranslation } from "react-i18next";
 import { useSelector , useDispatch } from "react-redux";
 import { useCallback ,memo} from "react";
-import { RoutePath } from "shared/config/routeConfig/index";
-import { Dropdown } from "shared/ui/Dropdown/Dropdown";
-import { IconWrapper } from "shared/ui/IconWrapper/IconWrapper";
-import {  isAdmin, isEditor , getUserAuthData, userActions } from "entities/User";
-import DropdownMenuIcon from "../../../shared/assets/icons/dropdown-icon.svg";
+import { RoutePath } from "@/shared/config/routeConfig/index";
+import { Dropdown } from "@/shared/ui/Dropdown/Dropdown";
+import { IconWrapper } from "@/shared/ui/IconWrapper/IconWrapper";
+import {  isAdmin, isEditor , getUserAuthData, userActions } from "@/entities/User";
+import DropdownMenuIcon from "@/../../../shared/assets/icons/dropdown-icon.svg";
 import cls from "./DropdownMenu.module.scss";
 
 const DropDownMenu = DropdownMenuIcon as unknown as React.FC<React.SVGProps<SVGSVGElement>>;

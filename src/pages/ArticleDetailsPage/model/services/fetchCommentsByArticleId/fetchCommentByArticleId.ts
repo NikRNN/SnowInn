@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import type { ThunkApi } from "app/providers/StoreProvider";
+import type { ThunkApi } from "@/app/providers/StoreProvider";
 import type { Comment } from "../../../../../entities/Comment/model/types/comments";
 
 export const fetchCommentByArticleId = createAsyncThunk<Comment[], string | undefined, {rejectValue: string, extra : ThunkApi}>( 

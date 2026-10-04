@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
-import { PageWrapper } from "widgets/PageWrapper/PageWrapper";
-import { Text, TextSize, TextTheme } from "shared/ui/Text/Text";
+import { PageWrapper } from "@/widgets/PageWrapper/PageWrapper";
+import { Text, TextSize, TextTheme } from "@/shared/ui/Text/Text";
 import cls from "./AboutPage.module.scss";
 
 

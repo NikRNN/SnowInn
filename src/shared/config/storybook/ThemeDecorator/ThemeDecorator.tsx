@@ -1,6 +1,6 @@
 import type { Decorator } from "@storybook/react";
-import { Theme, ThemeProvider } from "app/providers/ThemeProvider/index.js";
-import "../../../../app/styles/index.scss";
+import { Theme, ThemeProvider } from "@/app/providers/ThemeProvider/index.js";
+import "@/../../../../app/styles/index.scss";
 
 // тут ThemeProvider и initialTheme нужен для нормальной смены иконок в тестах: без них всегда light
 

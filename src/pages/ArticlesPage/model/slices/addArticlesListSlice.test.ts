@@ -1,10 +1,10 @@
-import "@testing-library/jest-dom";
-import type { DeepPartial } from "app/types/global";
-import { ArticleTypeView , ArticleSortField, ArticleType } from "entities/Article";
-import { Article } from "entities/Article/model/types/article";
-import type { ArticlesListSchema } from "../types/articleListSchema";
-import { addArticlesListReducer, addArticlesListActions } from "./addArticlesListSlice";
-import { fetchArticlesList } from "../services/fetchArticlesList/fetchArticlesList";
+import "@/@testing-library/jest-dom";
+import type { DeepPartial } from "@/app/types/global";
+import { ArticleTypeView , ArticleSortField, ArticleType } from "@/entities/Article";
+import { Article } from "@/entities/Article/model/types/article";
+import type { ArticlesListSchema } from "@/../types/articleListSchema";
+import { addArticlesListReducer, addArticlesListActions } from "@/./addArticlesListSlice";
+import { fetchArticlesList } from "@/../services/fetchArticlesList/fetchArticlesList";
 
 describe("addArticleListSlice.test", () => {
     test("setView", () => {

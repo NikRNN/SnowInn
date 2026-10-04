@@ -1,6 +1,6 @@
-import { classNames } from "shared/lib/classNames/classNames.js";
+import { classNames } from "@/shared/lib/classNames/classNames.js";
 import { useTranslation } from "react-i18next";
-import { Button } from "shared/ui/Button/Button.js";
+import { Button } from "@/shared/ui/Button/Button.js";
 import cls from "./PageError.module.scss";
 
 interface PageErrorProps {

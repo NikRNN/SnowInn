@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { CommentList } from "./CommentList.js";
-import { RouterDecorator } from "shared/config/storybook/RouterDecorator/RouterDecorator.js";
+import { RouterDecorator } from "@/shared/config/storybook/RouterDecorator/RouterDecorator.js";
 
 const meta: Meta<typeof CommentList> = {
     title: "entities/Comment/CommentList",

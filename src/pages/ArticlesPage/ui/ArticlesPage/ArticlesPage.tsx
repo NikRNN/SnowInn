@@ -1,7 +1,7 @@
-import { classNames } from "shared/lib/classNames/classNames.js";
+import { classNames } from "@/shared/lib/classNames/classNames.js";
 import { memo } from "react";
-import { DynamicSomethingLoader, ReducersList } from "shared/lib/component/DynamicSomethingLoader/DynamicSomethingLoader";
-import { PageWrapper } from "widgets/PageWrapper/PageWrapper";
+import { DynamicSomethingLoader, ReducersList } from "@/shared/lib/component/DynamicSomethingLoader/DynamicSomethingLoader";
+import { PageWrapper } from "@/widgets/PageWrapper/PageWrapper";
 import { ArticlesPageFilters } from "../ArticlesPageFilters/ArticlesPageFilters";
 import { ArticlesLoaderList } from "../ArticlesLoaderList/ArticlesLoaderList";
 import { addArticlesListReducer } from "../../model/slices/addArticlesListSlice";

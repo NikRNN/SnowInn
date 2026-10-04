@@ -1,4 +1,4 @@
-import { baseRTKApi } from "shared/api/baseRTKApi"
+import { baseRTKApi } from "@/shared/api/baseRTKApi"
 import { Notification } from "../model/types/notifications";
 
 const notificationApi = baseRTKApi.injectEndpoints({

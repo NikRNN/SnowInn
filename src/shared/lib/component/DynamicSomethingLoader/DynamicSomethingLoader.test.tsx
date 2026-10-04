@@ -3,7 +3,8 @@ import { Provider } from "react-redux";
 import {
     vi, describe, it, expect, beforeEach,
 } from "vitest";
-import { DynamicSomethingLoader, ReducersList } from "./DynamicSomethingLoader";
+import { DynamicSomethingLoader } from "./DynamicSomethingLoader";
+import type { ReducersList} from "@/app/providers/StoreProvider/config/types";
 
 // Создаю объект стора, который удовлетворит TS и Redux
 const mockStore = {

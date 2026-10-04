@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import {ArticleDetailsPageHeader} from "./ArticleDetailsPageHeader.js";
-import { StoreDecoratorWithState } from "shared/config/storybook/StoreDecorator/StoreDecorator.js";
-import { ArticleReducer } from "entities/Article/model/slice/ArticleDetailsSlice.js";
-import { RouterDecorator } from "shared/config/storybook/RouterDecorator/RouterDecorator.js";
+import { StoreDecoratorWithState } from "@/shared/config/storybook/StoreDecorator/StoreDecorator.js";
+import { ArticleReducer } from "@/entities/Article/model/slice/ArticleDetailsSlice.js";
+import { RouterDecorator } from "@/shared/config/storybook/RouterDecorator/RouterDecorator.js";
 
 
 const meta = {

@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import type { ThunkApi } from "app/providers/StoreProvider";
-import type { StateSchema } from "app/providers/StoreProvider/config/types";
-import type { Article } from "entities/Article";
+import type { ThunkApi } from "@/app/providers/StoreProvider";
+import type { StateSchema } from "@/app/providers/StoreProvider/config/types";
+import type { Article } from "@/entities/Article";
 
 export const fetchArticlesRecommendations = createAsyncThunk<Article[], void, {rejectValue: string, extra : ThunkApi, state: StateSchema}>( // типы: массив Comment - то, что вернется в случае успеха, второе - входные данные thunk и тип ошибки
     "articlesDetailsPage/fetchArticlesRecommendations", // первый аргумент, название thunk

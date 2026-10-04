@@ -6,7 +6,7 @@ export function buildResolvers(options: BuildPaths): {
   } {
     return {
         alias: {
-            src: options.src,
+            "@": options.src,
             app: options.app,
             shared: options.shared,
             entities: options.entities,

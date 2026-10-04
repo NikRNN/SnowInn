@@ -1,14 +1,14 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
-import type { ThunkApi } from "app/providers/StoreProvider";
-import type { StateSchema} from "app/providers/StoreProvider/config/types";
+import { createAsyncThunk } from "@/@reduxjs/toolkit";
+import type { ThunkApi } from "@/app/providers/StoreProvider";
+import type { StateSchema} from "@/app/providers/StoreProvider/config/types";
 
-import { SortTypeOrder } from "shared/types";
-import { ArticleSortField, ArticleType } from "entities/Article";
+import { SortTypeOrder } from "@/shared/types";
+import { ArticleSortField, ArticleType } from "@/entities/Article";
 import {
     getArticleListIsInited,
-} from "../../selectors/articlesPageSelectors";
-import { fetchArticlesList } from "../fetchArticlesList/fetchArticlesList";
-import { addArticlesListActions } from "../../slices/addArticlesListSlice";
+} from "@/../../selectors/articlesPageSelectors";
+import { fetchArticlesList } from "@/../fetchArticlesList/fetchArticlesList";
+import { addArticlesListActions } from "@/../../slices/addArticlesListSlice";
 
 export const initArticlesPage = createAsyncThunk<void, URLSearchParams, {rejectValue: string, extra : ThunkApi, state: StateSchema}>( 
     "articlesList/fetchInitArticlesPage", // первый аргумент, название thunk

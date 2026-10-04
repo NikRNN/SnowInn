@@ -1,5 +1,5 @@
-import { classNames } from "shared/lib/classNames/classNames.js";
-import { Button } from "shared/ui/Button/Button.js";
+import { classNames } from "@/shared/lib/classNames/classNames.js";
+import { Button } from "@/shared/ui/Button/Button.js";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 

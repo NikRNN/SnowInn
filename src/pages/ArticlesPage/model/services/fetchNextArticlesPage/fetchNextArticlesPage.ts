@@ -1,12 +1,12 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
-import type { ThunkApi } from "app/providers/StoreProvider";
-import type { StateSchema} from "app/providers/StoreProvider/config/types";
+import { createAsyncThunk } from "@/@reduxjs/toolkit";
+import type { ThunkApi } from "@/app/providers/StoreProvider";
+import type { StateSchema} from "@/app/providers/StoreProvider/config/types";
 
 import {
     getArticleListHasMore, getArticleListPageNum, getArticleListIsLoading,
-} from "../../selectors/articlesPageSelectors";
-import { fetchArticlesList } from "../fetchArticlesList/fetchArticlesList";
-import { addArticlesListActions } from "../../slices/addArticlesListSlice";
+} from "@/../../selectors/articlesPageSelectors";
+import { fetchArticlesList } from "@/../fetchArticlesList/fetchArticlesList";
+import { addArticlesListActions } from "@/../../slices/addArticlesListSlice";
 
 export const fetchNextArticlesPage = createAsyncThunk<void, void, {rejectValue: string, extra : ThunkApi, state: StateSchema}>( // типы: массив Comment - то, что вернется в случае успеха, второе - входные данные thunk и тип ошибки
     "articlesList/fetchNextArticlesPage", // первый аргумент, название thunk

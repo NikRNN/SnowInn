@@ -1,11 +1,10 @@
-import { classNames } from "shared/lib/classNames/classNames.js";
+import { classNames } from "@/shared/lib/classNames/classNames.js";
 import { useTranslation } from "react-i18next";
 import { ReactNode } from "react";
 import cls from "./Dropdown.module.scss";
 import { DropdownDirection } from "../../types/ui";
-import { AppLink, AppLinkTheme } from "../AppLink/AppLink";
+import { AppLink} from "../AppLink/AppLink";
 import { useLocation } from "react-router-dom";
-import { RoutePath } from "shared/config/routeConfig/index";
 
 import { Button } from "../Shadcn/button"
 import {

@@ -1,5 +1,5 @@
-import { classNames } from "shared/lib/classNames/classNames";
-import { ButtonHTMLAttributes } from "react";
+import { classNames } from "@/shared/lib/classNames/classNames";
+import { ButtonHTMLAttributes , ReactNode } from "react";
 import cls from "./Button.module.scss";
 
 export enum ButtonTheme {
@@ -25,6 +25,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   square?: boolean;
   size?: SizeButton,
   disabled?: boolean;
+  children?: ReactNode
 }
 
 export function Button(props: ButtonProps) {

@@ -1,7 +1,7 @@
 import { Provider } from "react-redux";
 import { ReactNode } from "react";
-import { createReduxStore } from "app/providers/StoreProvider/config/store.js";
-import { DeepPartial } from "app/types/global.js";
+import { createReduxStore } from "@/app/providers/StoreProvider/config/store.js";
+import { DeepPartial } from "@/app/types/global.js";
 import type { ReducersList } from "../config/reducerTypes";
 import { ReducersMapObject } from "@reduxjs/toolkit";
 import type { StateSchema } from "../config/types";

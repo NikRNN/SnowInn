@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
-import { StateSchema } from "app/providers/StoreProvider";
-import { DeepPartial } from "app/types/global";
+import { StateSchema } from "@/app/providers/StoreProvider";
+import { DeepPartial } from "@/app/types/global";
 import { getArticleCommentIsLoading } from "./getArticleCommentIsLoading";
 
 describe("getArticleCommentIsLoading.test", () => {

@@ -1,12 +1,12 @@
-import { vi } from "vitest";
-import axios from "axios";
-import { Dispatch } from "@reduxjs/toolkit";
-import { StateSchema } from "app/providers/StoreProvider";
-import { TestAsyncThunk } from "shared/lib/tests/testAsyncThunk/TestAsyncThunk";
-import type { DeepPartial } from "app/types/global";
-import { fetchArticlesList } from "../fetchArticlesList/fetchArticlesList";
-import { initArticlesPage } from "./initArticlesPage";
-import { addArticlesListActions } from "../../slices/addArticlesListSlice";
+import { vi } from "@/vitest";
+import axios from "@/axios";
+import { Dispatch } from "@/@reduxjs/toolkit";
+import { StateSchema } from "@/app/providers/StoreProvider";
+import { TestAsyncThunk } from "@/shared/lib/tests/testAsyncThunk/TestAsyncThunk";
+import type { DeepPartial } from "@/app/types/global";
+import { fetchArticlesList } from "@/../fetchArticlesList/fetchArticlesList";
+import { initArticlesPage } from "@/./initArticlesPage";
+import { addArticlesListActions } from "@/../../slices/addArticlesListSlice";
 
 vi.mock("axios"); // заменил модуль axios на mock, далее все методы (get, post, put и т.д.) становятся vi.fn()
 vi.mock("../fetchArticlesList/fetchArticlesList");

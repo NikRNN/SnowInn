@@ -1,5 +1,5 @@
 import "@testing-library/jest-dom";
-import type { DeepPartial } from "app/types/global";
+import type { DeepPartial } from "@/app/types/global";
 import { AddNewCommentSchema } from "../types/addNewComments";
 import { AddNewComentActions, AddNewCommentReducer } from "./addNewCommentSlice";
 

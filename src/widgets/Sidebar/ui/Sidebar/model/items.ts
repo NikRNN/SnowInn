@@ -1,8 +1,8 @@
-import { RoutePath } from "shared/config/routeConfig/index";
-import MainPageIcon from "shared/assets/icons/main-page.svg";
-import AboutPageIcon from "shared/assets/icons/about-us.svg";
-import ProfilePageIcon from "shared/assets/icons/profile.svg";
-import ArticlePageIcon from "shared/assets/icons/article-20-20.svg";
+import { RoutePath } from "@/shared/config/routeConfig/index";
+import MainPageIcon from "@/shared/assets/icons/main-page.svg";
+import AboutPageIcon from "@/shared/assets/icons/about-us.svg";
+import ProfilePageIcon from "@/shared/assets/icons/profile.svg";
+import ArticlePageIcon from "@/shared/assets/icons/article-20-20.svg";
 
 
 const MainIcon = MainPageIcon as unknown as React.FC<React.SVGProps<SVGSVGElement>>;

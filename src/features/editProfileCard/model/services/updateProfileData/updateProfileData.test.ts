@@ -1,10 +1,10 @@
 import { vi } from "vitest";
 import axios from "axios";
 import { Dispatch } from "@reduxjs/toolkit";
-import { StateSchema } from "app/providers/StoreProvider";
-import { TestAsyncThunk } from "shared/lib/tests/testAsyncThunk/TestAsyncThunk";
-import { Country } from "entities/Country";
-import { DeepPartial } from "app/types/global";
+import { StateSchema } from "@/app/providers/StoreProvider";
+import { TestAsyncThunk } from "@/shared/lib/tests/testAsyncThunk/TestAsyncThunk";
+import { Country } from "@/entities/Country";
+import { DeepPartial } from "@/app/types/global";
 import { updateProfileData } from "./updateProfileData";
 import { ValidateProfileError } from "../../const/consts";
 
